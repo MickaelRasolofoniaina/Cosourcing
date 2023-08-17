@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="User\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="User\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cosourcing.RH.Contracts\Cosourcing.RH.Contracts.csproj" />
+    <ProjectReference Include="..\Cosourcing.RH.DataAccess\Cosourcing.RH.DataAccess.csproj" />
+  </ItemGroup>
+</Project>

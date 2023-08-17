@@ -1,0 +1,63 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "Cosourcing.RH.Services/1.0.0": {
+        "dependencies": {
+          "Cosourcing.RH.Contracts": "1.0.0",
+          "Cosourcing.RH.DataAccess": "1.0.0"
+        },
+        "runtime": {
+          "Cosourcing.RH.Services.dll": {}
+        }
+      },
+      "Cosourcing.RH.Contracts/1.0.0": {
+        "dependencies": {
+          "Cosourcing.RH.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Cosourcing.RH.Contracts.dll": {}
+        }
+      },
+      "Cosourcing.RH.DataAccess/1.0.0": {
+        "dependencies": {
+          "Cosourcing.RH.Contracts": "1.0.0"
+        },
+        "runtime": {
+          "Cosourcing.RH.DataAccess.dll": {}
+        }
+      },
+      "Cosourcing.RH.Domain/1.0.0": {
+        "runtime": {
+          "Cosourcing.RH.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Cosourcing.RH.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Cosourcing.RH.Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Cosourcing.RH.DataAccess/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Cosourcing.RH.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

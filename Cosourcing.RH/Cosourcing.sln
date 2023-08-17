@@ -1,0 +1,65 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1705.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cosourcing.RH", "Cosourcing.RH", "{D629A1ED-EB62-41AB-8D7C-636EDE671A40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cosourcing.RH.Api", "Cosourcing.RH.Api\Cosourcing.RH.Api.csproj", "{5D3BE94A-8BBB-478C-8002-0F60A4242B38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cosourcing.RH.Bootstrapper", "Cosourcing.RH.Bootstrapper\Cosourcing.RH.Bootstrapper.csproj", "{8B627AF6-93A5-4F13-8BE6-44229E027AF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cosourcing.RH.Contracts", "Cosourcing.RH.Contracts\Cosourcing.RH.Contracts.csproj", "{9F6929D6-E6C9-4FAF-8138-C8726CE7C494}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cosourcing.RH.DataAccess", "Cosourcing.RH.DataAccess\Cosourcing.RH.DataAccess.csproj", "{FED78972-D93A-4809-9313-E783CCFE65DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cosourcing.RH.Domain", "Cosourcing.RH.Domain\Cosourcing.RH.Domain.csproj", "{C3537726-7983-4E12-84C5-064F7E12256E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cosourcing.RH.Services", "Cosourcing.RH.Services\Cosourcing.RH.Services.csproj", "{1B5EF1D8-6E78-4110-8F6A-9DE9F1E44D41}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5D3BE94A-8BBB-478C-8002-0F60A4242B38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D3BE94A-8BBB-478C-8002-0F60A4242B38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D3BE94A-8BBB-478C-8002-0F60A4242B38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D3BE94A-8BBB-478C-8002-0F60A4242B38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B627AF6-93A5-4F13-8BE6-44229E027AF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B627AF6-93A5-4F13-8BE6-44229E027AF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B627AF6-93A5-4F13-8BE6-44229E027AF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B627AF6-93A5-4F13-8BE6-44229E027AF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F6929D6-E6C9-4FAF-8138-C8726CE7C494}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F6929D6-E6C9-4FAF-8138-C8726CE7C494}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F6929D6-E6C9-4FAF-8138-C8726CE7C494}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F6929D6-E6C9-4FAF-8138-C8726CE7C494}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FED78972-D93A-4809-9313-E783CCFE65DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FED78972-D93A-4809-9313-E783CCFE65DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FED78972-D93A-4809-9313-E783CCFE65DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FED78972-D93A-4809-9313-E783CCFE65DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3537726-7983-4E12-84C5-064F7E12256E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3537726-7983-4E12-84C5-064F7E12256E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3537726-7983-4E12-84C5-064F7E12256E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3537726-7983-4E12-84C5-064F7E12256E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B5EF1D8-6E78-4110-8F6A-9DE9F1E44D41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B5EF1D8-6E78-4110-8F6A-9DE9F1E44D41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B5EF1D8-6E78-4110-8F6A-9DE9F1E44D41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B5EF1D8-6E78-4110-8F6A-9DE9F1E44D41}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {641403E8-3D53-4831-A18E-5374C9808EEF}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5D3BE94A-8BBB-478C-8002-0F60A4242B38} = {D629A1ED-EB62-41AB-8D7C-636EDE671A40}
+		{8B627AF6-93A5-4F13-8BE6-44229E027AF2} = {D629A1ED-EB62-41AB-8D7C-636EDE671A40}
+		{9F6929D6-E6C9-4FAF-8138-C8726CE7C494} = {D629A1ED-EB62-41AB-8D7C-636EDE671A40}
+		{FED78972-D93A-4809-9313-E783CCFE65DF} = {D629A1ED-EB62-41AB-8D7C-636EDE671A40}
+		{C3537726-7983-4E12-84C5-064F7E12256E} = {D629A1ED-EB62-41AB-8D7C-636EDE671A40}
+		{1B5EF1D8-6E78-4110-8F6A-9DE9F1E44D41} = {D629A1ED-EB62-41AB-8D7C-636EDE671A40}
+	EndGlobalSection
+EndGlobal

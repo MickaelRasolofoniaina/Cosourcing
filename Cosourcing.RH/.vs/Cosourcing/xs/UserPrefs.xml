@@ -1,0 +1,40 @@
+﻿<Properties StartupConfiguration="{5D3BE94A-8BBB-478C-8002-0F60A4242B38}|https">
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Cosourcing" expanded="True">
+            <Node name="Cosourcing.RH" expanded="True">
+              <Node name="Cosourcing.RH.Api" expanded="True">
+                <Node name="Controllers" expanded="True">
+                  <Node name="User" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="Cosourcing.RH.Domain" expanded="True">
+                <Node name="User" expanded="True">
+                  <Node name="UserModel.cs" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.Api/Controllers/User/UserController.cs" relfile="Cosourcing.RH.Api/Controllers/User/UserController.cs" line="25" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.Cosourcing.RH.Cosourcing.RH.Api PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <DisabledProjects>
+    <String>Cosourcing.RH.Api/Cosourcing.RH.Bootstrapper/Cosourcing.RH.Bootstrapper.csproj</String>
+    <String>Cosourcing.RH.Api/Cosourcing.RH.Contracts/Cosourcing.RH.Contracts.csproj</String>
+    <String>Cosourcing.RH.Api/Cosourcing.RH.DataAccess/Cosourcing.RH.DataAccess.csproj</String>
+    <String>Cosourcing.RH.Api/Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj</String>
+    <String>Cosourcing.RH.Api/Cosourcing.RH.Services/Cosourcing.RH.Services.csproj</String>
+  </DisabledProjects>
+</Properties>

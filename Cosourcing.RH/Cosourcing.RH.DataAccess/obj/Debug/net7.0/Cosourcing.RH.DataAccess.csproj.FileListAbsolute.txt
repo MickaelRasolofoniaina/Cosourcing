@@ -1,0 +1,17 @@
+/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.DataAccess/bin/Debug/net7.0/Cosourcing.RH.DataAccess.deps.json
+/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.DataAccess/bin/Debug/net7.0/Cosourcing.RH.DataAccess.dll
+/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.DataAccess/bin/Debug/net7.0/Cosourcing.RH.DataAccess.pdb
+/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.DataAccess/bin/Debug/net7.0/Cosourcing.RH.Contracts.dll
+/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.DataAccess/bin/Debug/net7.0/Cosourcing.RH.Domain.dll
+/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.DataAccess/bin/Debug/net7.0/Cosourcing.RH.Contracts.pdb
+/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.DataAccess/bin/Debug/net7.0/Cosourcing.RH.Domain.pdb
+/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.DataAccess/obj/Debug/net7.0/Cosourcing.RH.DataAccess.csproj.AssemblyReference.cache
+/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.DataAccess/obj/Debug/net7.0/Cosourcing.RH.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.DataAccess/obj/Debug/net7.0/Cosourcing.RH.DataAccess.AssemblyInfoInputs.cache
+/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.DataAccess/obj/Debug/net7.0/Cosourcing.RH.DataAccess.AssemblyInfo.cs
+/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.DataAccess/obj/Debug/net7.0/Cosourcing.RH.DataAccess.csproj.CoreCompileInputs.cache
+/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.DataAccess/obj/Debug/net7.0/Cosourcing.RH.DataAccess.csproj.CopyComplete
+/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.DataAccess/obj/Debug/net7.0/Cosourcing.RH.DataAccess.dll
+/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.DataAccess/obj/Debug/net7.0/refint/Cosourcing.RH.DataAccess.dll
+/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.DataAccess/obj/Debug/net7.0/Cosourcing.RH.DataAccess.pdb
+/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.DataAccess/obj/Debug/net7.0/ref/Cosourcing.RH.DataAccess.dll

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../buildMultiTargeting/Cosourcing.RH.Api.props" />
+</Project>

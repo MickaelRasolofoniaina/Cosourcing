@@ -1,0 +1,313 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.Bootstrapper/Cosourcing.RH.Bootstrapper.csproj": {}
+  },
+  "projects": {
+    "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.Bootstrapper/Cosourcing.RH.Bootstrapper.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.Bootstrapper/Cosourcing.RH.Bootstrapper.csproj",
+        "projectName": "Cosourcing.RH.Bootstrapper",
+        "projectPath": "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.Bootstrapper/Cosourcing.RH.Bootstrapper.csproj",
+        "packagesPath": "/Users/mickael/.nuget/packages/",
+        "outputPath": "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.Bootstrapper/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/mickael/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.DataAccess/Cosourcing.RH.DataAccess.csproj": {
+                "projectPath": "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.DataAccess/Cosourcing.RH.DataAccess.csproj"
+              },
+              "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.Services/Cosourcing.RH.Services.csproj": {
+                "projectPath": "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.Services/Cosourcing.RH.Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Autofac": {
+              "target": "Package",
+              "version": "[7.1.0, )"
+            },
+            "Microsoft.AspNetCore.Hosting.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Binder": {
+              "target": "Package",
+              "version": "[7.0.4, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.200/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.Contracts/Cosourcing.RH.Contracts.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.Contracts/Cosourcing.RH.Contracts.csproj",
+        "projectName": "Cosourcing.RH.Contracts",
+        "projectPath": "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.Contracts/Cosourcing.RH.Contracts.csproj",
+        "packagesPath": "/Users/mickael/.nuget/packages/",
+        "outputPath": "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.Contracts/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/mickael/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj": {
+                "projectPath": "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.200/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.DataAccess/Cosourcing.RH.DataAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.DataAccess/Cosourcing.RH.DataAccess.csproj",
+        "projectName": "Cosourcing.RH.DataAccess",
+        "projectPath": "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.DataAccess/Cosourcing.RH.DataAccess.csproj",
+        "packagesPath": "/Users/mickael/.nuget/packages/",
+        "outputPath": "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.DataAccess/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/mickael/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.Contracts/Cosourcing.RH.Contracts.csproj": {
+                "projectPath": "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.Contracts/Cosourcing.RH.Contracts.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.200/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj",
+        "projectName": "Cosourcing.RH.Domain",
+        "projectPath": "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj",
+        "packagesPath": "/Users/mickael/.nuget/packages/",
+        "outputPath": "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/mickael/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.200/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.Services/Cosourcing.RH.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.Services/Cosourcing.RH.Services.csproj",
+        "projectName": "Cosourcing.RH.Services",
+        "projectPath": "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.Services/Cosourcing.RH.Services.csproj",
+        "packagesPath": "/Users/mickael/.nuget/packages/",
+        "outputPath": "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.Services/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/mickael/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.Contracts/Cosourcing.RH.Contracts.csproj": {
+                "projectPath": "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.Contracts/Cosourcing.RH.Contracts.csproj"
+              },
+              "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.DataAccess/Cosourcing.RH.DataAccess.csproj": {
+                "projectPath": "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.DataAccess/Cosourcing.RH.DataAccess.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.200/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
