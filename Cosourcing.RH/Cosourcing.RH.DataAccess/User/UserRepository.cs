@@ -1,19 +1,25 @@
 ﻿using System;
 using Cosourcing.RH.Contracts.DataAccess.User;
+using Cosourcing.RH.DataAccess.Context;
 using Cosourcing.RH.Domain.User;
+using Microsoft.EntityFrameworkCore;
 
 namespace Cosourcing.RH.DataAccess.User
 {
 	public class UserRepository : IUserRepository
 	{
-		public UserRepository()
-		{
-		}
+        private DbSet<UserModel> _userDbContext;
 
-        public Task<UserModel> Save(UserModel user)
+		public UserRepository(DbSet<UserModel> userDbContext)
+		{
+            _userDbContext = userDbContext;
+        }
+
+        public void Add(UserModel user)
         {
-            // Save to db 
-            throw new NotImplementedException();
+            user.Id = Guid.NewGuid();
+
+            _userDbContext.Add(user);
         }
     }
 }

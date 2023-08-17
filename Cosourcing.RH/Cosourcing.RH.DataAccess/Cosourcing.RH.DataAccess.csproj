@@ -11,8 +11,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="User\" />
+    <None Remove="Context\" />
+    <None Remove="SQLQuery\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="User\" />
+    <Folder Include="Context\" />
+    <Folder Include="SQLQuery\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.4" />
   </ItemGroup>
 </Project>

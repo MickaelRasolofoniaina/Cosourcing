@@ -22,9 +22,16 @@ namespace Cosourcing.RH.Api.Controllers.User
         [HttpPost]
         public async Task<IActionResult> Save(UserModel user)
         {
-            var result = await _userService.Save(user);
+            try
+            {
+                var result = await _userService.Save(user);
 
-            return Ok(result);
+                return Ok(result);
+            }
+            catch(Exception)
+            {
+                return BadRequest("Something went wrong");
+            }
         }
     }
 }

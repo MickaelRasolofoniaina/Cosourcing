@@ -10,3 +10,15 @@
 /Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.Domain/obj/Debug/net7.0/refint/Cosourcing.RH.Domain.dll
 /Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.Domain/obj/Debug/net7.0/Cosourcing.RH.Domain.pdb
 /Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.Domain/obj/Debug/net7.0/ref/Cosourcing.RH.Domain.dll
+/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Domain/bin/Debug/net7.0/Cosourcing.RH.Domain.deps.json
+/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Domain/bin/Debug/net7.0/Cosourcing.RH.Domain.dll
+/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Domain/bin/Debug/net7.0/Cosourcing.RH.Domain.pdb
+/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Domain/obj/Debug/net7.0/Cosourcing.RH.Domain.csproj.AssemblyReference.cache
+/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Domain/obj/Debug/net7.0/Cosourcing.RH.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Domain/obj/Debug/net7.0/Cosourcing.RH.Domain.AssemblyInfoInputs.cache
+/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Domain/obj/Debug/net7.0/Cosourcing.RH.Domain.AssemblyInfo.cs
+/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Domain/obj/Debug/net7.0/Cosourcing.RH.Domain.csproj.CoreCompileInputs.cache
+/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Domain/obj/Debug/net7.0/Cosourcing.RH.Domain.dll
+/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Domain/obj/Debug/net7.0/refint/Cosourcing.RH.Domain.dll
+/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Domain/obj/Debug/net7.0/Cosourcing.RH.Domain.pdb
+/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Domain/obj/Debug/net7.0/ref/Cosourcing.RH.Domain.dll

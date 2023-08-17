@@ -5,7 +5,7 @@ namespace Cosourcing.RH.Contracts.DataAccess.User
 {
 	public interface IUserRepository
 	{
-		public Task<UserModel> Save(UserModel user);
+		public void Add(UserModel user);
 	}
 }
 

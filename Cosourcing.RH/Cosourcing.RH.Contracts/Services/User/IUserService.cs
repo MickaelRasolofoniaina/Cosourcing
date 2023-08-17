@@ -5,7 +5,7 @@ namespace Cosourcing.RH.Contracts.Services.User
 {
 	public interface IUserService
 	{
-		public Task<UserModel> Save(UserModel user);
+		public Task<int> Save(UserModel user);
 	}
 }
 

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.DataAccess/Cosourcing.RH.DataAccess.csproj": {}
+    "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.DataAccess/Cosourcing.RH.DataAccess.csproj": {}
   },
   "projects": {
-    "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.Contracts/Cosourcing.RH.Contracts.csproj": {
+    "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Contracts/Cosourcing.RH.Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.Contracts/Cosourcing.RH.Contracts.csproj",
+        "projectUniqueName": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Contracts/Cosourcing.RH.Contracts.csproj",
         "projectName": "Cosourcing.RH.Contracts",
-        "projectPath": "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.Contracts/Cosourcing.RH.Contracts.csproj",
+        "projectPath": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Contracts/Cosourcing.RH.Contracts.csproj",
         "packagesPath": "/Users/mickael/.nuget/packages/",
-        "outputPath": "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.Contracts/obj/",
+        "outputPath": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Contracts/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/mickael/.nuget/NuGet/NuGet.Config"
@@ -26,8 +26,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj": {
-                "projectPath": "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj"
+              "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj": {
+                "projectPath": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj"
               }
             }
           }
@@ -61,14 +61,14 @@
         }
       }
     },
-    "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.DataAccess/Cosourcing.RH.DataAccess.csproj": {
+    "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.DataAccess/Cosourcing.RH.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.DataAccess/Cosourcing.RH.DataAccess.csproj",
+        "projectUniqueName": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.DataAccess/Cosourcing.RH.DataAccess.csproj",
         "projectName": "Cosourcing.RH.DataAccess",
-        "projectPath": "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.DataAccess/Cosourcing.RH.DataAccess.csproj",
+        "projectPath": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.DataAccess/Cosourcing.RH.DataAccess.csproj",
         "packagesPath": "/Users/mickael/.nuget/packages/",
-        "outputPath": "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.DataAccess/obj/",
+        "outputPath": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.DataAccess/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/mickael/.nuget/NuGet/NuGet.Config"
@@ -83,8 +83,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.Contracts/Cosourcing.RH.Contracts.csproj": {
-                "projectPath": "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.Contracts/Cosourcing.RH.Contracts.csproj"
+              "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Contracts/Cosourcing.RH.Contracts.csproj": {
+                "projectPath": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Contracts/Cosourcing.RH.Contracts.csproj"
               }
             }
           }
@@ -98,6 +98,12 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[7.0.4, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -118,14 +124,14 @@
         }
       }
     },
-    "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj": {
+    "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj",
+        "projectUniqueName": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj",
         "projectName": "Cosourcing.RH.Domain",
-        "projectPath": "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj",
+        "projectPath": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj",
         "packagesPath": "/Users/mickael/.nuget/packages/",
-        "outputPath": "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.Domain/obj/",
+        "outputPath": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/mickael/.nuget/NuGet/NuGet.Config"

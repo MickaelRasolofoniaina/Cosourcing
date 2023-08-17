@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj": {}
+    "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj": {}
   },
   "projects": {
-    "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj": {
+    "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj",
+        "projectUniqueName": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj",
         "projectName": "Cosourcing.RH.Domain",
-        "projectPath": "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj",
+        "projectPath": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj",
         "packagesPath": "/Users/mickael/.nuget/packages/",
-        "outputPath": "/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.Domain/obj/",
+        "outputPath": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/mickael/.nuget/NuGet/NuGet.Config"

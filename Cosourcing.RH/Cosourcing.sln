@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cosourcing.RH.Domain", "Cos
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cosourcing.RH.Services", "Cosourcing.RH.Services\Cosourcing.RH.Services.csproj", "{1B5EF1D8-6E78-4110-8F6A-9DE9F1E44D41}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cosourcing.Identity", "Cosourcing.Identity", "{08482C70-C387-4DB1-8938-2168E6C3CFEC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

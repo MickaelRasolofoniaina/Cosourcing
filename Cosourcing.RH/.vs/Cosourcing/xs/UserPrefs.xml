@@ -1,35 +1,5 @@
 ﻿<Properties StartupConfiguration="{5D3BE94A-8BBB-478C-8002-0F60A4242B38}|https">
-  <MonoDevelop.Ide.Workbench>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="Cosourcing" expanded="True">
-            <Node name="Cosourcing.RH" expanded="True">
-              <Node name="Cosourcing.RH.Api" expanded="True">
-                <Node name="Controllers" expanded="True">
-                  <Node name="User" expanded="True" />
-                </Node>
-              </Node>
-              <Node name="Cosourcing.RH.Domain" expanded="True">
-                <Node name="User" expanded="True">
-                  <Node name="UserModel.cs" selected="True" />
-                </Node>
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
-  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/mickael/Projects/Cosourcing.RH/Cosourcing.RH.Api/Controllers/User/UserController.cs" relfile="Cosourcing.RH.Api/Controllers/User/UserController.cs" line="25" column="1" />
-    </BreakpointStore>
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.Cosourcing.RH.Cosourcing.RH.Api PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <DisabledProjects>
     <String>Cosourcing.RH.Api/Cosourcing.RH.Bootstrapper/Cosourcing.RH.Bootstrapper.csproj</String>
     <String>Cosourcing.RH.Api/Cosourcing.RH.Contracts/Cosourcing.RH.Contracts.csproj</String>
@@ -37,4 +7,58 @@
     <String>Cosourcing.RH.Api/Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj</String>
     <String>Cosourcing.RH.Api/Cosourcing.RH.Services/Cosourcing.RH.Services.csproj</String>
   </DisabledProjects>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Cosourcing.RH.Cosourcing.RH.Api PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Cosourcing.RH.Api/Program.cs">
+    <Files>
+      <File FileName="Cosourcing.RH.DataAccess/Context/RHDbContext.cs" Line="1" Column="1" />
+      <File FileName="Cosourcing.RH.DataAccess/User/UserRepository.cs" Line="24" Column="12" />
+      <File FileName="Cosourcing.RH.Contracts/DataAccess/User/IUserRepository.cs" Line="8" Column="5" />
+      <File FileName="Cosourcing.RH.DataAccess/BaseRepository.cs" Line="25" Column="29" />
+      <File FileName="Cosourcing.RH.Services/User/UserService.cs" Line="21" Column="41" />
+      <File FileName="Cosourcing.RH.Contracts/Services/User/IUserService.cs" Line="8" Column="41" />
+      <File FileName="Cosourcing.RH.Contracts/DataAccess/IBaseRepository.cs" Line="7" Column="3" />
+      <File FileName="Cosourcing.RH.Api/Program.cs" Line="22" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Cosourcing" expanded="True">
+            <Node name="Cosourcing.RH" expanded="True">
+              <Node name="Cosourcing.RH.Api" expanded="True">
+                <Node name="Dependencies" expanded="True">
+                  <Node name="PackageDependencies" expanded="True" />
+                </Node>
+                <Node name="Program.cs" selected="True" />
+              </Node>
+              <Node name="Cosourcing.RH.Contracts" expanded="True">
+                <Node name="DataAccess" expanded="True">
+                  <Node name="User" expanded="True" />
+                </Node>
+                <Node name="Services" expanded="True">
+                  <Node name="User" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="Cosourcing.RH.DataAccess" expanded="True">
+                <Node name="Dependencies" expanded="True">
+                  <Node name="PackageDependencies" expanded="True" />
+                </Node>
+                <Node name="Context" expanded="True" />
+                <Node name="SQLQuery" expanded="True" />
+                <Node name="User" expanded="True" />
+              </Node>
+              <Node name="Cosourcing.RH.Domain" expanded="True" />
+              <Node name="Cosourcing.RH.Services" expanded="True">
+                <Node name="User" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>

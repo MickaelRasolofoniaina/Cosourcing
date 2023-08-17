@@ -22,6 +22,7 @@ public class Startup
     public void ConfigureServices(IServiceCollection services)
     {
         var allowedOrigins = new HashSet<string>(Configuration.GetValue<string[]>("AllowedHosts") ?? Array.Empty<string>());
+        var dbConnectionString = Configuration.GetConnectionString("Db") ?? "";
 
         services.AddCors(options =>
                options
@@ -35,17 +36,12 @@ public class Startup
         {
             c.SwaggerDoc("v1", new OpenApiInfo
             {
-                Title = "Hello Elton Cnam Services API",
+                Title = "Cosourcing RH Services API",
                 Version = "v1"
             });
         });
 
-        //FirebaseApp.Create(new AppOptions
-        //{
-        //    Credential = GoogleCredential.FromFile(
-        //          Path.Combine(Directory.GetCurrentDirectory(),
-        //              @"AppData/firebase/hello-elton-firebase-adminsdk-4cr8q-9d7aa35a6b.json"))
-        //});
+        services.ConfigureServices(dbConnectionString);
     }
 
     public void ConfigureContainer(ContainerBuilder containerBuilder)
