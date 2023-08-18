@@ -286,6 +286,7 @@
       "Cosourcing.RH.DataAccess/1.0.0": {
         "dependencies": {
           "Cosourcing.RH.Contracts": "1.0.0",
+          "Cosourcing.RH.Domain": "1.0.0",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.4"
         },
         "runtime": {

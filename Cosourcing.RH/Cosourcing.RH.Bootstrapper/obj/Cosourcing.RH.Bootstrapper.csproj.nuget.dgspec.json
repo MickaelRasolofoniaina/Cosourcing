@@ -163,6 +163,9 @@
             "projectReferences": {
               "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Contracts/Cosourcing.RH.Contracts.csproj": {
                 "projectPath": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Contracts/Cosourcing.RH.Contracts.csproj"
+              },
+              "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj": {
+                "projectPath": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj"
               }
             }
           }

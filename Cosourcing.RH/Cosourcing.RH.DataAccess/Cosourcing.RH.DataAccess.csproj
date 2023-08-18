@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Cosourcing.RH.Contracts\Cosourcing.RH.Contracts.csproj" />
+    <ProjectReference Include="..\Cosourcing.RH.Domain\Cosourcing.RH.Domain.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="User\" />

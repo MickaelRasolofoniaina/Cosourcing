@@ -15,11 +15,9 @@ namespace Cosourcing.RH.DataAccess.User
             _userDbContext = userDbContext;
         }
 
-        public void Add(UserModel user)
+        public Task<UserModel[]> GetAllUsers()
         {
-            user.Id = Guid.NewGuid();
-
-            _userDbContext.Add(user);
+            return _userDbContext.ToArrayAsync();
         }
     }
 }

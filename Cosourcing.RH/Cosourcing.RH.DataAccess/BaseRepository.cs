@@ -2,6 +2,7 @@
 using Cosourcing.RH.Contracts.DataAccess;
 using Cosourcing.RH.DataAccess.Context;
 using Cosourcing.RH.Domain;
+using Cosourcing.RH.Domain.Exception;
 using Npgsql.TypeMapping;
 
 namespace Cosourcing.RH.DataAccess
@@ -26,6 +27,22 @@ namespace Cosourcing.RH.DataAccess
 
 			_rhDbContext.Add<T>(obj);
 		}
-	}
+
+        public ValueTask<T?> GetById<T>(Guid id) where T : BaseModel
+		{
+			return _rhDbContext.FindAsync<T>(id);
+
+		}
+
+        public async void Delete<T>(Guid id) where T : BaseModel
+        {
+			var entity = await GetById<T>(id);
+
+			if(entity != null)
+			{
+                entity.Deleted = true;
+            }
+        }
+    }
 }
 

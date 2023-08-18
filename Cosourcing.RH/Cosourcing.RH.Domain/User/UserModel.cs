@@ -7,17 +7,21 @@ namespace Cosourcing.RH.Domain.User
 		public string LastName { get; set; }
 		public string FirstName { get; set; }
 		public DateTime Birthday { get; set; }
+        public string Email { get; set; }
 
-		public UserModel(
+        public UserModel(
 			Guid id,
+			bool deleted,
 			string lastName,
 			string firstName,
-			DateTime birthday
-		) : base(id)
+			DateTime birthday,
+			string email
+		) : base(id, deleted)
 		{
 			LastName = lastName;
 			FirstName = firstName;
 			Birthday = birthday;
+			Email = email;
 		}
 	}
 }
