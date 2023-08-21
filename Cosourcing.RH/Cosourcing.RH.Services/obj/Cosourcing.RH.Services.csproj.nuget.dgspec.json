@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Services/Cosourcing.RH.Services.csproj": {}
+    "/home/herisitraka/Documents/workspace/sandbox/Cosourcing/Cosourcing.RH/Cosourcing.RH.Services/Cosourcing.RH.Services.csproj": {}
   },
   "projects": {
-    "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Contracts/Cosourcing.RH.Contracts.csproj": {
+    "/home/herisitraka/Documents/workspace/sandbox/Cosourcing/Cosourcing.RH/Cosourcing.RH.Contracts/Cosourcing.RH.Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Contracts/Cosourcing.RH.Contracts.csproj",
+        "projectUniqueName": "/home/herisitraka/Documents/workspace/sandbox/Cosourcing/Cosourcing.RH/Cosourcing.RH.Contracts/Cosourcing.RH.Contracts.csproj",
         "projectName": "Cosourcing.RH.Contracts",
-        "projectPath": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Contracts/Cosourcing.RH.Contracts.csproj",
-        "packagesPath": "/Users/mickael/.nuget/packages/",
-        "outputPath": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Contracts/obj/",
+        "projectPath": "/home/herisitraka/Documents/workspace/sandbox/Cosourcing/Cosourcing.RH/Cosourcing.RH.Contracts/Cosourcing.RH.Contracts.csproj",
+        "packagesPath": "/home/herisitraka/.nuget/packages/",
+        "outputPath": "/home/herisitraka/Documents/workspace/sandbox/Cosourcing/Cosourcing.RH/Cosourcing.RH.Contracts/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/mickael/.nuget/NuGet/NuGet.Config"
+          "/home/herisitraka/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -26,8 +26,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj": {
-                "projectPath": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj"
+              "/home/herisitraka/Documents/workspace/sandbox/Cosourcing/Cosourcing.RH/Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj": {
+                "projectPath": "/home/herisitraka/Documents/workspace/sandbox/Cosourcing/Cosourcing.RH/Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj"
               }
             }
           }
@@ -57,21 +57,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.200/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/216/sdk/7.0.306/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.DataAccess/Cosourcing.RH.DataAccess.csproj": {
+    "/home/herisitraka/Documents/workspace/sandbox/Cosourcing/Cosourcing.RH/Cosourcing.RH.DataAccess/Cosourcing.RH.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.DataAccess/Cosourcing.RH.DataAccess.csproj",
+        "projectUniqueName": "/home/herisitraka/Documents/workspace/sandbox/Cosourcing/Cosourcing.RH/Cosourcing.RH.DataAccess/Cosourcing.RH.DataAccess.csproj",
         "projectName": "Cosourcing.RH.DataAccess",
-        "projectPath": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.DataAccess/Cosourcing.RH.DataAccess.csproj",
-        "packagesPath": "/Users/mickael/.nuget/packages/",
-        "outputPath": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.DataAccess/obj/",
+        "projectPath": "/home/herisitraka/Documents/workspace/sandbox/Cosourcing/Cosourcing.RH/Cosourcing.RH.DataAccess/Cosourcing.RH.DataAccess.csproj",
+        "packagesPath": "/home/herisitraka/.nuget/packages/",
+        "outputPath": "/home/herisitraka/Documents/workspace/sandbox/Cosourcing/Cosourcing.RH/Cosourcing.RH.DataAccess/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/mickael/.nuget/NuGet/NuGet.Config"
+          "/home/herisitraka/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -83,11 +83,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Contracts/Cosourcing.RH.Contracts.csproj": {
-                "projectPath": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Contracts/Cosourcing.RH.Contracts.csproj"
+              "/home/herisitraka/Documents/workspace/sandbox/Cosourcing/Cosourcing.RH/Cosourcing.RH.Contracts/Cosourcing.RH.Contracts.csproj": {
+                "projectPath": "/home/herisitraka/Documents/workspace/sandbox/Cosourcing/Cosourcing.RH/Cosourcing.RH.Contracts/Cosourcing.RH.Contracts.csproj"
               },
-              "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj": {
-                "projectPath": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj"
+              "/home/herisitraka/Documents/workspace/sandbox/Cosourcing/Cosourcing.RH/Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj": {
+                "projectPath": "/home/herisitraka/Documents/workspace/sandbox/Cosourcing/Cosourcing.RH/Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj"
               }
             }
           }
@@ -123,21 +123,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.200/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/216/sdk/7.0.306/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj": {
+    "/home/herisitraka/Documents/workspace/sandbox/Cosourcing/Cosourcing.RH/Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj",
+        "projectUniqueName": "/home/herisitraka/Documents/workspace/sandbox/Cosourcing/Cosourcing.RH/Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj",
         "projectName": "Cosourcing.RH.Domain",
-        "projectPath": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj",
-        "packagesPath": "/Users/mickael/.nuget/packages/",
-        "outputPath": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Domain/obj/",
+        "projectPath": "/home/herisitraka/Documents/workspace/sandbox/Cosourcing/Cosourcing.RH/Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj",
+        "packagesPath": "/home/herisitraka/.nuget/packages/",
+        "outputPath": "/home/herisitraka/Documents/workspace/sandbox/Cosourcing/Cosourcing.RH/Cosourcing.RH.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/mickael/.nuget/NuGet/NuGet.Config"
+          "/home/herisitraka/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -176,21 +176,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.200/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/216/sdk/7.0.306/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Services/Cosourcing.RH.Services.csproj": {
+    "/home/herisitraka/Documents/workspace/sandbox/Cosourcing/Cosourcing.RH/Cosourcing.RH.Services/Cosourcing.RH.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Services/Cosourcing.RH.Services.csproj",
+        "projectUniqueName": "/home/herisitraka/Documents/workspace/sandbox/Cosourcing/Cosourcing.RH/Cosourcing.RH.Services/Cosourcing.RH.Services.csproj",
         "projectName": "Cosourcing.RH.Services",
-        "projectPath": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Services/Cosourcing.RH.Services.csproj",
-        "packagesPath": "/Users/mickael/.nuget/packages/",
-        "outputPath": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Services/obj/",
+        "projectPath": "/home/herisitraka/Documents/workspace/sandbox/Cosourcing/Cosourcing.RH/Cosourcing.RH.Services/Cosourcing.RH.Services.csproj",
+        "packagesPath": "/home/herisitraka/.nuget/packages/",
+        "outputPath": "/home/herisitraka/Documents/workspace/sandbox/Cosourcing/Cosourcing.RH/Cosourcing.RH.Services/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/mickael/.nuget/NuGet/NuGet.Config"
+          "/home/herisitraka/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -202,11 +202,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Contracts/Cosourcing.RH.Contracts.csproj": {
-                "projectPath": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Contracts/Cosourcing.RH.Contracts.csproj"
+              "/home/herisitraka/Documents/workspace/sandbox/Cosourcing/Cosourcing.RH/Cosourcing.RH.Contracts/Cosourcing.RH.Contracts.csproj": {
+                "projectPath": "/home/herisitraka/Documents/workspace/sandbox/Cosourcing/Cosourcing.RH/Cosourcing.RH.Contracts/Cosourcing.RH.Contracts.csproj"
               },
-              "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.DataAccess/Cosourcing.RH.DataAccess.csproj": {
-                "projectPath": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.DataAccess/Cosourcing.RH.DataAccess.csproj"
+              "/home/herisitraka/Documents/workspace/sandbox/Cosourcing/Cosourcing.RH/Cosourcing.RH.DataAccess/Cosourcing.RH.DataAccess.csproj": {
+                "projectPath": "/home/herisitraka/Documents/workspace/sandbox/Cosourcing/Cosourcing.RH/Cosourcing.RH.DataAccess/Cosourcing.RH.DataAccess.csproj"
               }
             }
           }
@@ -236,7 +236,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.200/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/216/sdk/7.0.306/RuntimeIdentifierGraph.json"
         }
       }
     }
