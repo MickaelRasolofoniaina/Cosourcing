@@ -6,66 +6,24 @@
     <String>Cosourcing.RH.Api/Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj</String>
     <String>Cosourcing.RH.Api/Cosourcing.RH.Services/Cosourcing.RH.Services.csproj</String>
   </DisabledProjects>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Cosourcing.RH.Domain/BaseModel.cs">
-    <Files>
-      <File FileName="Cosourcing.RH.DataAccess/BaseRepository.cs" Line="43" Column="39" />
-      <File FileName="Cosourcing.RH.Contracts/DataAccess/IBaseRepository.cs" Line="14" Column="28" />
-      <File FileName="Cosourcing.RH.Api/Controllers/User/UserController.cs" Line="76" Column="14" />
-      <File FileName="Cosourcing.RH.Services/User/UserService.cs" Line="74" Column="32" />
-      <File FileName="Cosourcing.RH.Contracts/Services/User/IUserService.cs" Line="12" Column="36" />
-      <File FileName="Cosourcing.RH.DataAccess/User/UserRepository.cs" Line="18" Column="45" />
-      <File FileName="Cosourcing.RH.Contracts/DataAccess/User/IUserRepository.cs" Line="8" Column="39" />
-      <File FileName="Cosourcing.RH.Domain/Request/User/UpdateEmailRequest.cs" Line="10" Column="18" />
-      <File FileName="Cosourcing.RH.Domain/BaseModel.cs" Line="8" Column="36" />
-      <File FileName="Cosourcing.RH.Domain/User/UserModel.cs" Line="19" Column="23" />
-    </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="Cosourcing" expanded="True">
-            <Node name="Cosourcing.RH" expanded="True">
-              <Node name="Cosourcing.RH.Api" expanded="True">
-                <Node name="Controllers" expanded="True">
-                  <Node name="User" expanded="True" />
-                </Node>
-              </Node>
-              <Node name="Cosourcing.RH.Contracts" expanded="True">
-                <Node name="DataAccess" expanded="True">
-                  <Node name="User" expanded="True" />
-                </Node>
-                <Node name="Services" expanded="True">
-                  <Node name="User" expanded="True" />
-                </Node>
-              </Node>
-              <Node name="Cosourcing.RH.DataAccess" expanded="True">
-                <Node name="Dependencies" expanded="True">
-                  <Node name="ProjectDependencies" expanded="True" />
-                </Node>
-                <Node name="User" expanded="True" />
-              </Node>
-              <Node name="Cosourcing.RH.Domain" expanded="True">
-                <Node name="Request" expanded="True">
-                  <Node name="User" expanded="True" />
-                </Node>
-                <Node name="User" expanded="True" />
-                <Node name="BaseModel.cs" selected="True" />
-              </Node>
-              <Node name="Cosourcing.RH.Services" expanded="True">
-                <Node name="User" expanded="True" />
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
-  </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Cosourcing.RH.Cosourcing.RH.Api PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.DataAccess/BaseRepository.cs" relfile="Cosourcing.RH.DataAccess/BaseRepository.cs" line="41" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Cosourcing.RH.Cosourcing.RH.Api PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Cosourcing" expanded="True">
+            <Node name="Cosourcing.RH" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
 </Properties>
