@@ -1,4 +1,8 @@
-﻿<Properties StartupConfiguration="{5D3BE94A-8BBB-478C-8002-0F60A4242B38}|https">
+﻿<Properties StartupConfiguration="{5D3BE94A-8BBB-478C-8002-0F60A4242B38}|Default">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <Breakpoint file="/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.DataAccess/BaseRepository.cs" relfile="Cosourcing.RH.DataAccess/BaseRepository.cs" line="41" column="1" />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <DisabledProjects>
     <String>Cosourcing.RH.Api/Cosourcing.RH.Bootstrapper/Cosourcing.RH.Bootstrapper.csproj</String>
     <String>Cosourcing.RH.Api/Cosourcing.RH.Contracts/Cosourcing.RH.Contracts.csproj</String>
@@ -6,15 +10,8 @@
     <String>Cosourcing.RH.Api/Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj</String>
     <String>Cosourcing.RH.Api/Cosourcing.RH.Services/Cosourcing.RH.Services.csproj</String>
   </DisabledProjects>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Cosourcing.RH.Cosourcing.RH.Api PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.DataAccess/BaseRepository.cs" relfile="Cosourcing.RH.DataAccess/BaseRepository.cs" line="41" column="1" />
-    </BreakpointStore>
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Cosourcing.RH.Cosourcing.RH.Utility FirstBuild="True" />
   <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
@@ -26,4 +23,6 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Cosourcing.RH.Cosourcing.RH.Api PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MultiItemStartupConfigurations />
 </Properties>
