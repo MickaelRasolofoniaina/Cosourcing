@@ -9,20 +9,20 @@ namespace Cosourcing.RH.Domain.Societe
         public string Adresse { get; set; }
         public DateTime DateDeCreation { get; set; }
         public string FormeJuridique { get; set; }
-        public int NumeroStatistique { get; set; }
-        public int Nif { get; set; }
+        public string NumeroStatistique { get; set; }
+        public string Nif { get; set; }
         public string Activite { get; set; }
         public string NomResponsable { get; set; }
         public string PrenomResponsable { get; set; }
         public string QualiteResponsable { get; set; }
-        public int CodeBanque1 { get; set; }
+        public string CodeBanque1 { get; set; }
         public string NomBanque1 { get; set; }
         public string AdresseBanque1 { get; set; }
-        public int IbanBanque1 { get; set; }
-        public int CodeBanque2 { get; set; }
+        public string IbanBanque1 { get; set; }
+        public string CodeBanque2 { get; set; }
         public string NomBanque2 { get; set; }
         public string AdresseBanque2 { get; set; }
-        public int IbanBanque2 { get; set; }
+        public string IbanBanque2 { get; set; }
         public int NombreEtablissement { get; set; }
         public string NomOrganismeSocial { get; set; }
         public string NumeroAffiliationOrganismeSocial { get; set; }
@@ -41,20 +41,20 @@ namespace Cosourcing.RH.Domain.Societe
             string adresse,
             DateTime dateDeCreation,
             string formeJuridique,
-            int numeroStatistique,
-            int nif,
+            string numeroStatistique,
+            string nif,
             string activite,
             string nomResponsable,
             string prenomResponsable,
             string qualiteResponsable,
-            int codeBanque1,
+            string codeBanque1,
             string nomBanque1,
             string adresseBanque1,
-            int ibanBanque1,
-            int codeBanque2,
+            string ibanBanque1,
+            string codeBanque2,
             string nomBanque2,
             string adresseBanque2,
-            int ibanBanque2,
+            string ibanBanque2,
             int nombreEtablissement,
             string nomOrganismeSocial,
             string numeroAffiliationOrganismeSocial,

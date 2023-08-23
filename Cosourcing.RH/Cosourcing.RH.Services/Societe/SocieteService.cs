@@ -4,6 +4,7 @@ using Cosourcing.RH.Contracts.DataAccess.Societe;
 using Cosourcing.RH.Contracts.Services.Societe;
 using Cosourcing.RH.Domain.Societe;
 using Cosourcing.RH.Domain.Exception;
+using Cosourcing.RH.Utility;
 
 namespace Cosourcing.RH.Services.Societe
 {
@@ -21,18 +22,18 @@ namespace Cosourcing.RH.Services.Societe
             _societeRepository = societeRepository;
         }
 
-      /*  private static void ValidateData(SocieteModel societe)
+        private static void ValidateData(SocieteModel societe)
         {
-            if (!user.Email.Contains("@gmail.com"))
+            if (!Validator.IsValidNomCommercial(societe.NomCommercial))
             {
                 throw new InvalidModelDataException("Please enter gmail");
             }
         }
-      */
+      
 
         public Task<int> Save(SocieteModel societe)
         {
-           // ValidateData(societe);
+           ValidateData(societe);
 
             _baseRepository.Add<SocieteModel>(societe);
 

@@ -306,6 +306,16 @@
         "runtime": {
           "bin/placeholder/Cosourcing.RH.Domain.dll": {}
         }
+      },
+      "Cosourcing.RH.Utility/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Cosourcing.RH.Utility.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Cosourcing.RH.Utility.dll": {}
+        }
       }
     }
   },
@@ -717,12 +727,18 @@
       "type": "project",
       "path": "../Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj",
       "msbuildProject": "../Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj"
+    },
+    "Cosourcing.RH.Utility/1.0.0": {
+      "type": "project",
+      "path": "../Cosourcing.RH.Utility/Cosourcing.RH.Utility.csproj",
+      "msbuildProject": "../Cosourcing.RH.Utility/Cosourcing.RH.Utility.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
       "Cosourcing.RH.Contracts >= 1.0.0",
-      "Cosourcing.RH.DataAccess >= 1.0.0"
+      "Cosourcing.RH.DataAccess >= 1.0.0",
+      "Cosourcing.RH.Utility >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -757,6 +773,9 @@
             },
             "D:\\Gestion de Paye cosourcing\\backend\\Cosourcing\\Cosourcing.RH\\Cosourcing.RH.DataAccess\\Cosourcing.RH.DataAccess.csproj": {
               "projectPath": "D:\\Gestion de Paye cosourcing\\backend\\Cosourcing\\Cosourcing.RH\\Cosourcing.RH.DataAccess\\Cosourcing.RH.DataAccess.csproj"
+            },
+            "D:\\Gestion de Paye cosourcing\\backend\\Cosourcing\\Cosourcing.RH\\Cosourcing.RH.Utility\\Cosourcing.RH.Utility.csproj": {
+              "projectPath": "D:\\Gestion de Paye cosourcing\\backend\\Cosourcing\\Cosourcing.RH\\Cosourcing.RH.Utility\\Cosourcing.RH.Utility.csproj"
             }
           }
         }

@@ -1,6 +1,6 @@
 ﻿using System;
 using Cosourcing.RH.Contracts.Services.Societe;
-using Cosourcing.RH.Domain.Request.Societe;
+//using Cosourcing.RH.Domain.Request.Societe;
 using Cosourcing.RH.Domain.Societe;
 using Microsoft.AspNetCore.Mvc;
 
