@@ -17,10 +17,6 @@
     <None Remove="Services\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DataAccess\" />
-    <Folder Include="Services\" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Cosourcing.RH.Services\Cosourcing.RH.Services.csproj" />
     <ProjectReference Include="..\Cosourcing.RH.DataAccess\Cosourcing.RH.DataAccess.csproj" />
   </ItemGroup>

@@ -1,0 +1,94 @@
+﻿using System;
+
+namespace Cosourcing.RH.Domain.Societe
+{
+    public class SocieteModel : BaseModel
+    {
+        public string RaisonSociale { get; set; }
+        public string NomCommercial { get; set; }
+        public string Adresse { get; set; }
+        public DateTime DateDeCreation { get; set; }
+        public string FormeJuridique { get; set; }
+        public int NumeroStatistique { get; set; }
+        public int Nif { get; set; }
+        public string Activite { get; set; }
+        public string NomResponsable { get; set; }
+        public string PrenomResponsable { get; set; }
+        public string QualiteResponsable { get; set; }
+        public int CodeBanque1 { get; set; }
+        public string NomBanque1 { get; set; }
+        public string AdresseBanque1 { get; set; }
+        public int IbanBanque1 { get; set; }
+        public int CodeBanque2 { get; set; }
+        public string NomBanque2 { get; set; }
+        public string AdresseBanque2 { get; set; }
+        public int IbanBanque2 { get; set; }
+        public int NombreEtablissement { get; set; }
+        public string NomOrganismeSocial { get; set; }
+        public string NumeroAffiliationOrganismeSocial { get; set; }
+        public string NomServiceImpot { get; set; }
+        public string NumeroAffiliation { get; set; }
+        public string Commentaire { get; set; }
+
+
+
+
+        public SocieteModel(
+            Guid id,
+          //  bool deleted,
+            string raisonSociale,
+            string nomCommercial,
+            string adresse,
+            DateTime dateDeCreation,
+            string formeJuridique,
+            int numeroStatistique,
+            int nif,
+            string activite,
+            string nomResponsable,
+            string prenomResponsable,
+            string qualiteResponsable,
+            int codeBanque1,
+            string nomBanque1,
+            string adresseBanque1,
+            int ibanBanque1,
+            int codeBanque2,
+            string nomBanque2,
+            string adresseBanque2,
+            int ibanBanque2,
+            int nombreEtablissement,
+            string nomOrganismeSocial,
+            string numeroAffiliationOrganismeSocial,
+            string nomServiceImpot,
+            string numeroAffiliation,
+            string commentaire
+        ) : base(id)
+        {
+            RaisonSociale = raisonSociale;
+            NomCommercial = nomCommercial;
+            Adresse = adresse;
+            DateDeCreation = dateDeCreation;
+            FormeJuridique = formeJuridique;
+            NumeroStatistique = numeroStatistique;
+            Nif = nif;
+            Activite = activite;
+            NomResponsable = nomResponsable;
+            PrenomResponsable = prenomResponsable;
+            QualiteResponsable = qualiteResponsable;
+            CodeBanque1 = codeBanque1;
+            NomBanque1 = nomBanque1;
+            AdresseBanque1 = adresseBanque1;
+            IbanBanque1 = ibanBanque1;
+            CodeBanque2 = codeBanque2;
+            NomBanque2 = nomBanque2;
+            AdresseBanque2 = adresseBanque2;
+            IbanBanque2 = ibanBanque2;
+            NombreEtablissement = nombreEtablissement;
+            NomOrganismeSocial = nomOrganismeSocial;
+            NumeroAffiliationOrganismeSocial = numeroAffiliationOrganismeSocial;
+            NomServiceImpot = nomServiceImpot;
+            NumeroAffiliation = numeroAffiliation;
+            Commentaire = commentaire;
+
+        }
+    }
+}
