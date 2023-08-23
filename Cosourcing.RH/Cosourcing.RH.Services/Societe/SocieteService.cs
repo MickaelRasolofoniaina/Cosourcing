@@ -26,7 +26,7 @@ namespace Cosourcing.RH.Services.Societe
         {
             if (!Validator.IsValidNomCommercial(societe.NomCommercial))
             {
-                throw new InvalidModelDataException("Please enter gmail");
+                throw new InvalidModelDataException("Veuiller inserer un nom commercial valide !");
             }
         }
       
