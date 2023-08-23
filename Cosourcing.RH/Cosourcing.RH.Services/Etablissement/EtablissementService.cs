@@ -23,9 +23,9 @@ namespace Cosourcing.RH.Services.Etablissement
 
 		private static void ValidateData(EtablissementModel etablissement)
 		{
-            if (etablissement.Montant > 0)
+            if (etablissement.GetType() != typeof(EtablissementModel))
             {
-                throw new InvalidModelDataException("Please enter a number positive");
+                throw new InvalidModelDataException("Please enter a etablissement valid");
             }
         }
 
