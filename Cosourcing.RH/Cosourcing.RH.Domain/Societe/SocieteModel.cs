@@ -28,9 +28,6 @@
         public string NumeroAffiliation { get; set; }
         public string Commentaire { get; set; }
 
-
-
-
         public SocieteModel(
             Guid id,
             bool deleted,
@@ -86,7 +83,6 @@
             NomServiceImpot = nomServiceImpot;
             NumeroAffiliation = numeroAffiliation;
             Commentaire = commentaire;
-
         }
     }
 }

@@ -1,24 +1,38 @@
-﻿namespace Cosourcing.RH.Utility;
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 
+namespace Cosourcing.RH.Utility;
 
 public static class Validator
 {
-    // Example
-    public static Boolean isEmailValid(string email)
+    public static bool EstRenseigne(string champ)
     {
-        return false;
+        return !String.IsNullOrEmpty(champ);
     }
 
-    public static bool IsValidNomCommercial(string NomCommercial)
+    public static bool EstChiffreUniquement(string champ)
     {
-       
-        string pattern = "^[a-zA-Z ]+$";
-        return Regex.IsMatch(NomCommercial, pattern);
+        string pattern = "[0-9]*";
+
+        return Regex.IsMatch(champ, pattern);
     }
 
-   
+    public static bool EstNChiffreUniquement(string champ, int n)
+    {
+        string pattern = "[0-9]{" + n + "}";
 
+        return Regex.IsMatch(champ, pattern);
+    }
 
+    public static bool EstNomPersonneValide(string nom)
+    {
+        string pattern = "/^[a-z ,.'-]+$/i";
+
+        return Regex.IsMatch(nom, pattern);
+    }
+
+    public static bool EstPositif(int nombre)
+    {
+        return nombre > 0;
+    }
 }
 
