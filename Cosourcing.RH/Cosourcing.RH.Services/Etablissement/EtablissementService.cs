@@ -23,9 +23,84 @@ namespace Cosourcing.RH.Services.Etablissement
 
 		private static void ValidateData(EtablissementModel etablissement)
 		{
-            if (!Validator.EstRenseigne(etablissement)
+            if (!Validator.EstRenseigne(etablissement.Nom))
             {
-                
+                throw new InvalidModelDataException("Veuillez indiquer le nom de l'établissement");
+            }
+
+            if (!Validator.EstRenseigne(etablissement.Adresse))
+            {
+                throw new InvalidModelDataException("Veuillez indiquer l'addresse de l'établissement");
+            }
+
+            if (!Validator.EstRenseigne(etablissement.Activite))
+            {
+                throw new InvalidModelDataException("Veuillez indiquer l'activité de l'établissement");
+            }
+
+            if (!Validator.EstRenseigne(etablissement.NomResponsable))
+            {
+                throw new InvalidModelDataException("Veuillez indiquer le nom du responsable de l'établissement");
+            }
+
+            if (!Validator.EstNomPersonneValide(etablissement.NomResponsable))
+            {
+                throw new InvalidModelDataException("Le nom du responsable de l'établissement n'est pas valide");
+            }
+
+            if (Validator.EstRenseigne(etablissement.PrenomResponsable) && !Validator.EstNomPersonneValide(etablissement.PrenomResponsable))
+            {
+                throw new InvalidModelDataException("Le prénom du responsable de l'établissement n'est pas valide");
+            }
+
+            if (!Validator.EstRenseigne(etablissement.QualiteResponsable))
+            {
+                throw new InvalidModelDataException("Veuillez indiquer la qualité du responsable de l'établissement");
+            }
+
+            if(Validator.EstRenseigne(etablissement.CodeBanque1) && !Validator.EstNChiffreUniquement(etablissement.CodeBanque1, 2))
+            {
+                throw new InvalidModelDataException("Code banque invalide, veuillez insérer un code à 2 chiffres uniquement");
+            }
+
+            if (Validator.EstRenseigne(etablissement.Iban1) && !Validator.EstNChiffreUniquement(etablissement.Iban1, 23))
+            {
+                throw new InvalidModelDataException("Iban invalide, veuillez insérer un code à 23 chiffres uniquement");
+            }
+
+            if (Validator.EstRenseigne(etablissement.CodeBanque2) && !Validator.EstNChiffreUniquement(etablissement.CodeBanque2, 2))
+            {
+                throw new InvalidModelDataException("Code banque invalide, veuillez insérer un code à 2 chiffres uniquement");
+            }
+
+            if (Validator.EstRenseigne(etablissement.Iban2) && !Validator.EstNChiffreUniquement(etablissement.Iban2, 23))
+            {
+                throw new InvalidModelDataException("Iban invalide, veuillez insérer un code à 23 chiffres uniquement");
+            }
+
+            if (!Validator.EstPositif(etablissement.NombreEtablissement))
+            {
+                throw new InvalidModelDataException("Nombre établissement invalide, veuillez insérer un nombre positif uniquement");
+            }
+
+            if (!Validator.EstRenseigne(etablissement.NomOrganismeSociale))
+            {
+                throw new InvalidModelDataException("Veuillez insérer le nom de l'organisme social de l'établissement");
+            }
+
+            if (!Validator.EstRenseigne(etablissement.NumeroOrganismeSociale))
+            {
+                throw new InvalidModelDataException("Veuillez insérer le numéro d'affiliation de l'organisme social de l'établissement");
+            }
+
+            if (!Validator.EstRenseigne(etablissement.NomServiceImpots))
+            {
+                throw new InvalidModelDataException("Veuillez insérer le nom du service impôt de l'établissement");
+            }
+
+            if (!Validator.EstRenseigne(etablissement.NumeroAffiliationImpots))
+            {
+                throw new InvalidModelDataException("Veuillez insérer le numéro d'affiliation du service impôt de l'établissement");
             }
         }
 
