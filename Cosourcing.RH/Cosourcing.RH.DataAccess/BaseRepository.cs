@@ -1,9 +1,6 @@
-﻿using System;
-using Cosourcing.RH.Contracts.DataAccess;
+﻿using Cosourcing.RH.Contracts.DataAccess;
 using Cosourcing.RH.DataAccess.Context;
 using Cosourcing.RH.Domain;
-using Cosourcing.RH.Domain.Exception;
-using Npgsql.TypeMapping;
 
 namespace Cosourcing.RH.DataAccess
 {

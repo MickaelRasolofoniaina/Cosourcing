@@ -1,6 +1,4 @@
-using System;
 using Cosourcing.RH.Contracts.DataAccess.Etablissement;
-using Cosourcing.RH.DataAccess.Context;
 using Cosourcing.RH.Domain.Etablissement;
 using Microsoft.EntityFrameworkCore;
 
@@ -8,7 +6,7 @@ namespace Cosourcing.RH.DataAccess.Etablissement
 {
 	public class EtablissementRepository : IEtablissementRepository
 	{
-        private DbSet<EtablissementModel> _etablissementDbContext;
+        private readonly DbSet<EtablissementModel> _etablissementDbContext;
 
 		public EtablissementRepository(DbSet<EtablissementModel> etablissementDbContext)
 		{
@@ -17,7 +15,9 @@ namespace Cosourcing.RH.DataAccess.Etablissement
 
         public Task<EtablissementModel[]> GetAllEtablissements()
         {
-            return _etablissementDbContext.ToArrayAsync();
+            return _etablissementDbContext
+                .Where(e => !e.Deleted )
+                .ToArrayAsync();
         }
     }
 }
