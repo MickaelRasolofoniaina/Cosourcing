@@ -1,7 +1,6 @@
 ﻿using Cosourcing.RH.Domain.User;
 using Microsoft.EntityFrameworkCore;
-using Cosourcing.RH.Domain.Etablissement;
-using Cosourcing.RH.Domain.Societe;
+using Cosourcing.RH.Domain.Entite;
 
 namespace Cosourcing.RH.DataAccess.Context
 {

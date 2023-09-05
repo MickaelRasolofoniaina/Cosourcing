@@ -6,4 +6,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Validateur\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Validateur\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cosourcing.RH.Domain\Cosourcing.RH.Domain.csproj" />
+  </ItemGroup>
 </Project>

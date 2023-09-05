@@ -1,5 +1,5 @@
 using Cosourcing.RH.Contracts.DataAccess.Etablissement;
-using Cosourcing.RH.Domain.Etablissement;
+using Cosourcing.RH.Domain.Entite;
 using Microsoft.EntityFrameworkCore;
 
 namespace Cosourcing.RH.DataAccess.Etablissement

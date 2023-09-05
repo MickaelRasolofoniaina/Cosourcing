@@ -1,7 +1,5 @@
-﻿using System;
-using Cosourcing.RH.Contracts.DataAccess.Societe;
-using Cosourcing.RH.DataAccess.Context;
-using Cosourcing.RH.Domain.Societe;
+﻿using Cosourcing.RH.Contracts.DataAccess.Societe;
+using Cosourcing.RH.Domain.Entite;
 using Microsoft.EntityFrameworkCore;
 
 namespace Cosourcing.RH.DataAccess.Societe

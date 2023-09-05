@@ -1,5 +1,4 @@
-using System;
-using Cosourcing.RH.Domain.Etablissement;
+using Cosourcing.RH.Domain.Entite;
 
 namespace Cosourcing.RH.Contracts.Services.Etablissement
 {

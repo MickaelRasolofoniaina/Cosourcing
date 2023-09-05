@@ -1,4 +1,3 @@
-using System;
 using Autofac;
 using Cosourcing.RH.Contracts.Services.Etablissement;
 using Cosourcing.RH.Services.Etablissement;

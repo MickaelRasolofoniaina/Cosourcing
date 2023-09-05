@@ -1,5 +1,4 @@
-﻿using System;
-using Autofac;
+﻿using Autofac;
 using Cosourcing.RH.Contracts.DataAccess.User;
 using Cosourcing.RH.DataAccess.User;
 

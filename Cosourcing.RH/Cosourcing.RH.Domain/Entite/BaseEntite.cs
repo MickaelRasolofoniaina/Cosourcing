@@ -1,11 +1,8 @@
-namespace Cosourcing.RH.Domain.Etablissement
+﻿
+namespace Cosourcing.RH.Domain.Entite
 {
-	public class EtablissementModel : BaseModel
+	public class BaseEntite : BaseModel
 	{
-		
-        public string Nom { get; set; }
-        public string Adresse { get; set; }
-        public string Activite { get; set; }
         public string NomResponsable { get; set; }
         public string PrenomResponsable { get; set; }
         public string QualiteResponsable { get; set; }
@@ -22,11 +19,8 @@ namespace Cosourcing.RH.Domain.Etablissement
         public string NumeroAffiliationImpots { get; set; }
         public string Commentaire { get; set; }
 
-        public EtablissementModel(
+        public BaseEntite(
             Guid id,
-		    string nom,
-            string adresse,
-            string activite,
             string nomResponsable,
             string prenomResponsable,
             string qualiteResponsable,
@@ -42,11 +36,8 @@ namespace Cosourcing.RH.Domain.Etablissement
             string nomServiceImpots,
             string numeroAffiliationImpots,
             string commentaire
-		) : base(id)
+        ) : base(id)
 		{
-            Nom = nom;
-            Adresse = adresse;
-            Activite = activite;
             NomResponsable = nomResponsable;
             PrenomResponsable = prenomResponsable;
             QualiteResponsable = qualiteResponsable;
@@ -62,7 +53,7 @@ namespace Cosourcing.RH.Domain.Etablissement
             NomServiceImpots = nomServiceImpots;
             NumeroAffiliationImpots = numeroAffiliationImpots;
             Commentaire = commentaire;
-		}
+        }
 	}
 }
 

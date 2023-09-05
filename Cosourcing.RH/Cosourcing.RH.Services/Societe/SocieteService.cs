@@ -1,17 +1,17 @@
-﻿using System;
-using Cosourcing.RH.Contracts.DataAccess;
+﻿using Cosourcing.RH.Contracts.DataAccess;
 using Cosourcing.RH.Contracts.DataAccess.Societe;
 using Cosourcing.RH.Contracts.Services.Societe;
-using Cosourcing.RH.Domain.Societe;
+using Cosourcing.RH.Domain.Entite;
 using Cosourcing.RH.Domain.Exception;
 using Cosourcing.RH.Utility;
+using Cosourcing.RH.Utility.Validateur;
 
 namespace Cosourcing.RH.Services.Societe
 {
     public class SocieteService : ISocieteService
     {
-        private IBaseRepository _baseRepository;
-        private ISocieteRepository _societeRepository;
+        private readonly IBaseRepository _baseRepository;
+        private readonly ISocieteRepository _societeRepository;
 
         public SocieteService(
             IBaseRepository baseRepository,
@@ -22,43 +22,65 @@ namespace Cosourcing.RH.Services.Societe
             _societeRepository = societeRepository;
         }
 
-        private static void ValidateData(SocieteModel societe)
+        private static void ValiderSociete(SocieteModel societe)
         {
-           
+            if(!ValidateurGenerique.EstRenseigne(societe.RaisonSociale))
+            {
+                throw new InvalidModelDataException("Veuillez indiquer la raison sociale de la société");
+            }
+
+            if(!ValidateurGenerique.EstRenseigne(societe.NomCommercial))
+            {
+                throw new InvalidModelDataException("Veuillez indiquer le nom commerciale de la société");
+            }
+
+            if(!ValidateurGenerique.EstRenseigne(societe.Adresse))
+            {
+                throw new InvalidModelDataException("Veuillez indiquer l'adresse de la société");
+            }
+
+            if(!ValidateurGenerique.EstDatePassee(societe.DateDeCreation))
+            {
+                throw new InvalidModelDataException("La date de création de la société doit être dans le passé");
+            }
+
+            if (!ValidateurGenerique.EstRenseigne(societe.FormeJuridique))
+            {
+                throw new InvalidModelDataException("Veuillez indiquer la forme juridique de la société");
+            }
+
+            if (!ValidateurGenerique.EstRenseigne(societe.NumeroStatistique))
+            {
+                throw new InvalidModelDataException("Veuillez indiquer le numéro statistique de la société");
+            }
+
+            if (!ValidateurGenerique.EstChiffreUniquement(societe.NumeroStatistique))
+            {
+                throw new InvalidModelDataException("Numero statistiique invalide, veuillez insérer un numéro statistique en chiffre uniquement");
+            }
+
+            if(!ValidateurGenerique.EstNChiffreUniquement(societe.Nif, 10))
+            {
+                throw new InvalidModelDataException("NIF invalide, veuillez insérer un NIF à 10 chiffres uniquement");
+            }
+
+            if (!ValidateurGenerique.EstRenseigne(societe.Activite))
+            {
+                throw new InvalidModelDataException("Veuillez indiquer l'activité de la société");
+            }
         }
       
 
         public Task<int> Save(SocieteModel societe)
         {
-           ValidateData(societe);
+            ValiderSociete(societe);
 
-            _baseRepository.Add<SocieteModel>(societe);
+            ValidateurEntite.ValiderEntite(societe);
+
+            _baseRepository.Add(societe);
 
             return _baseRepository.Commit();
         }
-
-       /*
-        public async Task<int> UpdateEmail(Guid id, string email)
-        {
-            if (String.IsNullOrEmpty(email))
-            {
-                throw new InvalidModelDataException("Email required");
-            }
-
-            var user = await _baseRepository.GetById<UserModel>(id);
-
-            if (user != null)
-            {
-                user.Email = email;
-
-                return await _baseRepository.Commit();
-            }
-            else
-            {
-                throw new EntityNotFoundException($"Cannot find user with {id}");
-            }
-        }
-       */
 
         public ValueTask<SocieteModel?> GetById(Guid id)
         {
@@ -69,14 +91,13 @@ namespace Cosourcing.RH.Services.Societe
         {
             return _societeRepository.GetAllSocietes();
         }
-/*
-        public Task<int> DeleteUser(Guid id)
+
+        public Task<int> DeleteSociete(Guid id)
         {
-            _baseRepository.Delete<UserModel>(id);
+            _baseRepository.Delete<SocieteModel>(id);
 
             return _baseRepository.Commit();
         }
-*/
     }
 }
 

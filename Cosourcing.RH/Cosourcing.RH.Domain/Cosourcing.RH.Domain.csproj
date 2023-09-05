@@ -11,11 +11,13 @@
     <None Remove="Exception\" />
     <None Remove="Request\" />
     <None Remove="Request\User\" />
+    <None Remove="Entite\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="User\" />
     <Folder Include="Exception\" />
     <Folder Include="Request\" />
     <Folder Include="Request\User\" />
+    <Folder Include="Entite\" />
   </ItemGroup>
 </Project>

@@ -1,5 +1,5 @@
 using Cosourcing.RH.Contracts.Services.Etablissement;
-using Cosourcing.RH.Domain.Etablissement;
+using Cosourcing.RH.Domain.Entite;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Cosourcing.RH.Api.Controllers.Etablissement

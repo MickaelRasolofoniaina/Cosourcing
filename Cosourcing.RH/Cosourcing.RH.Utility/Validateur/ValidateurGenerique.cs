@@ -2,7 +2,7 @@
 
 namespace Cosourcing.RH.Utility;
 
-public static class Validator
+public static class ValidateurGenerique
 {
     public static bool EstRenseigne(string champ)
     {
@@ -33,6 +33,11 @@ public static class Validator
     public static bool EstPositif(int nombre)
     {
         return nombre > 0;
+    }
+
+    public static bool EstDatePassee(DateTime date)
+    {
+        return date < DateTime.Now;
     }
 }
 

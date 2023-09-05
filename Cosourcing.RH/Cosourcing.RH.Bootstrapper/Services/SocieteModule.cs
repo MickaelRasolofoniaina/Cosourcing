@@ -1,5 +1,4 @@
-﻿using System;
-using Autofac;
+﻿using Autofac;
 using Cosourcing.RH.Contracts.Services.Societe;
 using Cosourcing.RH.Services.Societe;
 

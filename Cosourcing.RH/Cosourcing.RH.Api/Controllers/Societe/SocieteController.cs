@@ -1,7 +1,5 @@
-﻿using System;
-using Cosourcing.RH.Contracts.Services.Societe;
-//using Cosourcing.RH.Domain.Request.Societe;
-using Cosourcing.RH.Domain.Societe;
+﻿using Cosourcing.RH.Contracts.Services.Societe;
+using Cosourcing.RH.Domain.Entite;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Cosourcing.RH.Api.Controllers.Societe
@@ -19,7 +17,7 @@ namespace Cosourcing.RH.Api.Controllers.Societe
             _societeService = societeService;
         }
 
-        [Route("save")]
+        [Route("ajouter")]
         [HttpPost]
         public async Task<IActionResult> Save(SocieteModel societe)
         {

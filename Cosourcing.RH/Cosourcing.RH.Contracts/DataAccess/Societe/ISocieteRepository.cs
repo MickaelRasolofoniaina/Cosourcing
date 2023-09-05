@@ -1,5 +1,4 @@
-﻿using System;
-using Cosourcing.RH.Domain.Societe;
+﻿using Cosourcing.RH.Domain.Entite;
 
 namespace Cosourcing.RH.Contracts.DataAccess.Societe
 {
