@@ -1,4 +1,6 @@
 ﻿namespace Cosourcing.RH.Utility;
+using System.Text.RegularExpressions;
+
 
 public static class Validator
 {
@@ -7,5 +9,16 @@ public static class Validator
     {
         return false;
     }
+
+    public static bool IsValidNomCommercial(string NomCommercial)
+    {
+       
+        string pattern = "^[a-zA-Z ]+$";
+        return Regex.IsMatch(NomCommercial, pattern);
+    }
+
+   
+
+
 }
 

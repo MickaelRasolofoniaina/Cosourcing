@@ -13,8 +13,6 @@
     <None Remove="Services\User\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DataAccess\" />
-    <Folder Include="Services\" />
     <Folder Include="DataAccess\User\" />
     <Folder Include="Services\User\" />
   </ItemGroup>

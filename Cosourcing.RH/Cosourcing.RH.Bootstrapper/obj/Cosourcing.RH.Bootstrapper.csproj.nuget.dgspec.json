@@ -1,36 +1,38 @@
 {
   "format": 1,
   "restore": {
-    "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Bootstrapper/Cosourcing.RH.Bootstrapper.csproj": {}
+    "D:\\Gestion de Paye cosourcing\\backend\\Cosourcing\\Cosourcing.RH\\Cosourcing.RH.Bootstrapper\\Cosourcing.RH.Bootstrapper.csproj": {}
   },
   "projects": {
-    "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Bootstrapper/Cosourcing.RH.Bootstrapper.csproj": {
+    "D:\\Gestion de Paye cosourcing\\backend\\Cosourcing\\Cosourcing.RH\\Cosourcing.RH.Bootstrapper\\Cosourcing.RH.Bootstrapper.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Bootstrapper/Cosourcing.RH.Bootstrapper.csproj",
+        "projectUniqueName": "D:\\Gestion de Paye cosourcing\\backend\\Cosourcing\\Cosourcing.RH\\Cosourcing.RH.Bootstrapper\\Cosourcing.RH.Bootstrapper.csproj",
         "projectName": "Cosourcing.RH.Bootstrapper",
-        "projectPath": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Bootstrapper/Cosourcing.RH.Bootstrapper.csproj",
-        "packagesPath": "/Users/mickael/.nuget/packages/",
-        "outputPath": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Bootstrapper/obj/",
+        "projectPath": "D:\\Gestion de Paye cosourcing\\backend\\Cosourcing\\Cosourcing.RH\\Cosourcing.RH.Bootstrapper\\Cosourcing.RH.Bootstrapper.csproj",
+        "packagesPath": "C:\\Users\\Andry\\.nuget\\packages\\",
+        "outputPath": "D:\\Gestion de Paye cosourcing\\backend\\Cosourcing\\Cosourcing.RH\\Cosourcing.RH.Bootstrapper\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/mickael/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Andry\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.DataAccess/Cosourcing.RH.DataAccess.csproj": {
-                "projectPath": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.DataAccess/Cosourcing.RH.DataAccess.csproj"
+              "D:\\Gestion de Paye cosourcing\\backend\\Cosourcing\\Cosourcing.RH\\Cosourcing.RH.DataAccess\\Cosourcing.RH.DataAccess.csproj": {
+                "projectPath": "D:\\Gestion de Paye cosourcing\\backend\\Cosourcing\\Cosourcing.RH\\Cosourcing.RH.DataAccess\\Cosourcing.RH.DataAccess.csproj"
               },
-              "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Services/Cosourcing.RH.Services.csproj": {
-                "projectPath": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Services/Cosourcing.RH.Services.csproj"
+              "D:\\Gestion de Paye cosourcing\\backend\\Cosourcing\\Cosourcing.RH\\Cosourcing.RH.Services\\Cosourcing.RH.Services.csproj": {
+                "projectPath": "D:\\Gestion de Paye cosourcing\\backend\\Cosourcing\\Cosourcing.RH\\Cosourcing.RH.Services\\Cosourcing.RH.Services.csproj"
               }
             }
           }
@@ -78,34 +80,36 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.200/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Contracts/Cosourcing.RH.Contracts.csproj": {
+    "D:\\Gestion de Paye cosourcing\\backend\\Cosourcing\\Cosourcing.RH\\Cosourcing.RH.Contracts\\Cosourcing.RH.Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Contracts/Cosourcing.RH.Contracts.csproj",
+        "projectUniqueName": "D:\\Gestion de Paye cosourcing\\backend\\Cosourcing\\Cosourcing.RH\\Cosourcing.RH.Contracts\\Cosourcing.RH.Contracts.csproj",
         "projectName": "Cosourcing.RH.Contracts",
-        "projectPath": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Contracts/Cosourcing.RH.Contracts.csproj",
-        "packagesPath": "/Users/mickael/.nuget/packages/",
-        "outputPath": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Contracts/obj/",
+        "projectPath": "D:\\Gestion de Paye cosourcing\\backend\\Cosourcing\\Cosourcing.RH\\Cosourcing.RH.Contracts\\Cosourcing.RH.Contracts.csproj",
+        "packagesPath": "C:\\Users\\Andry\\.nuget\\packages\\",
+        "outputPath": "D:\\Gestion de Paye cosourcing\\backend\\Cosourcing\\Cosourcing.RH\\Cosourcing.RH.Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/mickael/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Andry\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj": {
-                "projectPath": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj"
+              "D:\\Gestion de Paye cosourcing\\backend\\Cosourcing\\Cosourcing.RH\\Cosourcing.RH.Domain\\Cosourcing.RH.Domain.csproj": {
+                "projectPath": "D:\\Gestion de Paye cosourcing\\backend\\Cosourcing\\Cosourcing.RH\\Cosourcing.RH.Domain\\Cosourcing.RH.Domain.csproj"
               }
             }
           }
@@ -135,37 +139,39 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.200/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.DataAccess/Cosourcing.RH.DataAccess.csproj": {
+    "D:\\Gestion de Paye cosourcing\\backend\\Cosourcing\\Cosourcing.RH\\Cosourcing.RH.DataAccess\\Cosourcing.RH.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.DataAccess/Cosourcing.RH.DataAccess.csproj",
+        "projectUniqueName": "D:\\Gestion de Paye cosourcing\\backend\\Cosourcing\\Cosourcing.RH\\Cosourcing.RH.DataAccess\\Cosourcing.RH.DataAccess.csproj",
         "projectName": "Cosourcing.RH.DataAccess",
-        "projectPath": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.DataAccess/Cosourcing.RH.DataAccess.csproj",
-        "packagesPath": "/Users/mickael/.nuget/packages/",
-        "outputPath": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.DataAccess/obj/",
+        "projectPath": "D:\\Gestion de Paye cosourcing\\backend\\Cosourcing\\Cosourcing.RH\\Cosourcing.RH.DataAccess\\Cosourcing.RH.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\Andry\\.nuget\\packages\\",
+        "outputPath": "D:\\Gestion de Paye cosourcing\\backend\\Cosourcing\\Cosourcing.RH\\Cosourcing.RH.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/mickael/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Andry\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Contracts/Cosourcing.RH.Contracts.csproj": {
-                "projectPath": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Contracts/Cosourcing.RH.Contracts.csproj"
+              "D:\\Gestion de Paye cosourcing\\backend\\Cosourcing\\Cosourcing.RH\\Cosourcing.RH.Contracts\\Cosourcing.RH.Contracts.csproj": {
+                "projectPath": "D:\\Gestion de Paye cosourcing\\backend\\Cosourcing\\Cosourcing.RH\\Cosourcing.RH.Contracts\\Cosourcing.RH.Contracts.csproj"
               },
-              "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj": {
-                "projectPath": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj"
+              "D:\\Gestion de Paye cosourcing\\backend\\Cosourcing\\Cosourcing.RH\\Cosourcing.RH.Domain\\Cosourcing.RH.Domain.csproj": {
+                "projectPath": "D:\\Gestion de Paye cosourcing\\backend\\Cosourcing\\Cosourcing.RH\\Cosourcing.RH.Domain\\Cosourcing.RH.Domain.csproj"
               }
             }
           }
@@ -201,26 +207,28 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.200/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj": {
+    "D:\\Gestion de Paye cosourcing\\backend\\Cosourcing\\Cosourcing.RH\\Cosourcing.RH.Domain\\Cosourcing.RH.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj",
+        "projectUniqueName": "D:\\Gestion de Paye cosourcing\\backend\\Cosourcing\\Cosourcing.RH\\Cosourcing.RH.Domain\\Cosourcing.RH.Domain.csproj",
         "projectName": "Cosourcing.RH.Domain",
-        "projectPath": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Domain/Cosourcing.RH.Domain.csproj",
-        "packagesPath": "/Users/mickael/.nuget/packages/",
-        "outputPath": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Domain/obj/",
+        "projectPath": "D:\\Gestion de Paye cosourcing\\backend\\Cosourcing\\Cosourcing.RH\\Cosourcing.RH.Domain\\Cosourcing.RH.Domain.csproj",
+        "packagesPath": "C:\\Users\\Andry\\.nuget\\packages\\",
+        "outputPath": "D:\\Gestion de Paye cosourcing\\backend\\Cosourcing\\Cosourcing.RH\\Cosourcing.RH.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/mickael/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Andry\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -254,37 +262,42 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.200/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Services/Cosourcing.RH.Services.csproj": {
+    "D:\\Gestion de Paye cosourcing\\backend\\Cosourcing\\Cosourcing.RH\\Cosourcing.RH.Services\\Cosourcing.RH.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Services/Cosourcing.RH.Services.csproj",
+        "projectUniqueName": "D:\\Gestion de Paye cosourcing\\backend\\Cosourcing\\Cosourcing.RH\\Cosourcing.RH.Services\\Cosourcing.RH.Services.csproj",
         "projectName": "Cosourcing.RH.Services",
-        "projectPath": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Services/Cosourcing.RH.Services.csproj",
-        "packagesPath": "/Users/mickael/.nuget/packages/",
-        "outputPath": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Services/obj/",
+        "projectPath": "D:\\Gestion de Paye cosourcing\\backend\\Cosourcing\\Cosourcing.RH\\Cosourcing.RH.Services\\Cosourcing.RH.Services.csproj",
+        "packagesPath": "C:\\Users\\Andry\\.nuget\\packages\\",
+        "outputPath": "D:\\Gestion de Paye cosourcing\\backend\\Cosourcing\\Cosourcing.RH\\Cosourcing.RH.Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/mickael/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Andry\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Contracts/Cosourcing.RH.Contracts.csproj": {
-                "projectPath": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.Contracts/Cosourcing.RH.Contracts.csproj"
+              "D:\\Gestion de Paye cosourcing\\backend\\Cosourcing\\Cosourcing.RH\\Cosourcing.RH.Contracts\\Cosourcing.RH.Contracts.csproj": {
+                "projectPath": "D:\\Gestion de Paye cosourcing\\backend\\Cosourcing\\Cosourcing.RH\\Cosourcing.RH.Contracts\\Cosourcing.RH.Contracts.csproj"
               },
-              "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.DataAccess/Cosourcing.RH.DataAccess.csproj": {
-                "projectPath": "/Users/mickael/Work/Cosourcing/Cosourcing.RH/Cosourcing.RH.DataAccess/Cosourcing.RH.DataAccess.csproj"
+              "D:\\Gestion de Paye cosourcing\\backend\\Cosourcing\\Cosourcing.RH\\Cosourcing.RH.DataAccess\\Cosourcing.RH.DataAccess.csproj": {
+                "projectPath": "D:\\Gestion de Paye cosourcing\\backend\\Cosourcing\\Cosourcing.RH\\Cosourcing.RH.DataAccess\\Cosourcing.RH.DataAccess.csproj"
+              },
+              "D:\\Gestion de Paye cosourcing\\backend\\Cosourcing\\Cosourcing.RH\\Cosourcing.RH.Utility\\Cosourcing.RH.Utility.csproj": {
+                "projectPath": "D:\\Gestion de Paye cosourcing\\backend\\Cosourcing\\Cosourcing.RH\\Cosourcing.RH.Utility\\Cosourcing.RH.Utility.csproj"
               }
             }
           }
@@ -314,7 +327,62 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.200/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Gestion de Paye cosourcing\\backend\\Cosourcing\\Cosourcing.RH\\Cosourcing.RH.Utility\\Cosourcing.RH.Utility.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Gestion de Paye cosourcing\\backend\\Cosourcing\\Cosourcing.RH\\Cosourcing.RH.Utility\\Cosourcing.RH.Utility.csproj",
+        "projectName": "Cosourcing.RH.Utility",
+        "projectPath": "D:\\Gestion de Paye cosourcing\\backend\\Cosourcing\\Cosourcing.RH\\Cosourcing.RH.Utility\\Cosourcing.RH.Utility.csproj",
+        "packagesPath": "C:\\Users\\Andry\\.nuget\\packages\\",
+        "outputPath": "D:\\Gestion de Paye cosourcing\\backend\\Cosourcing\\Cosourcing.RH\\Cosourcing.RH.Utility\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Andry\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
