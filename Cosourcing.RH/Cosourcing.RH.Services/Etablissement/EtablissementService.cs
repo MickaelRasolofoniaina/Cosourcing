@@ -1,16 +1,16 @@
-using System;
 using Cosourcing.RH.Contracts.DataAccess;
 using Cosourcing.RH.Contracts.DataAccess.Etablissement;
 using Cosourcing.RH.Contracts.Services.Etablissement;
 using Cosourcing.RH.Domain.Etablissement;
 using Cosourcing.RH.Domain.Exception;
+using Cosourcing.RH.Utility;
 
 namespace Cosourcing.RH.Services.Etablissement
 {
 	public class EtablissementService : IEtablissementService
 	{
-		private IBaseRepository _baseRepository;
-		private IEtablissementRepository _etablissementRepository;
+		private readonly IBaseRepository _baseRepository;
+		private readonly IEtablissementRepository _etablissementRepository;
 
 		public EtablissementService(
 			IBaseRepository baseRepository,
@@ -23,9 +23,9 @@ namespace Cosourcing.RH.Services.Etablissement
 
 		private static void ValidateData(EtablissementModel etablissement)
 		{
-            if (etablissement.GetType() != typeof(EtablissementModel))
+            if (!Validator.EstRenseigne(etablissement)
             {
-                throw new InvalidModelDataException("Please enter a etablissement valid");
+                
             }
         }
 
@@ -33,11 +33,10 @@ namespace Cosourcing.RH.Services.Etablissement
         {
             ValidateData(etablissement);
 
-            _baseRepository.Add<EtablissementModel>(etablissement);
+            _baseRepository.Add(etablissement);
 
 			return _baseRepository.Commit();
         }
-
 
 
         public ValueTask<EtablissementModel?> GetById(Guid id)
