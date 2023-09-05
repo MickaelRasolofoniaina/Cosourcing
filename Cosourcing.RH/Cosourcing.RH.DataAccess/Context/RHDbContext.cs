@@ -1,7 +1,7 @@
-﻿using System;
-using Cosourcing.RH.Domain.User;
+﻿using Cosourcing.RH.Domain.User;
 using Microsoft.EntityFrameworkCore;
 using Cosourcing.RH.Domain.Etablissement;
+using Cosourcing.RH.Domain.Societe;
 
 namespace Cosourcing.RH.DataAccess.Context
 {
@@ -13,6 +13,7 @@ namespace Cosourcing.RH.DataAccess.Context
 
 		public DbSet<UserModel> User { get; set; }
 		public DbSet<EtablissementModel> Etablissement { get; set; }
+		public DbSet<SocieteModel> Societe { get; set; }
     }
 }
 

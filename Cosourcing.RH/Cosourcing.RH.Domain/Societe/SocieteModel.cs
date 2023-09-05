@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Cosourcing.RH.Domain.Societe
+﻿namespace Cosourcing.RH.Domain.Societe
 {
     public class SocieteModel : BaseModel
     {
@@ -35,7 +33,7 @@ namespace Cosourcing.RH.Domain.Societe
 
         public SocieteModel(
             Guid id,
-          //  bool deleted,
+            bool deleted,
             string raisonSociale,
             string nomCommercial,
             string adresse,
@@ -61,7 +59,7 @@ namespace Cosourcing.RH.Domain.Societe
             string nomServiceImpot,
             string numeroAffiliation,
             string commentaire
-        ) : base(id)
+        ) : base(id, deleted)
         {
             RaisonSociale = raisonSociale;
             NomCommercial = nomCommercial;

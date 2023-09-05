@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using Autofac;
+﻿using Autofac;
 using Cosourcing.RH.Contracts.DataAccess;
-using Cosourcing.RH.Contracts.DataAccess.User;
 using Cosourcing.RH.DataAccess;
 using Cosourcing.RH.DataAccess.Context;
-using Cosourcing.RH.DataAccess.User;
+using Cosourcing.RH.Domain.Societe;
 using Cosourcing.RH.Domain.User;
 using Microsoft.EntityFrameworkCore;
 
