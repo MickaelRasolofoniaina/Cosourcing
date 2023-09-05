@@ -28,7 +28,7 @@ namespace Cosourcing.RH.Services.Etablissement
                 throw new InvalidModelDataException("Veuillez indiquer le nom de l'établissement");
             }
 
-            if (!Validator.EstRenseigne(etablissement.Addresse))
+            if (!Validator.EstRenseigne(etablissement.Adresse))
             {
                 throw new InvalidModelDataException("Veuillez indiquer l'addresse de l'établissement");
             }
