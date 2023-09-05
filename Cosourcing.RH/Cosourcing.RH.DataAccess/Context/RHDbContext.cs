@@ -1,6 +1,7 @@
 ﻿using System;
 using Cosourcing.RH.Domain.User;
 using Microsoft.EntityFrameworkCore;
+using Cosourcing.RH.Domain.Etablissement;
 
 namespace Cosourcing.RH.DataAccess.Context
 {
@@ -11,6 +12,7 @@ namespace Cosourcing.RH.DataAccess.Context
 		}
 
 		public DbSet<UserModel> User { get; set; }
+		public DbSet<EtablissementModel> Etablissement { get; set; }
     }
 }
 

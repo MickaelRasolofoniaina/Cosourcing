@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using Autofac;
 using Cosourcing.RH.Contracts.DataAccess;
 using Cosourcing.RH.Contracts.DataAccess.User;
+using Cosourcing.RH.Contracts.DataAccess.Etablissement;
 using Cosourcing.RH.DataAccess;
 using Cosourcing.RH.DataAccess.Context;
 using Cosourcing.RH.DataAccess.User;
+using Cosourcing.RH.DataAccess.Etablissement;
 using Cosourcing.RH.Domain.User;
+using Cosourcing.RH.Domain.Etablissement;
 using Microsoft.EntityFrameworkCore;
 
 namespace Cosourcing.RH.Bootstrapper.DataAccess
@@ -34,6 +37,17 @@ namespace Cosourcing.RH.Bootstrapper.DataAccess
                 })
                 .AsSelf()
                 .SingleInstance();
+
+            containerBuilder
+                .Register<DbSet<EtablissementModel>>(c =>
+                {
+                    var rhDbContext = c.Resolve<RHDbContext>();
+
+                    return rhDbContext.Etablissement;
+                })
+                .AsSelf()
+                .SingleInstance();
+
         }
     }
 }
