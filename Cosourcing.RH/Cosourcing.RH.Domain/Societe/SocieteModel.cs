@@ -30,7 +30,6 @@
 
         public SocieteModel(
             Guid id,
-            bool deleted,
             string raisonSociale,
             string nomCommercial,
             string adresse,
@@ -56,7 +55,7 @@
             string nomServiceImpot,
             string numeroAffiliation,
             string commentaire
-        ) : base(id, deleted)
+        ) : base(id)
         {
             RaisonSociale = raisonSociale;
             NomCommercial = nomCommercial;

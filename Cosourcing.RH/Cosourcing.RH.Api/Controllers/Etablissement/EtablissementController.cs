@@ -1,4 +1,3 @@
-using System;
 using Cosourcing.RH.Contracts.Services.Etablissement;
 using Cosourcing.RH.Domain.Etablissement;
 using Microsoft.AspNetCore.Mvc;
@@ -9,7 +8,7 @@ namespace Cosourcing.RH.Api.Controllers.Etablissement
     [ApiController]
     public class EtablissementController : ControllerBase
 	{
-		private IEtablissementService _etablissementService;
+		private readonly IEtablissementService _etablissementService;
 
 		public EtablissementController(
 			IEtablissementService etablissementService
@@ -18,7 +17,7 @@ namespace Cosourcing.RH.Api.Controllers.Etablissement
 			_etablissementService = etablissementService;
 		}
 
-        [Route("save")]
+        [Route("ajouter")]
         [HttpPost]
         public async Task<IActionResult> Save(EtablissementModel etablissement)
         {

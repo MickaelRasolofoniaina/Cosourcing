@@ -1,5 +1,4 @@
-﻿using System;
-
+﻿
 namespace Cosourcing.RH.Domain.User
 {
 	public class UserModel : BaseModel
@@ -11,12 +10,11 @@ namespace Cosourcing.RH.Domain.User
 
         public UserModel(
 			Guid id,
-			bool deleted,
 			string lastName,
 			string firstName,
 			DateTime birthday,
 			string email
-		) : base(id, deleted)
+		) : base(id)
 		{
 			LastName = lastName;
 			FirstName = firstName;

@@ -24,10 +24,7 @@ namespace Cosourcing.RH.Services.Societe
 
         private static void ValidateData(SocieteModel societe)
         {
-            if (!Validator.IsValidNomCommercial(societe.NomCommercial))
-            {
-                throw new InvalidModelDataException("Veuiller inserer un nom commercial valide !");
-            }
+           
         }
       
 

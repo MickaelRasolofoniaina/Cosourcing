@@ -1,4 +1,3 @@
-using System;
 using Autofac;
 using Cosourcing.RH.Contracts.DataAccess.Etablissement;
 using Cosourcing.RH.DataAccess.Etablissement;

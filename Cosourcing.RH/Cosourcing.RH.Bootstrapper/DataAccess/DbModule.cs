@@ -2,9 +2,6 @@
 using Cosourcing.RH.Contracts.DataAccess;
 using Cosourcing.RH.DataAccess;
 using Cosourcing.RH.DataAccess.Context;
-using Cosourcing.RH.Domain.Societe;
-using Cosourcing.RH.Domain.User;
-using Microsoft.EntityFrameworkCore;
 
 namespace Cosourcing.RH.Bootstrapper.DataAccess
 {
@@ -23,7 +20,7 @@ namespace Cosourcing.RH.Bootstrapper.DataAccess
                 .SingleInstance();
 
             containerBuilder
-                .Register<DbSet<UserModel>>(c =>
+                .Register(c =>
                 {
                     var rhDbContext = c.Resolve<RHDbContext>();
 
@@ -33,11 +30,21 @@ namespace Cosourcing.RH.Bootstrapper.DataAccess
                 .SingleInstance();
 
             containerBuilder
-                .Register<DbSet<SocieteModel>>(c =>
+                .Register(c =>
                 {
                     var rhDbContext = c.Resolve<RHDbContext>();
 
                     return rhDbContext.Societe;
+                })
+                .AsSelf()
+                .SingleInstance();
+
+            containerBuilder
+                .Register(c =>
+                {
+                    var rhDbContext = c.Resolve<RHDbContext>();
+
+                    return rhDbContext.Etablissement;
                 })
                 .AsSelf()
                 .SingleInstance();

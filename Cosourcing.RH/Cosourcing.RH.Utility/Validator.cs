@@ -11,21 +11,21 @@ public static class Validator
 
     public static bool EstChiffreUniquement(string champ)
     {
-        string pattern = "[0-9]*";
+        string pattern = "^[0-9]*$";
 
         return Regex.IsMatch(champ, pattern);
     }
 
     public static bool EstNChiffreUniquement(string champ, int n)
     {
-        string pattern = "[0-9]{" + n + "}";
+        string pattern = "^[0-9]{" + n + "}$";
 
         return Regex.IsMatch(champ, pattern);
     }
 
     public static bool EstNomPersonneValide(string nom)
     {
-        string pattern = "/^[a-z ,.'-]+$/i";
+        string pattern = "^([^0-9]*)$";
 
         return Regex.IsMatch(nom, pattern);
     }

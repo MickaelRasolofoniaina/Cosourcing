@@ -4,7 +4,7 @@ namespace Cosourcing.RH.Domain.Etablissement
 	{
 		
         public string Nom { get; set; }
-        public string Adresse { get; set; }
+        public string Addresse { get; set; }
         public string Activite { get; set; }
         public string NomResponsable { get; set; }
         public string PrenomResponsable { get; set; }
@@ -24,9 +24,8 @@ namespace Cosourcing.RH.Domain.Etablissement
 
         public EtablissementModel(
             Guid id,
-            bool deleted,
 		    string nom,
-            string adresse,
+            string addresse,
             string activite,
             string nomResponsable,
             string prenomResponsable,
@@ -43,10 +42,10 @@ namespace Cosourcing.RH.Domain.Etablissement
             string nomServiceImpots,
             string numeroAffiliationImpots,
             string commentaire
-		) : base(id, deleted)
+		) : base(id)
 		{
             Nom = nom;
-            Adresse = adresse;
+            Addresse = addresse;
             Activite = activite;
             NomResponsable = nomResponsable;
             PrenomResponsable = prenomResponsable;
