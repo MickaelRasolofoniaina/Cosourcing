@@ -68,6 +68,11 @@ namespace Cosourcing.RH.Services.Societe
             {
                 throw new InvalidModelDataException("Veuillez indiquer l'activité de la société");
             }
+
+            if (!ValidateurGenerique.EstPositif(societe.NombreEtablissement))
+            {
+                throw new InvalidModelDataException("Nombre établissement invalide, veuillez insérer un nombre positif uniquement");
+            }
         }
       
 

@@ -47,11 +47,6 @@ namespace Cosourcing.RH.Utility.Validateur
                 throw new InvalidModelDataException("Iban invalide, veuillez insérer un code à 23 chiffres uniquement");
             }
 
-            if (!ValidateurGenerique.EstPositif(baseEntite.NombreEtablissement))
-            {
-                throw new InvalidModelDataException("Nombre établissement invalide, veuillez insérer un nombre positif uniquement");
-            }
-
             if (!ValidateurGenerique.EstRenseigne(baseEntite.NomOrganismeSociale))
             {
                 throw new InvalidModelDataException("Veuillez insérer le nom de l'organisme social de l'établissement");

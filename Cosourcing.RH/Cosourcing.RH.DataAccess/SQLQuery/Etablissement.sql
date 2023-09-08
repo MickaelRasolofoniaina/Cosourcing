@@ -21,7 +21,8 @@ CREATE TABLE IF NOT EXISTS public."Etablissement"
     "Commentaire" character varying COLLATE pg_catalog."default",
     "Nom" character varying COLLATE pg_catalog."default" NOT NULL,
     "Adresse" character varying COLLATE pg_catalog."default" NOT NULL,
-    "Activite" character varying COLLATE pg_catalog."default" NOT NULL
+    "Activite" character varying COLLATE pg_catalog."default" NOT NULL,
+    "Deleted" boolean NOT NULL DEFAULT false
 )
 
 TABLESPACE pg_default;

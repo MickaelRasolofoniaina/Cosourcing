@@ -27,7 +27,8 @@ CREATE TABLE IF NOT EXISTS public."Societe"
     "NumeroStatistique" character varying COLLATE pg_catalog."default" NOT NULL,
     "Nif" character varying(10) COLLATE pg_catalog."default" NOT NULL,
     "Activite" character varying COLLATE pg_catalog."default" NOT NULL,
-    "NombreEtablissement" smallint NOT NULL DEFAULT 1
+    "NombreEtablissement" smallint NOT NULL DEFAULT 1,
+    "Deleted" boolean NOT NULL DEFAULT false
 )
     INHERITS (public."Etablissement")
 TABLESPACE pg_default;
