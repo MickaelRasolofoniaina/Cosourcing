@@ -79,7 +79,7 @@ namespace Cosourcing.RH.Services.Societe
 
             _baseRepository.Add(societe);
 
-            return _baseRepository.Commit();
+            return _baseRepository.SaveChangesAsync();
         }
 
         public ValueTask<SocieteModel?> GetById(Guid id)
@@ -96,7 +96,7 @@ namespace Cosourcing.RH.Services.Societe
         {
             _baseRepository.Delete<SocieteModel>(id);
 
-            return _baseRepository.Commit();
+            return _baseRepository.SaveChangesAsync();
         }
     }
 }

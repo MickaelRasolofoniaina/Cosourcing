@@ -6,7 +6,7 @@ namespace Cosourcing.RH.DataAccess.User
 {
 	public class UserRepository : IUserRepository
 	{
-        private DbSet<UserModel> _userDbContext;
+        private readonly DbSet<UserModel> _userDbContext;
 
 		public UserRepository(DbSet<UserModel> userDbContext)
 		{

@@ -48,7 +48,7 @@ namespace Cosourcing.RH.Services.Etablissement
 
             _baseRepository.Add(etablissement);
 
-			return _baseRepository.Commit();
+			return _baseRepository.SaveChangesAsync();
         }
 
 
@@ -66,7 +66,7 @@ namespace Cosourcing.RH.Services.Etablissement
         {
             _baseRepository.Delete<EtablissementModel>(id);
 
-            return _baseRepository.Commit();
+            return _baseRepository.SaveChangesAsync();
         }
     }
 }

@@ -6,7 +6,7 @@ namespace Cosourcing.RH.DataAccess.Societe
 {
     public class SocieteRepository : ISocieteRepository
     {
-        private DbSet<SocieteModel> _societeDbContext;
+        private readonly DbSet<SocieteModel> _societeDbContext;
 
         public SocieteRepository(DbSet<SocieteModel> societeDbContext)
         {

@@ -1,5 +1,4 @@
-﻿using System;
-using Cosourcing.RH.Contracts.DataAccess;
+﻿using Cosourcing.RH.Contracts.DataAccess;
 using Cosourcing.RH.Contracts.DataAccess.User;
 using Cosourcing.RH.Contracts.Services.User;
 using Cosourcing.RH.Domain.User;
@@ -9,8 +8,8 @@ namespace Cosourcing.RH.Services.User
 {
 	public class UserService : IUserService
 	{
-		private IBaseRepository _baseRepository;
-		private IUserRepository _userRepository;
+		private readonly IBaseRepository _baseRepository;
+		private readonly IUserRepository _userRepository;
 
 		public UserService(
 			IBaseRepository baseRepository,
@@ -33,14 +32,14 @@ namespace Cosourcing.RH.Services.User
         {
             ValidateData(user);
 
-            _baseRepository.Add<UserModel>(user);
+            _baseRepository.Add(user);
 
-			return _baseRepository.Commit();
+			return _baseRepository.SaveChangesAsync();
         }
 
         public async Task<int> UpdateEmail(Guid id, string email)
         {
-            if(String.IsNullOrEmpty(email))
+            if(string.IsNullOrEmpty(email))
             {
                 throw new InvalidModelDataException("Email required");
             }
@@ -51,7 +50,7 @@ namespace Cosourcing.RH.Services.User
             {
                 user.Email = email;
 
-                return await _baseRepository.Commit();
+                return await _baseRepository.SaveChangesAsync();
             }
             else
             {
@@ -73,7 +72,7 @@ namespace Cosourcing.RH.Services.User
         {
             _baseRepository.Delete<UserModel>(id);
 
-            return _baseRepository.Commit();
+            return _baseRepository.SaveChangesAsync();
         }
     }
 }

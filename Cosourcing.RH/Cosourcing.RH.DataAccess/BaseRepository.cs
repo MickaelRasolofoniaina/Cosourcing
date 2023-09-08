@@ -13,7 +13,7 @@ namespace Cosourcing.RH.DataAccess
 			_rhDbContext = rHDbContext;
 		}
 
-		public Task<int> SaveChangeAsync()
+		public Task<int> SaveChangesAsync()
 		{
 			return _rhDbContext.SaveChangesAsync();
 		}

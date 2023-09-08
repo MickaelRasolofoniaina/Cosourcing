@@ -10,6 +10,8 @@ namespace Cosourcing.RH.Contracts.DataAccess
 
         public ValueTask<T?> GetById<T>(Guid id) where T : BaseModel;
 
+        public Task<int> SaveChangesAsync();
+
         public void BeginTransaction();
 
         public void CommitTransaction();
