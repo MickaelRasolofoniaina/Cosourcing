@@ -1,6 +1,4 @@
-﻿using System;
-using Cosourcing.RH.Contracts.DataAccess.User;
-using Cosourcing.RH.DataAccess.Context;
+﻿using Cosourcing.RH.Contracts.DataAccess.User;
 using Cosourcing.RH.Domain.User;
 using Microsoft.EntityFrameworkCore;
 

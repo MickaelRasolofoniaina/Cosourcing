@@ -6,19 +6,34 @@ namespace Cosourcing.RH.DataAccess
 {
 	public class BaseRepository : IBaseRepository
 	{
-        private RHDbContext _rhDbContext;
+        private readonly RHDbContext _rhDbContext;
 
         public BaseRepository(RHDbContext rHDbContext)
 		{
 			_rhDbContext = rHDbContext;
 		}
 
-		public Task<int> Commit()
+		public Task<int> SaveChangeAsync()
 		{
 			return _rhDbContext.SaveChangesAsync();
 		}
 
-		public void Add<T>(T obj) where T : BaseModel
+		public void BeginTransaction()
+		{
+			_rhDbContext.Database.BeginTransaction();
+		}
+
+        public void CommitTransaction()
+        {
+            _rhDbContext.Database.CommitTransaction();
+        }
+
+        public void RollbackTransaction()
+        {
+            _rhDbContext.Database.RollbackTransaction();
+        }
+
+        public void Add<T>(T obj) where T : BaseModel
 		{
 			obj.Id = Guid.NewGuid();
 
