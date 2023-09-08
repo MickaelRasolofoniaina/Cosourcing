@@ -12,7 +12,6 @@ namespace Cosourcing.RH.Domain.Entite
         public string CodeBanque2 { get; set; }
         public string NomBanque2 { get; set; }
         public string Iban2 { get; set; }
-        public int NombreEtablissement { get; set; }
         public string NomOrganismeSociale { get; set; }
         public string NumeroOrganismeSociale { get; set; }
         public string NomServiceImpots { get; set; }
@@ -30,7 +29,6 @@ namespace Cosourcing.RH.Domain.Entite
             string codeBanque2,
             string nomBanque2,
             string iban2,
-            int nombreEtablissement,
             string nomOrganismeSociale,
             string numeroOrganismeSociale,
             string nomServiceImpots,
@@ -47,7 +45,6 @@ namespace Cosourcing.RH.Domain.Entite
             CodeBanque2 = codeBanque2;
             NomBanque2 = nomBanque2;
             Iban2 = iban2;
-            NombreEtablissement = nombreEtablissement;
             NomOrganismeSociale = nomOrganismeSociale;
             NumeroOrganismeSociale = numeroOrganismeSociale;
             NomServiceImpots = nomServiceImpots;

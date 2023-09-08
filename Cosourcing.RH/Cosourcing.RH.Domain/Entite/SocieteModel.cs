@@ -10,6 +10,7 @@
         public string NumeroStatistique { get; set; }
         public string Nif { get; set; }
         public string Activite { get; set; }
+        public int NombreEtablissement { get; set; }
 
         public SocieteModel(
             Guid id,
@@ -47,7 +48,6 @@
             codeBanque2,
             nomBanque2,
             iban2,
-            nombreEtablissement,
             nomOrganismeSociale,
             numeroOrganismeSociale,
             nomServiceImpots,
@@ -63,6 +63,7 @@
             NumeroStatistique = numeroStatistique;
             Nif = nif;
             Activite = activite;
+            NombreEtablissement = nombreEtablissement;
         }
     }
 }
