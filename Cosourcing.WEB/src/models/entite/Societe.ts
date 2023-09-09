@@ -1,6 +1,6 @@
-import { BaseModele } from "../BaseModel";
+import { BaseEntite } from "./BaseEntite";
 
-export interface Societe extends BaseModele {
+export interface Societe extends BaseEntite {
   raisonSociale: string;
   nomCommercial: string;
   adresse: string;
@@ -10,18 +10,5 @@ export interface Societe extends BaseModele {
   nif: string;
   activite: string;
   nombreEtablissement: number;
-  nomResponsable: string;
-  prenomResponsable: string;
-  qualiteResponsable: string;
-  codeBanque1: string;
-  nomBanque1: string;
-  iban1: string;
-  codeBanque2: string;
-  nomBanque2: string;
-  iban2: string;
-  nomOrganismeSociale: string;
-  numeroOrganismeSociale: string;
-  nomServiceImpots: string;
-  numeroAffiliationImpots: string;
-  commentaire: string;
+  
 }

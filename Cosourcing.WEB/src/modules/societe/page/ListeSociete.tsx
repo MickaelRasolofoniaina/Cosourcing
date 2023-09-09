@@ -14,15 +14,11 @@ import Button from '@mui/material/Button';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import { Societe } from "../../../models/entite/Societe";
 import { useHttp } from "../../shared/hooks/UseHttp";
-import { getAllSociete } from "../services/SocieteService";
+import { getAllSociete } from "../services/entite/SocieteService";
 import { BaseEcran } from '../../shared/components/BaseEcran';
 
 export const ListeSociete: React.FC = () => {
   const  { data, isLoading, error } = useHttp<Societe[]>(() => getAllSociete());
-
-  // if(!data) {
-  //   return <>NO data</>;
-  // }
 
   return (
     <BaseEcran isLoading={isLoading} error={error}>
