@@ -17,6 +17,7 @@ namespace Cosourcing.RH.Domain.Entite
         public string NomServiceImpots { get; set; }
         public string NumeroAffiliationImpots { get; set; }
         public string Commentaire { get; set; }
+        public string Adresse { get; set; }
 
         public BaseEntite(
             int id,
@@ -33,7 +34,8 @@ namespace Cosourcing.RH.Domain.Entite
             string numeroOrganismeSociale,
             string nomServiceImpots,
             string numeroAffiliationImpots,
-            string commentaire
+            string commentaire,
+            string adresse
         ) : base(id)
 		{
             NomResponsable = nomResponsable;
@@ -50,6 +52,7 @@ namespace Cosourcing.RH.Domain.Entite
             NomServiceImpots = nomServiceImpots;
             NumeroAffiliationImpots = numeroAffiliationImpots;
             Commentaire = commentaire;
+            Adresse = adresse;
         }
 	}
 }

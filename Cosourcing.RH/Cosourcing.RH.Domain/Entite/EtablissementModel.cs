@@ -4,7 +4,6 @@ namespace Cosourcing.RH.Domain.Entite
 	{
 		
         public string Nom { get; set; }
-        public string Adresse { get; set; }
         public string Activite { get; set; }
 
         public EtablissementModel(
@@ -42,7 +41,8 @@ namespace Cosourcing.RH.Domain.Entite
             numeroOrganismeSociale,
             nomServiceImpots,
             numeroAffiliationImpots,
-            commentaire
+            commentaire,
+            adresse
         )
 		{
             Nom = nom;

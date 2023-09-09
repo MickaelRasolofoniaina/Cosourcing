@@ -4,7 +4,6 @@
     {
         public string RaisonSociale { get; set; }
         public string NomCommercial { get; set; }
-        public string Adresse { get; set; }
         public DateTime DateDeCreation { get; set; }
         public string FormeJuridique { get; set; }
         public string NumeroStatistique { get; set; }
@@ -52,7 +51,8 @@
             numeroOrganismeSociale,
             nomServiceImpots,
             numeroAffiliationImpots,
-            commentaire
+            commentaire,
+            adresse
         )
         {
             RaisonSociale = raisonSociale;
