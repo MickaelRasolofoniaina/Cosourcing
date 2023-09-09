@@ -52,7 +52,7 @@ namespace Cosourcing.RH.Api.Controllers.Societe
 
         [Route("{id}")]
         [HttpGet]
-        public async Task<IActionResult> GetById(Guid id)
+        public async Task<IActionResult> GetById(int id)
         {
             try
             {

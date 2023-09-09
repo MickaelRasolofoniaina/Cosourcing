@@ -52,7 +52,7 @@ namespace Cosourcing.RH.Api.Controllers.Etablissement
 
         [Route("{id}")]
         [HttpGet]
-        public async Task<IActionResult> GetById(Guid id)
+        public async Task<IActionResult> GetById(int id)
         {
             try
             {
@@ -68,7 +68,7 @@ namespace Cosourcing.RH.Api.Controllers.Etablissement
 
         [Route("{id}")]
         [HttpDelete]
-        public async Task<IActionResult> DeleteEtablissement(Guid id)
+        public async Task<IActionResult> DeleteEtablissement(int id)
         {
             try
             {

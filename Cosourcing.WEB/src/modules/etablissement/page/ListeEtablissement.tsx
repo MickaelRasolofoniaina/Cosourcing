@@ -59,20 +59,20 @@ export const ListeEtablissement: React.FC = () => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {data?.map((societe) => (
+            {data?.map((etablissement) => (
               <TableRow
-                key={societe.id}
+                key={etablissement.id}
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
               >
                 <TableCell>
-                  <Link to={`/etablissement/${societe.id}`}>{societe.id}</Link>
+                  <Link to={`/etablissement/${etablissement.id}`}>{etablissement.id}</Link>
                 </TableCell>
-                <TableCell>{societe.nom}</TableCell>
-                <TableCell>{societe.adresse}</TableCell>
+                <TableCell>{etablissement.nom}</TableCell>
+                <TableCell>{etablissement.adresse}</TableCell>
                 <TableCell>
-                  {societe.nomResponsable} {societe.prenomResponsable}
+                  {etablissement.nomResponsable} {etablissement.prenomResponsable}
                 </TableCell>
-                <TableCell>{societe.activite}</TableCell>
+                <TableCell>{etablissement.activite}</TableCell>
                 <TableCell align="right">
                   <IconButton>
                     <EditIcon />

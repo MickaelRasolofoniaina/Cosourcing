@@ -38,13 +38,13 @@ namespace Cosourcing.RH.DataAccess
 			_rhDbContext.Add(obj);
 		}
 
-        public ValueTask<T?> GetById<T>(Guid id) where T : BaseModel
+        public ValueTask<T?> GetById<T>(int id) where T : BaseModel
 		{
 			return _rhDbContext.FindAsync<T>(id);
 
 		}
 
-        public async void Delete<T>(Guid id) where T : BaseModel
+        public async void Delete<T>(int id) where T : BaseModel
         {
 			var entity = await GetById<T>(id);
 

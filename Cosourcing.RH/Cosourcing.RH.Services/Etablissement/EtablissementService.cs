@@ -52,7 +52,7 @@ namespace Cosourcing.RH.Services.Etablissement
         }
 
 
-        public ValueTask<EtablissementModel?> GetById(Guid id)
+        public ValueTask<EtablissementModel?> GetById(int id)
         {
             return _baseRepository.GetById<EtablissementModel>(id);
         }
@@ -62,7 +62,7 @@ namespace Cosourcing.RH.Services.Etablissement
             return _etablissementRepository.GetAllEtablissements();
         }
 
-        public Task<int> DeleteEtablissement(Guid id)
+        public Task<int> DeleteEtablissement(int id)
         {
             _baseRepository.Delete<EtablissementModel>(id);
 

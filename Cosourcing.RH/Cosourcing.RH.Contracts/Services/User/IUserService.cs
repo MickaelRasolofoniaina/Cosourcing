@@ -7,13 +7,13 @@ namespace Cosourcing.RH.Contracts.Services.User
 	{
 		public Task<int> Save(UserModel user);
 
-        public Task<int> UpdateEmail(Guid id, string email);
+        public Task<int> UpdateEmail(int id, string email);
 
-        public ValueTask<UserModel?> GetById(Guid id);
+        public ValueTask<UserModel?> GetById(int id);
 
         public Task<UserModel[]> GetAll();
 
-        public Task<int> DeleteUser(Guid id);
+        public Task<int> DeleteUser(int id);
     }
 }
 

@@ -37,7 +37,7 @@ namespace Cosourcing.RH.Services.User
 			return _baseRepository.SaveChangesAsync();
         }
 
-        public async Task<int> UpdateEmail(Guid id, string email)
+        public async Task<int> UpdateEmail(int id, string email)
         {
             if(string.IsNullOrEmpty(email))
             {
@@ -58,7 +58,7 @@ namespace Cosourcing.RH.Services.User
             }
         }
 
-        public ValueTask<UserModel?> GetById(Guid id)
+        public ValueTask<UserModel?> GetById(int id)
         {
             return _baseRepository.GetById<UserModel>(id);
         }
@@ -68,7 +68,7 @@ namespace Cosourcing.RH.Services.User
             return _userRepository.GetAllUsers();
         }
 
-        public Task<int> DeleteUser(Guid id)
+        public Task<int> DeleteUser(int id)
         {
             _baseRepository.Delete<UserModel>(id);
 

@@ -54,7 +54,7 @@ namespace Cosourcing.RH.Api.Controllers.User
 
         [Route("{id}")]
         [HttpGet]
-        public async Task<IActionResult> GetById(Guid id)
+        public async Task<IActionResult> GetById(int id)
         {
             try
             {
@@ -70,7 +70,7 @@ namespace Cosourcing.RH.Api.Controllers.User
 
         [Route("{id}")]
         [HttpDelete]
-        public async Task<IActionResult> DeleteUser(Guid id)
+        public async Task<IActionResult> DeleteUser(int id)
         {
             try
             {
@@ -86,7 +86,7 @@ namespace Cosourcing.RH.Api.Controllers.User
 
         [Route("update-email/{id}")]
         [HttpPut]
-        public async Task<IActionResult> UpdateEmail(Guid id, [FromBody] UpdateEmailRequest updateEmailRequest)
+        public async Task<IActionResult> UpdateEmail(int id, [FromBody] UpdateEmailRequest updateEmailRequest)
         {
             try
             {

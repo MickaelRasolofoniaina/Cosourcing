@@ -6,11 +6,11 @@ namespace Cosourcing.RH.Contracts.Services.Etablissement
 	{
 		public Task<int> Save(EtablissementModel etablissement);
 
-        public ValueTask<EtablissementModel?> GetById(Guid id);
+        public ValueTask<EtablissementModel?> GetById(int id);
 
         public Task<EtablissementModel[]> GetAll();
 
-        public Task<int> DeleteEtablissement(Guid id);
+        public Task<int> DeleteEtablissement(int id);
     }
 }
 
