@@ -1,8 +1,10 @@
-import { ListeEtablissement} from "./page/ListeEtablissement";
+import { ListeEtablissement } from "./page/ListeEtablissement";
+import {
+  Route,
+} from "react-router-dom";
 
-export const EtablissementRouter =
-  {
-    path: "/etablissement",
-    element: <ListeEtablissement />
-  }
-;
+export const EtablissementRouter = (
+  <Route path="/etablissement">
+    <Route index element={<ListeEtablissement />} />
+  </Route>
+);

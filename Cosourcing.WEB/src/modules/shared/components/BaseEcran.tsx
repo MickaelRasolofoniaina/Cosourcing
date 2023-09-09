@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 export interface BaseEcranProps {
   isLoading: boolean;
   error: Erreur | undefined;
-  children: React.ReactElement[];
+  children: React.ReactElement[] | React.ReactElement;
 }
 
 export const BaseEcran: React.FC<BaseEcranProps> = ({
