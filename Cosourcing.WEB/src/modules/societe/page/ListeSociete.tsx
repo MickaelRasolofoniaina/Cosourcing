@@ -14,8 +14,9 @@ import Button from '@mui/material/Button';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import { Societe } from "../../../models/entite/Societe";
 import { useHttp } from "../../shared/hooks/UseHttp";
-import { getAllSociete } from "../services/entite/SocieteService";
+import { getAllSociete } from "../services/SocieteService";
 import { BaseEcran } from '../../shared/components/BaseEcran';
+import { Link } from 'react-router-dom';
 
 export const ListeSociete: React.FC = () => {
   const  { data, isLoading, error } = useHttp<Societe[]>(() => getAllSociete());
@@ -32,6 +33,7 @@ export const ListeSociete: React.FC = () => {
         <Table>
           <TableHead>
             <TableRow>
+              <TableCell><b>Id</b></TableCell>
               <TableCell><b>Nom</b></TableCell>
               <TableCell><b>Adresse</b></TableCell>
               <TableCell><b>Responsable</b> </TableCell>
@@ -47,6 +49,9 @@ export const ListeSociete: React.FC = () => {
               key={societe.id}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
+              <TableCell>
+                <Link to={`/societe/${societe.id}`}>{societe.id}</Link>
+              </TableCell>
               <TableCell>
                 {societe.nomCommercial}
               </TableCell>

@@ -15,4 +15,5 @@ export interface BaseEntite extends BaseModele {
   nomServiceImpots: string;
   numeroAffiliationImpots: string;
   commentaire: string;
+  adresse: string;
 }
