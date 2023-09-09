@@ -19,7 +19,7 @@ namespace Cosourcing.RH.Domain.Entite
         public string Commentaire { get; set; }
 
         public BaseEntite(
-            Guid id,
+            int id,
             string nomResponsable,
             string prenomResponsable,
             string qualiteResponsable,

@@ -1,12 +1,7 @@
 ﻿
 using Autofac;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.OpenApi.Models;
-using Microsoft.Extensions.DependencyInjection;
 using Cosourcing.RH.Bootstrapper;
-using Microsoft.Extensions.Configuration;
-using FirebaseAdmin;
-using Google.Apis.Auth.OAuth2;
 
 namespace Cosourcing.RH.Api;
 
@@ -21,7 +16,7 @@ public class Startup
 
     public void ConfigureServices(IServiceCollection services)
     {
-        var allowedOrigins = new HashSet<string>(Configuration.GetValue<string[]>("AllowedHosts") ?? Array.Empty<string>());
+        var allowedOrigins = new HashSet<string>(Configuration.GetValue<string[]>("AllowedHosts") ?? new string[] {"*"});
         var dbConnectionString = Configuration.GetConnectionString("Db") ?? "";
 
         services.AddCors(options =>

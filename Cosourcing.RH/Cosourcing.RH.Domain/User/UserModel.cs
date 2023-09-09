@@ -9,7 +9,7 @@ namespace Cosourcing.RH.Domain.User
         public string Email { get; set; }
 
         public UserModel(
-			Guid id,
+			int id,
 			string lastName,
 			string firstName,
 			DateTime birthday,

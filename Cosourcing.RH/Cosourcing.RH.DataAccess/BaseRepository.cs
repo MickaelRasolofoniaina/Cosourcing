@@ -35,9 +35,7 @@ namespace Cosourcing.RH.DataAccess
 
         public void Add<T>(T obj) where T : BaseModel
 		{
-			obj.Id = Guid.NewGuid();
-
-			_rhDbContext.Add<T>(obj);
+			_rhDbContext.Add(obj);
 		}
 
         public ValueTask<T?> GetById<T>(Guid id) where T : BaseModel

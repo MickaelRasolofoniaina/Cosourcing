@@ -2,10 +2,10 @@
 {
 	public class BaseModel
 	{
-		public Guid Id { get; set; }
+		public int Id { get; set; }
 		public bool Deleted { get; set; } = false;
 
-		public BaseModel(Guid id)
+		public BaseModel(int id)
 		{
 			Id = id;
 		}

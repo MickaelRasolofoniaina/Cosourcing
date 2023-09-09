@@ -57,14 +57,13 @@ export const BaseLayout: React.FC = () => {
       >
         <Toolbar>
           <Typography variant="h6" noWrap component="div">
-            Responsive drawer
+            Gestion ressource humaine
           </Typography>
         </Toolbar>
       </AppBar>
       <Box
         component="nav"
         sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
-        aria-label="mailbox folders"
       >
         <Drawer
           variant="permanent"

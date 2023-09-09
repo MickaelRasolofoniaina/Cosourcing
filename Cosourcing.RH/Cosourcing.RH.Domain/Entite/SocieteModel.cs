@@ -13,7 +13,7 @@
         public int NombreEtablissement { get; set; }
 
         public SocieteModel(
-            Guid id,
+            int id,
             string raisonSociale,
             string nomCommercial,
             string adresse,

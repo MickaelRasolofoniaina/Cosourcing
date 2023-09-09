@@ -8,7 +8,7 @@ namespace Cosourcing.RH.Domain.Entite
         public string Activite { get; set; }
 
         public EtablissementModel(
-            Guid id,
+            int id,
 		    string nom,
             string adresse,
             string activite,

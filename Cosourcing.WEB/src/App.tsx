@@ -3,14 +3,16 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-import { BaseLayout } from "./modules/shared/Layout/BaseLayout";
-import { SocieteRouter } from "./modules/societe/societeRouter";
+import { BaseLayout } from "./modules/shared/layout/BaseLayout";
+import { SocieteRouter } from "./modules/societe/SocieteRouter";
+import { Erreur } from "./modules/erreur/Erreur";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <BaseLayout />,
-    children: [SocieteRouter]
+    children: [SocieteRouter],
+    errorElement: <Erreur />
   },
 ]);
 
