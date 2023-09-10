@@ -1,6 +1,5 @@
 import IconButton from '@mui/material/IconButton';
 import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -22,10 +21,7 @@ export const ListeSociete: React.FC = () => {
   const  { data, isLoading, error } = useHttp<Societe[]>(() => getAllSociete());
 
   return (
-    <BaseEcran isLoading={isLoading} error={error}>
-      <Typography variant="h5" component="h1" marginBottom={2}>
-        Liste des sociétés
-      </Typography>
+    <BaseEcran isLoading={isLoading} error={error} titre='Liste des sociétés'>
       <Box marginBottom={4} display="flex" justifyContent="flex-end">
         <Button variant="contained" color='success' endIcon={<AddCircleIcon/>}>Ajouter une société</Button>
       </Box>

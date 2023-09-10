@@ -7,10 +7,10 @@ import { BaseEcran } from "../../shared/components/BaseEcran";
 export const DetailSociete: React.FC = () => {
   const params = useParams();
   const id = parseInt(params.id ?? "0");
-  const { data, isLoading, error } = useHttp<Societe>(() => getDetailSociete(id));
+  const { isLoading, error } = useHttp<Societe>(() => getDetailSociete(id));
 
   return (
-    <BaseEcran isLoading={isLoading} error={error}>
+    <BaseEcran isLoading={isLoading} error={error} titre="Détail société">
       <div>{id}</div>
     </BaseEcran>
   )
