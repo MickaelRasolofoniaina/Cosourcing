@@ -17,7 +17,7 @@ namespace Cosourcing.RH.Api.Controllers.Societe
             _societeService = societeService;
         }
 
-        [Route("ajouter")]
+        [Route("")]
         [HttpPost]
         public async Task<IActionResult> Save(SocieteModel societe)
         {

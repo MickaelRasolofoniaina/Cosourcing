@@ -17,7 +17,7 @@ namespace Cosourcing.RH.Api.Controllers.Etablissement
 			_etablissementService = etablissementService;
 		}
 
-        [Route("ajouter")]
+        [Route("")]
         [HttpPost]
         public async Task<IActionResult> Save(EtablissementModel etablissement)
         {

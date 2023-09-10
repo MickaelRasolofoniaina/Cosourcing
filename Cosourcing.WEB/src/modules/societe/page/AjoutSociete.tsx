@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { BaseEcran } from "../../shared/components/BaseEcran";
 import { SocieteRoute } from "../SocieteRouter";
 import { useForm } from "react-hook-form";
@@ -22,6 +22,10 @@ import Cancel from "@mui/icons-material/Cancel";
 import Save from "@mui/icons-material/Save";
 import MenuItem from "@mui/material/MenuItem";
 import Divider from "@mui/material/Divider";
+import Alert from "@mui/material/Alert";
+import Snackbar from "@mui/material/Snackbar";
+import { useState } from "react";
+import { ajouterSociete } from "../services/SocieteService";
 
 const SocieteSchema: ObjectSchema<Societe> = object({
   nomResponsable: string()
@@ -29,6 +33,7 @@ const SocieteSchema: ObjectSchema<Societe> = object({
     .matches(NomRegex, "Le nom du responsable n'est pas valide"),
   prenomResponsable: string()
     .optional()
+    .default("")
     .matches(NomRegex, "Le prénom du responsable n'est pas valide"),
   qualiteResponsable: string().required(
     "Veuillez indiquer la qualité du responsable"
@@ -124,8 +129,25 @@ export const AjoutSociete: React.FC = () => {
     resolver: yupResolver(SocieteSchema),
   });
 
+  const [erreur, setErreur] = useState(false);
+  const [sending, setSending] = useState(false);
+  const navigate = useNavigate();
+
   const onSubmit = handleSubmit((societe) => {
-    console.log(societe);
+    setErreur(false);
+    setSending(true);
+    ajouterSociete(societe)
+      .then((response) => {
+        if (response === 1) {
+          navigate(SocieteRoute.Root);
+        }
+      })
+      .catch(() => {
+        setErreur(true);
+      })
+      .finally(() => {
+        setSending(false);
+      });
   });
 
   return (
@@ -344,7 +366,7 @@ export const AjoutSociete: React.FC = () => {
               defaultValue={1}
             />
           </Grid>
-          <Grid item xs={8}/>
+          <Grid item xs={8} />
           <Grid item xs={4}>
             <TextField
               {...register("nomOrganismeSociale")}
@@ -381,7 +403,7 @@ export const AjoutSociete: React.FC = () => {
               label="Numéro d’affiliation au Service des impôts rattaché à la Société"
             />
           </Grid>
-          <Grid item xs={8}/>
+          <Grid item xs={8} />
           <Grid item xs={8}>
             <TextField
               {...register("commentaire")}
@@ -407,6 +429,7 @@ export const AjoutSociete: React.FC = () => {
               style={{
                 marginRight: 20,
               }}
+              disabled={sending}
             >
               Annuler
             </Button>
@@ -415,12 +438,18 @@ export const AjoutSociete: React.FC = () => {
               color="success"
               type="submit"
               endIcon={<Save />}
+              disabled={sending}
             >
               Enregistrer
             </Button>
           </Grid>
         </Grid>
       </form>
+      <Snackbar open={erreur} autoHideDuration={3000}>
+        <Alert variant="outlined" severity="error">
+          Une erreur s'est produite, veuillez réessayer s'il vous plaît
+        </Alert>
+      </Snackbar>
     </BaseEcran>
   );
 };
