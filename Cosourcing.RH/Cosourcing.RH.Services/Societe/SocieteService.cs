@@ -49,6 +49,11 @@ namespace Cosourcing.RH.Services.Societe
                 throw new InvalidModelDataException("Veuillez indiquer la forme juridique de la société");
             }
 
+            if (!ValidateurEntite.EstValideFormeJuridique(societe.FormeJuridique))
+            {
+                throw new InvalidModelDataException("Forme juridique invalide");
+            }
+
             if (!ValidateurGenerique.EstRenseigne(societe.NumeroStatistique))
             {
                 throw new InvalidModelDataException("Veuillez indiquer le numéro statistique de la société");

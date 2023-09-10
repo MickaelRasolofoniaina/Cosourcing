@@ -1,5 +1,17 @@
 ﻿namespace Cosourcing.RH.Domain.Entite
 {
+    public static class FormeJuridique
+    {
+        public static readonly string EI = "EI";
+        public static readonly string EURL = "EURL";
+        public static readonly string SA = "SA";
+        public static readonly string SARL = "SARL";
+        public static readonly string SAS = "SAS";
+        public static readonly string SNC = "SNC";
+        public static readonly string SCOP = "SCOP";
+        public static readonly string SCA = "SCA";
+    }
+
     public class SocieteModel : BaseEntite
     {
         public string RaisonSociale { get; set; }

@@ -6,7 +6,7 @@ public static class ValidateurGenerique
 {
     public static bool EstRenseigne(string champ)
     {
-        return !String.IsNullOrEmpty(champ);
+        return !string.IsNullOrEmpty(champ);
     }
 
     public static bool EstChiffreUniquement(string champ)

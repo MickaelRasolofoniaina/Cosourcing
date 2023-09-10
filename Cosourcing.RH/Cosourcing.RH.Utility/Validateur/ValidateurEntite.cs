@@ -67,6 +67,26 @@ namespace Cosourcing.RH.Utility.Validateur
                 throw new InvalidModelDataException("Veuillez insérer le numéro d'affiliation du service impôt de l'établissement");
             }
         }
-	}
+
+        public static bool EstValideFormeJuridique(string formeJuridique)
+        {
+            return formeJuridique == FormeJuridique.EI ||
+                formeJuridique == FormeJuridique.EURL ||
+                formeJuridique == FormeJuridique.SARL ||
+                formeJuridique == FormeJuridique.SAS ||
+                formeJuridique == FormeJuridique.SNC ||
+                formeJuridique == FormeJuridique.SCOP ||
+                formeJuridique == FormeJuridique.SCA;
+        }
+
+        //public static readonly string EI = "EI";
+        //public static readonly string EURL = "EURL";
+        //public static readonly string SA = "SA";
+        //public static readonly string SARL = "SARL";
+        //public static readonly string SAS = "SAS";
+        //public static readonly string SNC = "SNC";
+        //public static readonly string SCOP = "SCOP";
+        //public static readonly string SCA = "SCA";
+    }
 }
 
