@@ -1,4 +1,5 @@
-﻿using Cosourcing.RH.Domain.Entite;
+﻿using System.Net.Sockets;
+using Cosourcing.RH.Domain.Entite;
 using Cosourcing.RH.Domain.Exception;
 
 namespace Cosourcing.RH.Utility.Validateur
@@ -9,22 +10,22 @@ namespace Cosourcing.RH.Utility.Validateur
 		{
             if (!ValidateurGenerique.EstRenseigne(baseEntite.NomResponsable))
             {
-                throw new InvalidModelDataException("Veuillez indiquer le nom du responsable de l'établissement");
+                throw new InvalidModelDataException("Veuillez indiquer le nom du responsable");
             }
 
             if (!ValidateurGenerique.EstNomPersonneValide(baseEntite.NomResponsable))
             {
-                throw new InvalidModelDataException("Le nom du responsable de l'établissement n'est pas valide");
+                throw new InvalidModelDataException("Le nom du responsable n'est pas valide");
             }
 
             if (ValidateurGenerique.EstRenseigne(baseEntite.PrenomResponsable) && !ValidateurGenerique.EstNomPersonneValide(baseEntite.PrenomResponsable))
             {
-                throw new InvalidModelDataException("Le prénom du responsable de l'établissement n'est pas valide");
+                throw new InvalidModelDataException("Le prénom du responsable n'est pas valide");
             }
 
             if (!ValidateurGenerique.EstRenseigne(baseEntite.QualiteResponsable))
             {
-                throw new InvalidModelDataException("Veuillez indiquer la qualité du responsable de l'établissement");
+                throw new InvalidModelDataException("Veuillez indiquer la qualité du responsable");
             }
 
             if (ValidateurGenerique.EstRenseigne(baseEntite.CodeBanque1) && !ValidateurGenerique.EstNChiffreUniquement(baseEntite.CodeBanque1, 2))
@@ -49,22 +50,27 @@ namespace Cosourcing.RH.Utility.Validateur
 
             if (!ValidateurGenerique.EstRenseigne(baseEntite.NomOrganismeSociale))
             {
-                throw new InvalidModelDataException("Veuillez insérer le nom de l'organisme social de l'établissement");
+                throw new InvalidModelDataException("Veuillez insérer le nom de l'organisme social");
             }
 
             if (!ValidateurGenerique.EstRenseigne(baseEntite.NumeroOrganismeSociale))
             {
-                throw new InvalidModelDataException("Veuillez insérer le numéro d'affiliation de l'organisme social de l'établissement");
+                throw new InvalidModelDataException("Veuillez insérer le numéro d'affiliation de l'organisme social");
             }
 
             if (!ValidateurGenerique.EstRenseigne(baseEntite.NomServiceImpots))
             {
-                throw new InvalidModelDataException("Veuillez insérer le nom du service impôt de l'établissement");
+                throw new InvalidModelDataException("Veuillez insérer le nom du service impôt");
             }
 
             if (!ValidateurGenerique.EstRenseigne(baseEntite.NumeroAffiliationImpots))
             {
-                throw new InvalidModelDataException("Veuillez insérer le numéro d'affiliation du service impôt de l'établissement");
+                throw new InvalidModelDataException("Veuillez insérer le numéro d'affiliation du service impôt");
+            }
+
+            if (!ValidateurGenerique.EstRenseigne(baseEntite.Adresse))
+            {
+                throw new InvalidModelDataException("Veuillez indiquer l'adresse");
             }
         }
 

@@ -21,7 +21,7 @@ export const BaseLayout: React.FC = () => {
   const drawer = (
     <div>
       <Toolbar>
-        <img src="https://www.cosourcing.fr/wp-content/uploads/2020/12/logo-cosourcing-v4-220x49-1.jpg" />
+        <img src="https://www.cosourcing.fr/wp-content/uploads/2020/12/logo-cosourcing-v4-220x49-1.jpg" alt="logo cosourcing" />
       </Toolbar>
       <Divider />
       <List>

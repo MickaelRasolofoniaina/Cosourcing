@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Erreur } from "../../../models/BaseModel";
 
 export function useHttp<T>(fn: () => Promise<T>) {
@@ -6,21 +6,22 @@ export function useHttp<T>(fn: () => Promise<T>) {
   const [isLoading, setLoading] = useState(false);
   const [error, setError] = useState<Erreur>();
 
+  const fnc = useCallback(fn, [fn]);
+
   useEffect(() => {
     setLoading(true);
 
-    fn()
+    fnc()
       .then((data) => {
         setData(data);
       })
       .catch((error: Erreur) => {
-        console.log(error, "erreur");
         setError(error);
       })
       .finally(() => {
         setLoading(false);
       })
-  }, []);
+  }, [fnc]);
 
   return { isLoading, data, error }
 }

@@ -34,11 +34,6 @@ namespace Cosourcing.RH.Services.Societe
                 throw new InvalidModelDataException("Veuillez indiquer le nom commerciale de la société");
             }
 
-            if(!ValidateurGenerique.EstRenseigne(societe.Adresse))
-            {
-                throw new InvalidModelDataException("Veuillez indiquer l'adresse de la société");
-            }
-
             if(!ValidateurGenerique.EstDatePassee(societe.DateDeCreation))
             {
                 throw new InvalidModelDataException("La date de création de la société doit être dans le passé");
@@ -61,7 +56,7 @@ namespace Cosourcing.RH.Services.Societe
 
             if (!ValidateurGenerique.EstChiffreUniquement(societe.NumeroStatistique))
             {
-                throw new InvalidModelDataException("Numero statistiique invalide, veuillez insérer un numéro statistique en chiffre uniquement");
+                throw new InvalidModelDataException("Numero statistique invalide, veuillez insérer un numéro statistique en chiffre uniquement");
             }
 
             if(!ValidateurGenerique.EstNChiffreUniquement(societe.Nif, 10))

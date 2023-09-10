@@ -1,6 +1,6 @@
 export interface BaseModele {
-  id: number;
-  deleted: boolean;
+  id?: number;
+  deleted?: boolean;
 }
 
 export interface Erreur {
