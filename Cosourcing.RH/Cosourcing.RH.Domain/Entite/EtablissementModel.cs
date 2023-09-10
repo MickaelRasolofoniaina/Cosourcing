@@ -5,6 +5,7 @@ namespace Cosourcing.RH.Domain.Entite
 		
         public string Nom { get; set; }
         public string Activite { get; set; }
+        public int IdSociete { get; set; }
 
         public EtablissementModel(
             int id,
@@ -24,7 +25,8 @@ namespace Cosourcing.RH.Domain.Entite
             string numeroOrganismeSociale,
             string nomServiceImpots,
             string numeroAffiliationImpots,
-            string commentaire
+            string commentaire,
+            int idSociete
 
         ) : base(
             id,
@@ -48,6 +50,7 @@ namespace Cosourcing.RH.Domain.Entite
             Nom = nom;
             Adresse = adresse;
             Activite = activite;
+            IdSociete = idSociete;
 		}
 	}
 }
