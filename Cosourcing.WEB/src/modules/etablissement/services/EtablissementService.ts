@@ -15,3 +15,7 @@ export const getSocieteEtablissement = async (idSociete: number) => {
 export const ajouterEtablissement = async(etablissement: Etablissement) => {
   return post<Etablissement, number>(ETABLISSEMENT_ROOT_URL, etablissement);
 }
+
+export const getDetailEtablissement = async(id: number) => {
+  return get<Etablissement>(`${ETABLISSEMENT_ROOT_URL}/${id}`);
+}

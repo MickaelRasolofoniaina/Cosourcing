@@ -99,7 +99,7 @@ export const ListeEtablissement: React.FC = () => {
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
               >
                 <TableCell>
-                  <Link to={`/etablissement/${etablissement.id}`}>
+                  <Link to={`/etablissement/${etablissement.id}?idSociete=${idSociete}`}>
                     {etablissement.id}
                   </Link>
                 </TableCell>

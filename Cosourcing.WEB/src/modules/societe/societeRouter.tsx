@@ -7,13 +7,14 @@ import {
 
 export const SocieteRoute = {
   Root: "/societe",
-  Ajout: "/societe/ajout"
+  Ajout: "/societe/ajout",
+  Detail: "/societe/:id",
 }
 
 export const SocieteRouter = (
-  <Route path="/societe">
+  <Route path={SocieteRoute.Root}>
     <Route index element={<ListeSociete />} />
-    <Route path="/societe/:id" element={<DetailSociete />} />
-    <Route path="/societe/ajout" element={<AjoutSociete />} />
+    <Route path={SocieteRoute.Detail} element={<DetailSociete />} />
+    <Route path={SocieteRoute.Ajout} element={<AjoutSociete />} />
   </Route>
 );
