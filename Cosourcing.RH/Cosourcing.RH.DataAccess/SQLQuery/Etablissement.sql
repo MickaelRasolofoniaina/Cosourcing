@@ -22,10 +22,26 @@ CREATE TABLE IF NOT EXISTS public."Etablissement"
     "Nom" character varying COLLATE pg_catalog."default" NOT NULL,
     "Adresse" character varying COLLATE pg_catalog."default" NOT NULL,
     "Activite" character varying COLLATE pg_catalog."default" NOT NULL,
-    "Deleted" boolean NOT NULL DEFAULT false
+    "Deleted" boolean NOT NULL DEFAULT false,
+    "IdSociete" integer NOT NULL,
+    "AdresseBanque1" character varying COLLATE pg_catalog."default",
+    "AdresseBanque2" character varying COLLATE pg_catalog."default",
+    CONSTRAINT "Etablissement_pkey" PRIMARY KEY ("Id"),
+    CONSTRAINT "Etablissement_IdSociete_fkey" FOREIGN KEY ("IdSociete")
+        REFERENCES public."Societe" ("Id") MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
 )
 
 TABLESPACE pg_default;
 
 ALTER TABLE IF EXISTS public."Etablissement"
     OWNER to postgres;
+-- Index: fki_FK_Etablissement_Societe
+
+-- DROP INDEX IF EXISTS public."fki_FK_Etablissement_Societe";
+
+CREATE INDEX IF NOT EXISTS "fki_FK_Etablissement_Societe"
+    ON public."Etablissement" USING btree
+    ("IdSociete" ASC NULLS LAST)
+    TABLESPACE pg_default;
