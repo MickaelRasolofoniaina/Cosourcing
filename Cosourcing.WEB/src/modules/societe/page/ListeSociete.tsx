@@ -26,6 +26,10 @@ export const ListeSociete: React.FC = () => {
     navigate(SocieteRoute.Ajout);
   };
 
+  if (!data) {
+    return null;
+  }
+
   return (
     <BaseEcran isLoading={isLoading} error={error} titre="Liste des sociétés">
       <Box marginBottom={4} display="flex" justifyContent="flex-end">
@@ -69,7 +73,7 @@ export const ListeSociete: React.FC = () => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {data?.map((societe) => (
+            {data.map((societe) => (
               <TableRow
                 key={societe.id}
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}

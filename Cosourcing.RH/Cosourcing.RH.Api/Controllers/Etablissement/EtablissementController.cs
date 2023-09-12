@@ -36,13 +36,23 @@ namespace Cosourcing.RH.Api.Controllers.Etablissement
 
         [Route("")]
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll([FromQuery] int idSociete = -1)
         {
             try
             {
-                var result = await _etablissementService.GetAll();
+                if(idSociete != -1)
+                {
+                    var result = await _etablissementService.GetSocieteEtablissements(idSociete);
 
-                return Ok(result);
+                    return Ok(result);
+                }
+                else
+                {
+
+                    var result = await _etablissementService.GetAll();
+
+                    return Ok(result);
+                }
             }
             catch (Exception ex)
             {

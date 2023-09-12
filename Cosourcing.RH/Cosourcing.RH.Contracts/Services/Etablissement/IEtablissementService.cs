@@ -11,6 +11,8 @@ namespace Cosourcing.RH.Contracts.Services.Etablissement
         public Task<EtablissementModel[]> GetAll();
 
         public Task<int> DeleteEtablissement(int id);
+
+        public Task<EtablissementModel[]> GetSocieteEtablissements(int idSociete);
     }
 }
 

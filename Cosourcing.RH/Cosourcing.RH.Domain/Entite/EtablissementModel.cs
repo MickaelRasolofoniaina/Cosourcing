@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace Cosourcing.RH.Domain.Entite
 {
 	public class EtablissementModel : BaseEntite
@@ -5,6 +7,7 @@ namespace Cosourcing.RH.Domain.Entite
 		
         public string Nom { get; set; }
         public string Activite { get; set; }
+        [ForeignKey("Etablissement_IdSociete_fkey")]
         public int IdSociete { get; set; }
 
         public EtablissementModel(

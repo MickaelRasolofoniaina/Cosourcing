@@ -16,6 +16,7 @@ import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
 import { SocieteRoute } from "../../societe/SocieteRouter";
 import { EtablissementRoute } from "../../etablissement/EtablissementRouter";
 import HomeWorkIcon from "@mui/icons-material/HomeWork";
+import DashboardIcon from '@mui/icons-material/Dashboard';
 
 const drawerWidth = 240;
 
@@ -32,6 +33,18 @@ export const BaseLayout: React.FC = () => {
       </Toolbar>
       <Divider />
       <List>
+      <ListItem disablePadding>
+          <ListItemButton
+            component={Link}
+            to={"/"}
+            selected={pathname === "/"}
+          >
+            <ListItemIcon>
+              <DashboardIcon />
+            </ListItemIcon>
+            <ListItemText primary={"Dashboard"} />
+          </ListItemButton>
+        </ListItem>
         <ListItem disablePadding>
           <ListItemButton
             component={Link}

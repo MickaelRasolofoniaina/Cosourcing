@@ -19,6 +19,13 @@ namespace Cosourcing.RH.DataAccess.Etablissement
                 .Where(e => !e.Deleted )
                 .ToArrayAsync();
         }
+
+        public Task<EtablissementModel[]> GetSocieteEtablissements(int idSociete)
+        {
+            return _etablissementDbContext
+                .Where(e => !e.Deleted && e.IdSociete == idSociete)
+                .ToArrayAsync();
+        }
     }
 }
 

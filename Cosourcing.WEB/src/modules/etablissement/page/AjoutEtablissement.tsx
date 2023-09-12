@@ -1,18 +1,9 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { BaseEcran } from "../../shared/components/BaseEcran";
-import { SocieteRoute } from "../SocieteRouter";
+import { EtablissementRoute } from "../EtablissementRouter";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import {
-  object,
-  number,
-  string,
-  ObjectSchema,
-  date,
-  boolean,
-  mixed,
-} from "yup";
-import { FormeJuridique, Societe } from "../../../models/entite/Societe";
+import { object, number, string, ObjectSchema, boolean } from "yup";
 import { CodeBanqueRegex, IbanRegex, NomRegex } from "../../../constants/Regex";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -20,14 +11,14 @@ import Grid from "@mui/material/Grid";
 import TextField from "@mui/material/TextField";
 import Cancel from "@mui/icons-material/Cancel";
 import Save from "@mui/icons-material/Save";
-import MenuItem from "@mui/material/MenuItem";
 import Divider from "@mui/material/Divider";
 import Alert from "@mui/material/Alert";
 import Snackbar from "@mui/material/Snackbar";
 import { useState } from "react";
-import { ajouterSociete } from "../services/SocieteService";
+import { ajouterEtablissement } from "../services/EtablissementService";
+import { Etablissement } from "../../../models/entite/Etablissement";
 
-const SocieteSchema: ObjectSchema<Societe> = object({
+const Etablissementchema: ObjectSchema<Etablissement> = object({
   nomResponsable: string()
     .required("Veuillez indiquer le nom du responsable")
     .matches(NomRegex, "Le nom du responsable n'est pas valide"),
@@ -88,58 +79,37 @@ const SocieteSchema: ObjectSchema<Societe> = object({
   ),
   commentaire: string().optional(),
   adresse: string().required("Veuillez indiquer l'adresse"),
-  raisonSociale: string().required("Veuillez indiquer la raison sociale"),
-  nomCommercial: string().required("Veuillez indiquer le nom commerciale"),
-  dateDeCreation: date()
-    .required("Veuillez indiquer la date de création")
-    .max(new Date(), "La date de création doit être dans le passé")
-    .typeError("La date de création doit être dans le passé"),
-  formeJuridique: mixed<FormeJuridique>()
-    .required("Veuillez indiquer la forme juridique")
-    .oneOf(Object.values(FormeJuridique), "Forme juridique invalide"),
-  numeroStatistique: string()
-    .required("Veuillez indiquer le numéro statistique")
-    .matches(
-      /^[0-9]*$/,
-      "Numero statistique invalide, veuillez insérer un numéro statistique en chiffre uniquement"
-    ),
-  nif: string()
-    .required("Veuillez indiquer le NIF")
-    .matches(
-      /^[0-9]{10}$/,
-      "NIF invalide, veuillez insérer un NIF à 10 chiffres uniquement"
-    ),
+  nom: string().required("Veuillez indiquer le nom"),
   activite: string().required("Veuillez indiquer l'activité de la société"),
-  nombreEtablissement: number()
-    .min(
-      1,
-      "Nombre établissement invalide, veuillez insérer un nombre positif uniquement"
-    )
-    .default(1),
   id: number().optional(),
   deleted: boolean().optional().default(false),
+  idSociete: number().required(),
 }).required();
 
-export const AjoutSociete: React.FC = () => {
+export const AjoutEtablissement: React.FC = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<Societe>({
-    resolver: yupResolver(SocieteSchema),
+  } = useForm<Etablissement>({
+    resolver: yupResolver(Etablissementchema),
   });
+
+  const [params] = useSearchParams();
+
+  const idSociete = parseInt(params.get("idSociete") ?? "-1");
 
   const [erreur, setErreur] = useState(false);
   const [sending, setSending] = useState(false);
   const navigate = useNavigate();
 
-  const onSubmit = handleSubmit((societe) => {
+  const onSubmit = handleSubmit((etablissement) => {
     setErreur(false);
     setSending(true);
-    ajouterSociete(societe)
+    ajouterEtablissement(etablissement)
       .then((response) => {
         if (response > 0) {
-          navigate(SocieteRoute.Root);
+          navigate(`${EtablissementRoute.Root}?idSociete=${idSociete}`);
         }
       })
       .catch(() => {
@@ -151,9 +121,11 @@ export const AjoutSociete: React.FC = () => {
   });
 
   return (
-    <BaseEcran titre="Ajouter une société">
+    <BaseEcran titre="Ajouter un établissement">
       <Box marginBottom={4}>
-        <Link to={SocieteRoute.Root}>Retour</Link>
+        <Link to={`${EtablissementRoute.Root}?idSociete=${idSociete}`}>
+          Retour
+        </Link>
       </Box>
       <form onSubmit={onSubmit}>
         <Box marginBottom={2}>
@@ -162,20 +134,11 @@ export const AjoutSociete: React.FC = () => {
         <Grid container spacing={2}>
           <Grid item xs={4}>
             <TextField
-              {...register("raisonSociale")}
+              {...register("nom")}
               fullWidth
-              error={errors.raisonSociale !== undefined}
-              helperText={errors.raisonSociale?.message}
-              label="Raison sociale*"
-            />
-          </Grid>
-          <Grid item xs={4}>
-            <TextField
-              {...register("nomCommercial")}
-              fullWidth
-              error={errors.nomCommercial !== undefined}
-              helperText={errors.nomCommercial?.message}
-              label="Nom commercial*"
+              error={errors.nom !== undefined}
+              helperText={errors.nom?.message}
+              label="Nom*"
             />
           </Grid>
           <Grid item xs={4}>
@@ -185,50 +148,6 @@ export const AjoutSociete: React.FC = () => {
               error={errors.adresse !== undefined}
               helperText={errors.adresse?.message}
               label="Adresse*"
-            />
-          </Grid>
-          <Grid item xs={4}>
-            <TextField
-              {...register("dateDeCreation")}
-              fullWidth
-              error={errors.dateDeCreation !== undefined}
-              helperText={errors.dateDeCreation?.message}
-              label="Date de creation*"
-              type="date"
-            />
-          </Grid>
-          <Grid item xs={4}>
-            <TextField
-              {...register("formeJuridique")}
-              fullWidth
-              error={errors.formeJuridique !== undefined}
-              helperText={errors.formeJuridique?.message}
-              label="Forme Juridique"
-              select
-            >
-              {Object.values(FormeJuridique).map((option) => (
-                <MenuItem key={option} value={option}>
-                  {option}
-                </MenuItem>
-              ))}
-            </TextField>
-          </Grid>
-          <Grid item xs={4}>
-            <TextField
-              {...register("numeroStatistique")}
-              fullWidth
-              error={errors.numeroStatistique !== undefined}
-              helperText={errors.numeroStatistique?.message}
-              label="Numéro statistique*"
-            />
-          </Grid>
-          <Grid item xs={4}>
-            <TextField
-              {...register("nif")}
-              fullWidth
-              error={errors.nif !== undefined}
-              helperText={errors.nif?.message}
-              label="Numéro d'identification fiscale*"
             />
           </Grid>
           <Grid item xs={4}>
@@ -357,18 +276,6 @@ export const AjoutSociete: React.FC = () => {
         <Grid container spacing={2}>
           <Grid item xs={4}>
             <TextField
-              {...register("nombreEtablissement")}
-              fullWidth
-              error={errors.nombreEtablissement !== undefined}
-              helperText={errors.nombreEtablissement?.message}
-              label="Nombre établissement"
-              type="number"
-              defaultValue={1}
-            />
-          </Grid>
-          <Grid item xs={8} />
-          <Grid item xs={4}>
-            <TextField
               {...register("nomOrganismeSociale")}
               fullWidth
               error={errors.nomOrganismeSociale !== undefined}
@@ -415,6 +322,7 @@ export const AjoutSociete: React.FC = () => {
               rows={5}
             />
           </Grid>
+          <input {...register("idSociete")} type="hidden" value={idSociete} />
         </Grid>
         <Box marginTop={2} marginBottom={2}>
           <Divider />
@@ -445,8 +353,13 @@ export const AjoutSociete: React.FC = () => {
           </Grid>
         </Grid>
       </form>
-      <Snackbar open={erreur} autoHideDuration={3000}>
-        <Alert variant="outlined" severity="error">
+      <Snackbar
+        open={erreur}
+        autoHideDuration={2000}
+        onClose={() => setErreur(false)}
+        anchorOrigin={{ vertical: "top", horizontal: "right" }}
+      >
+        <Alert variant="filled" severity="error">
           Une erreur s'est produite, veuillez réessayer s'il vous plaît
         </Alert>
       </Snackbar>

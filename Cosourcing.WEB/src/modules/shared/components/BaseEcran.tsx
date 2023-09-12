@@ -8,15 +8,17 @@ import Typography from "@mui/material/Typography";
 export interface BaseEcranProps {
   isLoading?: boolean;
   error?: Erreur | undefined;
-  children: React.ReactElement[] | React.ReactElement;
-  titre: string;
+  forceError?: boolean;
+  children?: React.ReactElement[] | React.ReactElement;
+  titre?: string;
 }
 
 export const BaseEcran: React.FC<BaseEcranProps> = ({
   isLoading,
   error,
+  forceError,
   children,
-  titre
+  titre,
 }) => {
   if (isLoading) {
     return (
@@ -31,7 +33,7 @@ export const BaseEcran: React.FC<BaseEcranProps> = ({
     );
   }
 
-  if (error) {
+  if (error || forceError) {
     return (
       <Box
         display={"flex"}
@@ -51,10 +53,12 @@ export const BaseEcran: React.FC<BaseEcranProps> = ({
     );
   }
 
-  return (<>
-   <Typography variant="h5" component="h1" marginBottom={2}>
+  return (
+    <>
+      <Typography variant="h5" component="h1" marginBottom={2}>
         {titre}
       </Typography>
-  {children}
-  </>);
+      {children}
+    </>
+  );
 };

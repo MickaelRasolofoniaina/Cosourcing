@@ -12,21 +12,35 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import Button from "@mui/material/Button";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import { useHttp } from "../../shared/hooks/UseHttp";
-import { getAllEtablissement } from "../services/EtablissementService";
+import { getAllEtablissement, getSocieteEtablissement } from "../services/EtablissementService";
 import { BaseEcran } from "../../shared/components/BaseEcran";
 import { Etablissement } from "../../../models/entite/Etablissement";
-import { Link, useSearchParams } from "react-router-dom";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import Grid from "@mui/material/Grid";
 import { SocieteRoute } from "../../societe/SocieteRouter";
+import { EtablissementRoute } from "../EtablissementRouter";
 
 export const ListeEtablissement: React.FC = () => {
   const [params] = useSearchParams();
+  const navigate = useNavigate();
 
-  const id = parseInt(params.get("idSociete") ?? "0");
+  const idSociete = parseInt(params.get("idSociete") ?? "-1");
 
-  const { data, isLoading, error } = useHttp<Etablissement[]>(() =>
-    getAllEtablissement()
-  );
+  const { data, isLoading, error } = useHttp<Etablissement[]>(() => {
+    if (idSociete === -1) {
+      return getAllEtablissement();
+    } else {
+      return getSocieteEtablissement(idSociete);
+    }
+  });
+
+  const handleAjouterEtablissement = () => {
+    navigate(`${EtablissementRoute.Ajout}?idSociete=${idSociete}`);
+  }
+
+  if (!data) {
+    return null;
+  }
 
   return (
     <BaseEcran
@@ -37,7 +51,7 @@ export const ListeEtablissement: React.FC = () => {
       <Grid container spacing={2} marginBottom={4}>
         <Grid item xs={6}>
           <Box display={"flex"} alignItems={"center"}>
-            <Link to={`${SocieteRoute.Root}/${id}`}>Retour</Link>
+            <Link to={`${SocieteRoute.Root}/${idSociete}`}>Retour</Link>
           </Box>
         </Grid>
         <Grid item xs={6}>
@@ -46,6 +60,7 @@ export const ListeEtablissement: React.FC = () => {
               variant="contained"
               color="success"
               endIcon={<AddCircleIcon />}
+              onClick={handleAjouterEtablissement}
             >
               Ajouter un établissement
             </Button>
@@ -78,7 +93,7 @@ export const ListeEtablissement: React.FC = () => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {data?.map((etablissement) => (
+            {data.map((etablissement) => (
               <TableRow
                 key={etablissement.id}
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}

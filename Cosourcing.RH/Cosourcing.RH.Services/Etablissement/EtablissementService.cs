@@ -63,6 +63,11 @@ namespace Cosourcing.RH.Services.Etablissement
 
             return _baseRepository.SaveChangesAsync();
         }
+
+        public Task<EtablissementModel[]> GetSocieteEtablissements(int idSociete)
+        {
+            return _etablissementRepository.GetSocieteEtablissements(idSociete);
+        }
     }
 }
 

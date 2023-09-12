@@ -1,3 +1,4 @@
+import { AjoutEtablissement } from "./page/AjoutEtablissement";
 import { ListeEtablissement } from "./page/ListeEtablissement";
 import {
   Route,
@@ -12,5 +13,6 @@ export const EtablissementRoute = {
 export const EtablissementRouter = (
   <Route path={EtablissementRoute.Root}>
     <Route index element={<ListeEtablissement />} />
+    <Route path={EtablissementRoute.Ajout} element={<AjoutEtablissement />} />
   </Route>
 );

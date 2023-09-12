@@ -20,6 +20,11 @@ export async function post<T, U>(url: string, jsonData: T) {
       },
       body: JSON.stringify(jsonData)
     });
+
+    if(response.status !== 200 && response.status !== 201) {
+      throw new Error();
+    }
+
     const data: U = await response.json();
     return data;
   }
