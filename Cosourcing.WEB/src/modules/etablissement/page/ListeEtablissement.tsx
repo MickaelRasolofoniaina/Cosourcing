@@ -15,20 +15,43 @@ import { useHttp } from "../../shared/hooks/UseHttp";
 import { getAllEtablissement } from "../services/EtablissementService";
 import { BaseEcran } from "../../shared/components/BaseEcran";
 import { Etablissement } from "../../../models/entite/Etablissement";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
+import Grid from "@mui/material/Grid";
+import { SocieteRoute } from "../../societe/SocieteRouter";
 
 export const ListeEtablissement: React.FC = () => {
+  const [params] = useSearchParams();
+
+  const id = parseInt(params.get("idSociete") ?? "0");
+
   const { data, isLoading, error } = useHttp<Etablissement[]>(() =>
     getAllEtablissement()
   );
 
   return (
-    <BaseEcran isLoading={isLoading} error={error} titre="Liste des établissements">
-      <Box marginBottom={4} display="flex" justifyContent="flex-end">
-        <Button variant="contained" color="success" endIcon={<AddCircleIcon />}>
-          Ajouter un établissement
-        </Button>
-      </Box>
+    <BaseEcran
+      isLoading={isLoading}
+      error={error}
+      titre="Liste des établissements"
+    >
+      <Grid container spacing={2} marginBottom={4}>
+        <Grid item xs={6}>
+          <Box display={"flex"} alignItems={"center"}>
+            <Link to={`${SocieteRoute.Root}/${id}`}>Retour</Link>
+          </Box>
+        </Grid>
+        <Grid item xs={6}>
+          <Box display="flex" justifyContent="flex-end">
+            <Button
+              variant="contained"
+              color="success"
+              endIcon={<AddCircleIcon />}
+            >
+              Ajouter un établissement
+            </Button>
+          </Box>
+        </Grid>
+      </Grid>
       <TableContainer component={Paper}>
         <Table>
           <TableHead>
@@ -61,12 +84,15 @@ export const ListeEtablissement: React.FC = () => {
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
               >
                 <TableCell>
-                  <Link to={`/etablissement/${etablissement.id}`}>{etablissement.id}</Link>
+                  <Link to={`/etablissement/${etablissement.id}`}>
+                    {etablissement.id}
+                  </Link>
                 </TableCell>
                 <TableCell>{etablissement.nom}</TableCell>
                 <TableCell>{etablissement.adresse}</TableCell>
                 <TableCell>
-                  {etablissement.nomResponsable} {etablissement.prenomResponsable}
+                  {etablissement.nomResponsable}{" "}
+                  {etablissement.prenomResponsable}
                 </TableCell>
                 <TableCell>{etablissement.activite}</TableCell>
                 <TableCell align="right">

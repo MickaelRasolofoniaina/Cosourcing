@@ -27,7 +27,7 @@ export const DetailSociete: React.FC = () => {
   );
 
   const handleListeEtablissement = () => {
-    navigate(EtablissementRoute.Root);
+    navigate(`${EtablissementRoute.Root}?idSociete=${id}`);
   };
 
   if (!data) {
@@ -38,7 +38,8 @@ export const DetailSociete: React.FC = () => {
     <BaseEcran isLoading={isLoading} error={error} titre="Détail société">
       <Grid container spacing={2} marginBottom={4}>
         <Grid item xs={6}>
-          <Link to={SocieteRoute.Root}>Retour</Link>
+          <Box display={"flex"} alignItems={"center"}><Link to={SocieteRoute.Root}>Retour</Link></Box>
+          
         </Grid>
         <Grid item xs={6}>
           <Box
