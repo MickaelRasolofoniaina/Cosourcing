@@ -3,8 +3,14 @@ import {
   Route,
 } from "react-router-dom";
 
+export const EtablissementRoute = {
+  Root: "/etablissement",
+  Ajout: "/etablissement/ajout"
+}
+
+
 export const EtablissementRouter = (
-  <Route path="/etablissement">
+  <Route path={EtablissementRoute.Root}>
     <Route index element={<ListeEtablissement />} />
   </Route>
 );

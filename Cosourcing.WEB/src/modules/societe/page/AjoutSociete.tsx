@@ -153,7 +153,7 @@ export const AjoutSociete: React.FC = () => {
   return (
     <BaseEcran titre="Ajouter une société">
       <Box marginBottom={4}>
-        <Link to={SocieteRoute.Root}>Liste des sociétés</Link>
+        <Link to={SocieteRoute.Root}>Retour</Link>
       </Box>
       <form onSubmit={onSubmit}>
         <Box marginBottom={2}>

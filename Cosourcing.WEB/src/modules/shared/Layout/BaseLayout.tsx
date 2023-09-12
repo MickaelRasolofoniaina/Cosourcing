@@ -1,12 +1,10 @@
-import { Link, Outlet } from "react-router-dom";
-
+import { Link, Outlet, useLocation } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
 import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 import AddHomeIcon from "@mui/icons-material/AddHome";
-import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
@@ -14,31 +12,60 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
+import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
+import { SocieteRoute } from "../../societe/SocieteRouter";
+import { EtablissementRoute } from "../../etablissement/EtablissementRouter";
+import HomeWorkIcon from "@mui/icons-material/HomeWork";
 
 const drawerWidth = 240;
 
 export const BaseLayout: React.FC = () => {
+  const { pathname } = useLocation();
+
   const drawer = (
     <div>
       <Toolbar>
-        <img src="https://www.cosourcing.fr/wp-content/uploads/2020/12/logo-cosourcing-v4-220x49-1.jpg" alt="logo cosourcing" />
+        <img
+          src="https://www.cosourcing.fr/wp-content/uploads/2020/12/logo-cosourcing-v4-220x49-1.jpg"
+          alt="logo cosourcing"
+        />
       </Toolbar>
       <Divider />
       <List>
         <ListItem disablePadding>
-          <ListItemButton component={Link} to="/societe">
+          <ListItemButton
+            component={Link}
+            to={SocieteRoute.Root}
+            selected={pathname.includes(SocieteRoute.Root)}
+          >
             <ListItemIcon>
-              <AccountBalanceIcon />
+              <AddHomeIcon />
             </ListItemIcon>
             <ListItemText primary={"Société"} />
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
-          <ListItemButton component={Link} to="/etablissement">
+          <ListItemButton
+            component={Link}
+            to={EtablissementRoute.Root}
+            selected={pathname.includes(EtablissementRoute.Root)}
+          >
             <ListItemIcon>
-              <AddHomeIcon />
+              <HomeWorkIcon />
             </ListItemIcon>
             <ListItemText primary={"Etablissement"} />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton
+            component={Link}
+            to={EtablissementRoute.Root}
+            selected={pathname.includes("employe")}
+          >
+            <ListItemIcon>
+              <PeopleAltIcon />
+            </ListItemIcon>
+            <ListItemText primary={"Employé"} />
           </ListItemButton>
         </ListItem>
       </List>
