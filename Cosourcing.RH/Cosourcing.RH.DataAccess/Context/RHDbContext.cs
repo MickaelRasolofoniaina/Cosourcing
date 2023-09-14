@@ -13,6 +13,7 @@ namespace Cosourcing.RH.DataAccess.Context
 		public DbSet<UserModel> User { get; set; }
 		public DbSet<EtablissementModel> Etablissement { get; set; }
 		public DbSet<SocieteModel> Societe { get; set; }
+		public DbSet<EmployeModel> Employe { get; set; }
     }
 }
 
