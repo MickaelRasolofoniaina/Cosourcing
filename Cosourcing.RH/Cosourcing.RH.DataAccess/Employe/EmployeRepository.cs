@@ -6,23 +6,23 @@ namespace Cosourcing.RH.DataAccess.Employe
 {
 	public class EmployeRepository : IEmployeRepository
 	{
-        private readonly DbSet<EmployeModel> _etablissementDbContext;
+        private readonly DbSet<EmployeModel> _employeDbContext;
 
-		public EmployeRepository(DbSet<EmployeModel> etablissementDbContext)
+		public EmployeRepository(DbSet<EmployeModel> employeDbContext)
 		{
-            _etablissementDbContext = etablissementDbContext;
+            _employeDbContext = employeDbContext;
         }
 
         public Task<EmployeModel[]> GetAllEmployes()
         {
-            return _etablissementDbContext
+            return _employeDbContext
                 .Where(e => !e.Deleted )
                 .ToArrayAsync();
         }
 
         public Task<EmployeModel[]> GetEtablissementEmployes(int idEtablissement)
         {
-            return _etablissementDbContext
+            return _employeDbContext
                 .Where(e => !e.Deleted && e.IdEtablissement == idEtablissement)
                 .ToArrayAsync();
         }

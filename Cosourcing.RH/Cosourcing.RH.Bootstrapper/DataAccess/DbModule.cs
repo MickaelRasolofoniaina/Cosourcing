@@ -48,6 +48,16 @@ namespace Cosourcing.RH.Bootstrapper.DataAccess
                 })
                 .AsSelf()
                 .SingleInstance();
+            
+            containerBuilder
+                .Register(c =>
+                {
+                    var rhDbContext = c.Resolve<RHDbContext>();
+
+                    return rhDbContext.Employe;
+                })
+                .AsSelf()
+                .SingleInstance();
         }
     }
 }
