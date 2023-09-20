@@ -8,6 +8,7 @@ import {
 import { BaseLayout } from "./modules/shared/layout/BaseLayout";
 import { SocieteRouter } from "./modules/societe/SocieteRouter";
 import { EtablissementRouter } from "./modules/etablissement/EtablissementRouter";
+import { EmployeRouter } from "./modules/employe/EmployeRouter";
 import { Erreur } from "./modules/erreur/page/Erreur";
 import { DashboardRouter } from "./modules/dashboard/DashboardRouter";
 
@@ -17,6 +18,7 @@ const router = createBrowserRouter(
       {DashboardRouter}
       {SocieteRouter}
       {EtablissementRouter}
+      {EmployeRouter}
     </Route>
   )
 );

@@ -1,6 +1,7 @@
-import { Link, useParams, useSearchParams } from "react-router-dom";
+import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
+import Button from "@mui/material/Button";
 import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
 import { useHttp } from "../../shared/hooks/UseHttp";
@@ -11,18 +12,25 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import { afficherInformation } from "../../../utils/StringUtils";
 import { Etablissement } from "../../../models/entite/Etablissement";
+import HomeWorkIcon from "@mui/icons-material/HomeWork";
+import { EmployeRoute } from "../../employe/EmployeRouter";
 
 export const DetailEtablissement: React.FC = () => {
   const params = useParams();
   const [searchParams] = useSearchParams();
+  const navigate = useNavigate();
 
   const id = parseInt(params.id ?? "0");
-  const idSociete = parseInt(searchParams.get("idSociete") ?? "-1");
+  const idEtablissement = parseInt(searchParams.get("idEtablissement") ?? "-1");
 
   const { isLoading, error, data } = useHttp<Etablissement>(() =>
     getDetailEtablissement(id)
   );
 
+
+  const handleListeEmploye = () => {
+    navigate(`${EmployeRoute.Root}?idEtablissement=${id}`);
+  };
   if (!data) {
     return null;
   }
@@ -31,7 +39,23 @@ export const DetailEtablissement: React.FC = () => {
     <BaseEcran isLoading={isLoading} error={error} titre="Détail établissement">
       <Grid container spacing={2} marginBottom={4}>
         <Grid item xs={6}>
-          <Box display={"flex"} alignItems={"center"}><Link to={`${EtablissementRoute.Root}?idSociete=${idSociete}`}>Retour</Link></Box>
+          <Box display={"flex"} alignItems={"center"}><Link to={`${EtablissementRoute.Root}?idSociete=${idEtablissement}`}>Retour</Link></Box>
+        </Grid>
+        <Grid item xs={6}>
+          <Box
+            display={"flex"}
+            justifyContent={"flex-end"}
+            alignItems={"center"}
+          >
+            <Button
+              variant="contained"
+              color="primary"
+              endIcon={<HomeWorkIcon />}
+              onClick={handleListeEmploye}
+            >
+              Liste des employés
+            </Button>
+          </Box>
         </Grid>
       </Grid>
       <Grid container spacing={2}>

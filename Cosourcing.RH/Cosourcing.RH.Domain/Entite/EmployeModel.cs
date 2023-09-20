@@ -21,12 +21,12 @@ namespace Cosourcing.RH.Domain.Entite
         public DateTime DSortie { get; set; }
         public string MotifSortie { get; set; }
         public float Salaire { get; set; }
-        public int Cin { get; set; }
+        public string Cin { get; set; }
         public string NumCnaps { get; set; }
         public int HeureContractuelle { get; set; }
         public string TypeContrat { get; set; }
         public string ModeReglement { get; set; }
-        public int Iban { get; set; }
+        public string Iban { get; set; }
         public string LieuTravail { get; set; }
         public string Affectation { get; set; }
         public string Commentaire { get; set; }    
@@ -53,12 +53,12 @@ namespace Cosourcing.RH.Domain.Entite
             DateTime dSortie, 
             string motifSortie, 
             float salaire, 
-            int cin, 
+            string cin, 
             string numCnaps, 
             int heureContractuelle, 
             string typeContrat, 
             string modeReglement, 
-            int iban, 
+            string iban, 
             string lieuTravail, 
             string affectation, 
             string commentaire, 
