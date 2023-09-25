@@ -13,6 +13,9 @@
     <Folder Include="User\" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Core" Version="1.6.0" />
+  </ItemGroup>
+  <ItemGroup>
 	  <ProjectReference Include="..\Cosourcing.RH.Utility\Cosourcing.RH.Utility.csproj" /> 
     <ProjectReference Include="..\Cosourcing.RH.Contracts\Cosourcing.RH.Contracts.csproj" />
     <ProjectReference Include="..\Cosourcing.RH.DataAccess\Cosourcing.RH.DataAccess.csproj" />

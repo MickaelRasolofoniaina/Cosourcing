@@ -4,7 +4,7 @@
 
 CREATE TABLE IF NOT EXISTS public."User"
 (
-    "Id" uuid NOT NULL,
+    "Id" integer NOT NULL,
     "LastName" character varying COLLATE pg_catalog."default" NOT NULL,
     "FirstName" character varying COLLATE pg_catalog."default",
     "Birthday" date NOT NULL,
