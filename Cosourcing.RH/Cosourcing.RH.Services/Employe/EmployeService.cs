@@ -29,9 +29,9 @@ namespace Cosourcing.RH.Services.Employe
                 throw new InvalidModelDataException("Veuillez indiquer le nom de l'employé");
             }
 
-            if (!ValidateurGenerique.EstRenseigne(employe.Prenom))
+            if (!ValidateurGenerique.EstRenseigne(employe.Adresse))
             {
-                throw new InvalidModelDataException("Veuillez indiquer l'activité de l'employé");
+                throw new InvalidModelDataException("Veuillez indiquer l'Adresse de l'employé");
             }
         }
 
@@ -64,6 +64,11 @@ namespace Cosourcing.RH.Services.Employe
         public Task<EmployeModel[]> GetEtablissementEmployes(int idEtablissement)
         {
             return _employeRepository.GetEtablissementEmployes(idEtablissement);
+        }
+
+        public Task<bool> UpdateEmploye(int id, EmployeModel employe){
+            ValiderEmploye(employe);
+            return _baseRepository.UpdateEntity(id, employe);
         }
     }
 }

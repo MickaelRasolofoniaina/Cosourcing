@@ -91,7 +91,17 @@ namespace Cosourcing.RH.Api.Controllers.Etablissement
                 return BadRequest(ex.Message);
             }
         }
-
+        [Route("{id}")]
+        [HttpPut]
+        public async Task<IActionResult> UpdateEtablissement(int id, EtablissementModel etablissement){
+            try{
+                var result = await _etablissementService.UpdateEtablissement(id, etablissement);
+                return Ok(result);
+            }
+            catch(Exception ex){
+                return BadRequest(ex.Message);
+            }
+        }
 
     }
 }

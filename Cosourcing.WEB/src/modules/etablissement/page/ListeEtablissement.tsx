@@ -19,6 +19,13 @@ import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import Grid from "@mui/material/Grid";
 import { SocieteRoute } from "../../societe/SocieteRouter";
 import { EtablissementRoute } from "../EtablissementRouter";
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
+import { useState, useEffect } from "react";
+import { modifEtablissement } from "../services/EtablissementService";
 
 export const ListeEtablissement: React.FC = () => {
   const [params] = useSearchParams();
@@ -33,10 +40,54 @@ export const ListeEtablissement: React.FC = () => {
       return getSocieteEtablissement(idSociete);
     }
   });
+  const [liste, setListe] = useState<Etablissement[]>([]);
+  useEffect(() => {
+    if(data){
+      setListe(data)
+    }
+  }, [data])
 
   const handleAjouterEtablissement = () => {
-    navigate(`${EtablissementRoute.Ajout}?idSociete=${idSociete}`);
+    navigate(`${EtablissementRoute.Root}/ajout/0/${idSociete}`);
   }
+  //modal
+  const [open, setOpen] = useState(false);
+  const [supr, setSupr] = useState<Etablissement | undefined> (undefined);
+  const handleOpen = () => {
+    setOpen(true);
+  }
+
+  const handleClose = () => {
+    setOpen(false);
+  }
+  const handleSupprimerEtablissement = (etablissement: Etablissement) =>{
+    setSupr(etablissement)
+    handleOpen()
+  }
+
+  const supression = (etablissement: Etablissement) => {
+      if(etablissement && etablissement.id !== undefined){
+      etablissement.deleted = true;
+      modifEtablissement(etablissement.id, etablissement)
+      .then(response => {
+        if(!response.ok){
+          throw new Error('Echec de la suppression de cet Etablissement ');
+        }
+        setListe((ancienneListe) => ancienneListe.filter((e) => e.id !== etablissement.id));
+             
+        return response.json();
+      })
+      .then(data => {
+        console.log('mise à jour réussi', data);
+      })
+      .catch(error => {
+        console.error("Erreur lors de la mise à jour", error);
+      })
+    }else{
+      console.log("erreur de suppression")
+    }
+  }
+  
 
   if (!data) {
     return null;
@@ -56,6 +107,7 @@ export const ListeEtablissement: React.FC = () => {
         </Grid>
         <Grid item xs={6}>
           <Box display="flex" justifyContent="flex-end">
+            {idSociete > 0 ? (
             <Button
               variant="contained"
               color="success"
@@ -64,6 +116,8 @@ export const ListeEtablissement: React.FC = () => {
             >
               Ajouter un établissement
             </Button>
+            ) : ""}
+
           </Box>
         </Grid>
       </Grid>
@@ -93,7 +147,7 @@ export const ListeEtablissement: React.FC = () => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {data.map((etablissement) => (
+            {liste.map((etablissement) => (
               <TableRow
                 key={etablissement.id}
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
@@ -111,12 +165,16 @@ export const ListeEtablissement: React.FC = () => {
                 </TableCell>
                 <TableCell>{etablissement.activite}</TableCell>
                 <TableCell align="right">
-                  <IconButton>
+                  <IconButton>                    
+                  <Link to={`/etablissement/modifier/${etablissement.id}/${etablissement.idSociete}`}>
                     <EditIcon />
+                  </Link>
                   </IconButton>
                 </TableCell>
                 <TableCell align="right">
-                  <IconButton>
+                  <IconButton  onClick={()=>{
+                    handleSupprimerEtablissement(etablissement)
+                  }}>
                     <DeleteIcon />
                   </IconButton>
                 </TableCell>
@@ -125,6 +183,28 @@ export const ListeEtablissement: React.FC = () => {
           </TableBody>
         </Table>
       </TableContainer>
+            <Dialog open={open} onClose={handleClose}>
+        <DialogTitle>Alert</DialogTitle>
+        <DialogContent>
+          <DialogContentText>
+            Voulez vous vraiment Supprimer {supr !== undefined ? supr.nom : " "} ? 
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+        <Button onClick={()=>{
+          if(supr !== undefined){
+            supression(supr)
+          }
+          handleClose()
+        }}>
+          Valider
+
+        </Button>
+          <Button onClick={handleClose} color="primary">
+            Fermer
+          </Button>
+        </DialogActions>
+      </Dialog>
     </BaseEcran>
   );
 };

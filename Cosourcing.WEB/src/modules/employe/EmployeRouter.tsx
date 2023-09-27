@@ -4,10 +4,12 @@ import { ListeEmploye } from "./page/ListeEmploye";
 import {
   Route,
 } from "react-router-dom";
+import { ModifierEmploye } from "./page/ModifierEmploye";
 export const EmployeRoute ={
   Root:"/employe",
   Ajout:"/employe/ajout",
-  Detail:"/employe/:id"
+  Detail:"/employe/:id",
+  Modifier: "/employe/modifier"
 }
 
 export const EmployeRouter = (
@@ -15,5 +17,6 @@ export const EmployeRouter = (
     <Route index element={<ListeEmploye />} />
     <Route path={EmployeRoute.Detail} element={<DetailEmploye />} />
     <Route path={EmployeRoute.Ajout} element={<AjoutEmploye />} />
+    <Route path={EmployeRoute.Modifier} element={<ModifierEmploye /> }/>
   </Route>
 );

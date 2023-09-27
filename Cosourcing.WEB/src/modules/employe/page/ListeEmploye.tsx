@@ -117,8 +117,10 @@ export const ListeEmploye: React.FC = () => {
                                 <TableCell>{employe.poste}</TableCell>
                                 <TableCell>{employe.lieuTravail}</TableCell>
                                 <TableCell align="right">
-                                <IconButton>
+                                <IconButton>                                    
+                                    <Link to={`/employe/modifier?idEtablissement=${idEtablissement}&idEmployer=${employe.id}`}>
                                     <EditIcon />
+                                    </Link>
                                 </IconButton>
                                 </TableCell>
                                 <TableCell align="right">

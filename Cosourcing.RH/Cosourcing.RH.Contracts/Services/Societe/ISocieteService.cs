@@ -11,6 +11,7 @@ namespace Cosourcing.RH.Contracts.Services.Societe
         public Task<SocieteModel[]> GetAll();
 
         public Task<int> DeleteSociete(int id);
+        public Task<bool> UpdateSociete(int id, SocieteModel societe);
     }
 }
 

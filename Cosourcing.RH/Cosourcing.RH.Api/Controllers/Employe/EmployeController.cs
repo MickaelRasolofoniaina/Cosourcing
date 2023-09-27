@@ -91,6 +91,18 @@ namespace Cosourcing.RH.Api.Controllers.Employe
                 return BadRequest(ex.Message);
             }
         }
+        [Route("{id}")]
+        [HttpPut]
+
+        public async Task<IActionResult> UpdateEmploye(int id, EmployeModel employe){
+            try{
+                var result = await _employeService.UpdateEmploye(id, employe);
+                return Ok(result);
+            }
+            catch(Exception ex){
+                return BadRequest(ex.Message);
+            }
+        }
 
 
     }

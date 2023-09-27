@@ -24,17 +24,17 @@ namespace Cosourcing.RH.Services.Societe
 
         private static void ValiderSociete(SocieteModel societe)
         {
-            if(!ValidateurGenerique.EstRenseigne(societe.RaisonSociale))
+            if (!ValidateurGenerique.EstRenseigne(societe.RaisonSociale))
             {
                 throw new InvalidModelDataException("Veuillez indiquer la raison sociale de la société");
             }
 
-            if(!ValidateurGenerique.EstRenseigne(societe.NomCommercial))
+            if (!ValidateurGenerique.EstRenseigne(societe.NomCommercial))
             {
                 throw new InvalidModelDataException("Veuillez indiquer le nom commerciale de la société");
             }
 
-            if(!ValidateurGenerique.EstDatePassee(societe.DateDeCreation))
+            if (!ValidateurGenerique.EstDatePassee(societe.DateDeCreation))
             {
                 throw new InvalidModelDataException("La date de création de la société doit être dans le passé");
             }
@@ -59,7 +59,7 @@ namespace Cosourcing.RH.Services.Societe
                 throw new InvalidModelDataException("Numero statistique invalide, veuillez insérer un numéro statistique en chiffre uniquement");
             }
 
-            if(!ValidateurGenerique.EstNChiffreUniquement(societe.Nif, 10))
+            if (!ValidateurGenerique.EstNChiffreUniquement(societe.Nif, 10))
             {
                 throw new InvalidModelDataException("NIF invalide, veuillez insérer un NIF à 10 chiffres uniquement");
             }
@@ -74,7 +74,7 @@ namespace Cosourcing.RH.Services.Societe
                 throw new InvalidModelDataException("Nombre établissement invalide, veuillez insérer un nombre positif uniquement");
             }
         }
-      
+
 
         public Task<int> Save(SocieteModel societe)
         {
@@ -102,6 +102,11 @@ namespace Cosourcing.RH.Services.Societe
             _baseRepository.Delete<SocieteModel>(id);
 
             return _baseRepository.SaveChangesAsync();
+        }
+
+        public Task<bool> UpdateSociete(int id, SocieteModel societe)
+        {
+            return _baseRepository.UpdateEntity(id, societe);
         }
     }
 }

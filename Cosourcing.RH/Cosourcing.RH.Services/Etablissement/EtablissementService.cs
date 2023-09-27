@@ -8,22 +8,22 @@ using Cosourcing.RH.Utility.Validateur;
 
 namespace Cosourcing.RH.Services.Etablissement
 {
-	public class EtablissementService : IEtablissementService
-	{
-		private readonly IBaseRepository _baseRepository;
-		private readonly IEtablissementRepository _etablissementRepository;
+    public class EtablissementService : IEtablissementService
+    {
+        private readonly IBaseRepository _baseRepository;
+        private readonly IEtablissementRepository _etablissementRepository;
 
-		public EtablissementService(
-			IBaseRepository baseRepository,
-			IEtablissementRepository etablissementRepository
-		)
-		{
-			_baseRepository = baseRepository;
-			_etablissementRepository = etablissementRepository;
-		}
+        public EtablissementService(
+            IBaseRepository baseRepository,
+            IEtablissementRepository etablissementRepository
+        )
+        {
+            _baseRepository = baseRepository;
+            _etablissementRepository = etablissementRepository;
+        }
 
-		private static void ValiderEtablissement(EtablissementModel etablissement)
-		{
+        private static void ValiderEtablissement(EtablissementModel etablissement)
+        {
             if (!ValidateurGenerique.EstRenseigne(etablissement.Nom))
             {
                 throw new InvalidModelDataException("Veuillez indiquer le nom de l'établissement");
@@ -43,7 +43,7 @@ namespace Cosourcing.RH.Services.Etablissement
 
             _baseRepository.Add(etablissement);
 
-			return _baseRepository.SaveChangesAsync();
+            return _baseRepository.SaveChangesAsync();
         }
 
 
@@ -67,6 +67,12 @@ namespace Cosourcing.RH.Services.Etablissement
         public Task<EtablissementModel[]> GetSocieteEtablissements(int idSociete)
         {
             return _etablissementRepository.GetSocieteEtablissements(idSociete);
+        }
+        public Task<bool> UpdateEtablissement(int id, EtablissementModel etablissement)
+        {
+            ValiderEtablissement(etablissement);
+            ValidateurEntite.ValiderEntite(etablissement);
+            return _baseRepository.UpdateEntity(id, etablissement);
         }
     }
 }

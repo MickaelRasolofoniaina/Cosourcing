@@ -1,7 +1,7 @@
 
 import { ETABLISSEMENT_ROOT_URL } from "../../../configs/EtablissementURL";
 import { Etablissement } from "../../../models/entite/Etablissement";
-import { get, post } from "../../shared/service/HttpService";
+import { get, post, put } from "../../shared/service/HttpService";
 
 
 export const getAllEtablissement = async () => {
@@ -18,4 +18,8 @@ export const ajouterEtablissement = async(etablissement: Etablissement) => {
 
 export const getDetailEtablissement = async(id: number) => {
   return get<Etablissement>(`${ETABLISSEMENT_ROOT_URL}/${id}`);
+}
+
+export const modifEtablissement = async(id:number, etablissement:Etablissement) => {
+  return put<Etablissement, number>(`${ETABLISSEMENT_ROOT_URL}/${id}`, etablissement);   
 }

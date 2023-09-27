@@ -1,11 +1,11 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { BaseEcran } from "../../shared/components/BaseEcran";
 import { Etablissement } from "../../../models/entite/Etablissement";
-import { ajouterEtablissement } from "../services/EtablissementService";
+import { modifEtablissement } from "../services/EtablissementService";
 import { EtablissementRoute } from "../EtablissementRouter";
 import { FormulaireEtablissement } from "./FormulaireEtablissement";
 
-export const AjoutEtablissement : React.FC = () =>{	
+export const ModifierEtablissement : React.FC = () =>{	
 	
 	const params = useParams();
 	const idEtablissement = parseInt(params.idEtablissement ?? "0");
@@ -14,26 +14,25 @@ export const AjoutEtablissement : React.FC = () =>{
 	const navigate = useNavigate();
 
 	const executer = (etablissement : Etablissement) => {
-    console.log("fonction ajout etablissement")
-		etablissement.idSociete = idSociete;
-		etablissement.id = 0;  
-    console.log("ajouter etablissement")
-    ajouterEtablissement(etablissement)
-      .then((response) => {
-        if (response > 0) {
-          navigate(`${EtablissementRoute.Root}?idSociete=${idSociete}`);
-        }
-      })
-      .catch(() => {
-        console.log("erreur pendant le create")
-      })
-      .finally(() => {
-        console.log("ajout avec succes");
-      });
+		etablissement.id = idEtablissement;
+		modifEtablissement(etablissement.id, etablissement)
+			.then(response => {
+				if(!response.ok){
+					throw new Error('Echec de la mise à jour de cet Etablissement ');
+				}
+				navigate(`${EtablissementRoute.Root}?idSociete=${etablissement.idSociete}`);
+				return response.json();
+			})
+			.then(data => {
+				console.log('mise à jour réussi', data);
+			})
+			.catch(error => {
+				console.error("Erreur lors de la mise à jour", error);
+			})
 	}
 	return(
 		<BaseEcran titre="Modifier Etablissement">
 			<FormulaireEtablissement executable={executer} idEtablissement={idEtablissement} idSociete={idSociete} />
-    </BaseEcran>
+		</BaseEcran>
 	)
 }

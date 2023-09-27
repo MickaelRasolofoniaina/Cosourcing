@@ -76,6 +76,8 @@ const EmployeSchema:ObjectSchema<Employe>=object({
 }).required();
 
 export const AjoutEmploye: React.FC = () => {
+
+
     const {
         register,
         handleSubmit,
@@ -411,6 +413,8 @@ export const AjoutEmploye: React.FC = () => {
             >
               Enregistrer
             </Button>
+            
+            
           </Grid>
           <input {...register("idEtablissement")} type="hidden" value={idEtablissement} />
           <input {...register("motifSortie")} type="hidden" value={""} />
