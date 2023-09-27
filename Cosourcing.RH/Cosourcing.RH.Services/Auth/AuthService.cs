@@ -1,5 +1,4 @@
-﻿using System;
-using System.IdentityModel.Tokens.Jwt;
+﻿using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using Cosourcing.RH.Domain.User;
@@ -43,9 +42,9 @@ public class AuthService
         return new JwtSecurityTokenHandler().WriteToken(token);
     }
 
-    public UserModel AuthenticateUser(string isActive, string password)
+    public UserModel AuthenticateUser(string email, string password)
     {
-        var user = dbContext.User.SingleOrDefault(u => u.IsActive == true);
+        var user = dbContext.User.SingleOrDefault(u => u.Email == email);
 
         if (user == null)
         {
