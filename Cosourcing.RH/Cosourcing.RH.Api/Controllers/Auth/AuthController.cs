@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using BCrypt.Net;
 using Cosourcing.RH.Services.Auth;
 using Cosourcing.RH.Domain.Request.User;
 
@@ -17,6 +18,7 @@ public class AuthController : ControllerBase
     [HttpPost("login")]
     public IActionResult Login([FromBody] LoginRequest request)
     {
+       
         var user = authService.AuthenticateUser(request.Email, request.Password);
 
         if (user == null)
@@ -24,10 +26,11 @@ public class AuthController : ControllerBase
             return Unauthorized();
         }
 
+       
         var token = authService.GenerateJwtToken(user);
 
         return Ok(new { Token = token });
     }
 
-    // Autres actions pour l'inscription, la récupération de mot de passe, etc.
+    
 }

@@ -5,6 +5,7 @@ using Cosourcing.RH.Domain.User;
 using Microsoft.Extensions.Configuration;
 using Cosourcing.RH.DataAccess.Context;
 using Microsoft.IdentityModel.Tokens;
+using BCrypt.Net;
 
 namespace Cosourcing.RH.Services.Auth;
 
@@ -48,24 +49,24 @@ public class AuthService
 
         if (user == null)
         {
-            // L'utilisateur n'existe pas
+           
             return null;
         }
 
-        // Comparez le mot de passe hashé stocké dans la base de données avec le mot de passe fourni
-        if (VerifierMotDePasse(password, user.MotDePasseHash))
+       
+        if (user.Password == password)
         {
-            // Authentification réussie
+            
             return user;
         }
 
-        // Mot de passe incorrect
+       
         return null;
     }
 
     private bool VerifierMotDePasse(string motDePasse, string motDePasseHash)
     {
-
-        return BCrypt.Net.BCrypt.Verify(motDePasse, motDePasseHash);
+         return BCrypt.Net.BCrypt.Verify(motDePasse, motDePasseHash); 
+        
     }
 }
