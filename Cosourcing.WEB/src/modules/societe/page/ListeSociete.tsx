@@ -67,7 +67,7 @@ export const ListeSociete: React.FC = () => {
               <TableCell align="right">
                 <b>Nif</b>
               </TableCell>
-              <TableCell align="right" colSpan={2}>
+              <TableCell align="center" colSpan={2}>
                 <b>Gestion</b>
               </TableCell>
             </TableRow>
@@ -90,14 +90,24 @@ export const ListeSociete: React.FC = () => {
                 <TableCell align="right">{societe.numeroStatistique}</TableCell>
                 <TableCell align="right">{societe.nif}</TableCell>
                 <TableCell align="right">
-                  <IconButton>
-                    <EditIcon />
-                  </IconButton>
+                  <Button
+                    variant="contained"
+                    color="warning"
+                    endIcon={<EditIcon />}
+                    onClick={() => {}}
+                  >
+                    Modifier
+                  </Button>
                 </TableCell>
                 <TableCell align="right">
-                  <IconButton>
-                    <DeleteIcon />
-                  </IconButton>
+                  <Button
+                    variant="contained"
+                    color="error"
+                    endIcon={<DeleteIcon />}
+                    onClick={() => {}}
+                  >
+                    Supprimer
+                  </Button>
                 </TableCell>
               </TableRow>
             ))}

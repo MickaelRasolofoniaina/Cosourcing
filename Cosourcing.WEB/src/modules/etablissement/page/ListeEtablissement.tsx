@@ -12,7 +12,10 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import Button from "@mui/material/Button";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import { useHttp } from "../../shared/hooks/UseHttp";
-import { getAllEtablissement, getSocieteEtablissement } from "../services/EtablissementService";
+import {
+  getAllEtablissement,
+  getSocieteEtablissement,
+} from "../services/EtablissementService";
 import { BaseEcran } from "../../shared/components/BaseEcran";
 import { Etablissement } from "../../../models/entite/Etablissement";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
@@ -36,7 +39,7 @@ export const ListeEtablissement: React.FC = () => {
 
   const handleAjouterEtablissement = () => {
     navigate(`${EtablissementRoute.Ajout}?idSociete=${idSociete}`);
-  }
+  };
 
   if (!data) {
     return null;
@@ -87,7 +90,7 @@ export const ListeEtablissement: React.FC = () => {
               <TableCell>
                 <b>Activité</b>{" "}
               </TableCell>
-              <TableCell align="right" colSpan={2}>
+              <TableCell align="center" colSpan={2}>
                 <b>Gestion</b>
               </TableCell>
             </TableRow>
@@ -99,7 +102,9 @@ export const ListeEtablissement: React.FC = () => {
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
               >
                 <TableCell>
-                  <Link to={`/etablissement/${etablissement.id}?idSociete=${idSociete}`}>
+                  <Link
+                    to={`/etablissement/${etablissement.id}?idSociete=${idSociete}`}
+                  >
                     {etablissement.id}
                   </Link>
                 </TableCell>
@@ -111,14 +116,24 @@ export const ListeEtablissement: React.FC = () => {
                 </TableCell>
                 <TableCell>{etablissement.activite}</TableCell>
                 <TableCell align="right">
-                  <IconButton>
-                    <EditIcon />
-                  </IconButton>
+                  <Button
+                    variant="contained"
+                    color="warning"
+                    endIcon={<EditIcon />}
+                    onClick={() => {}}
+                  >
+                    Modifier
+                  </Button>
                 </TableCell>
                 <TableCell align="right">
-                  <IconButton>
-                    <DeleteIcon />
-                  </IconButton>
+                  <Button
+                    variant="contained"
+                    color="error"
+                    endIcon={<DeleteIcon />}
+                    onClick={() => {}}
+                  >
+                    Supprimer
+                  </Button>
                 </TableCell>
               </TableRow>
             ))}
