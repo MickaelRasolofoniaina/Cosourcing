@@ -11,7 +11,8 @@ export enum Situation{
     Celibataire="Célibataire",  
     Marie="Marié",  
     Divorce="Divorcé",  
-    Non_connue="Non connue"
+    NonConnue="Non connue"
+
 }
 
 export enum MotifSotie{
@@ -32,6 +33,16 @@ export enum ModeReglement{
     cheque="Chèque"
 }
 
+export enum Categorie{
+    categorie1="Categorie1",
+    categorie2 = "Categorie2"
+}
+
+export enum Groupe{
+    groupe1 = "Groupe1",
+    groupe2 = "Groupe2"
+}
+
 export interface Employe extends BaseModele {
     nom:string;
     prenom:string;
@@ -44,9 +55,9 @@ export interface Employe extends BaseModele {
     situation:Situation;
     adresse:string;
     poste:string;
-    categorie:string;
-    groupe:string;
-    dEmbauche:Date;
+    categorie:Categorie;
+    groupe:Groupe;
+    dateEmbauche:Date;
     salaire:number;
     iban:string;
     cin:string;
@@ -75,8 +86,8 @@ export interface EmployeModif extends BaseModele {
     poste:string;
     categorie:string;
     groupe:string;
-    dEmbauche:Date;
-    dSortie:Date;
+    dateEmbauche:Date;
+    dateSortie:Date;
     motifSortie:MotifSotie;
     salaire:number;
     iban:string;

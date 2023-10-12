@@ -20,6 +20,6 @@ export const getDetailEtablissement = async(id: number) => {
   return get<Etablissement>(`${ETABLISSEMENT_ROOT_URL}/${id}`);
 }
 
-export const modifEtablissement = async(id:number, etablissement:Etablissement) => {
-  return put<Etablissement, number>(`${ETABLISSEMENT_ROOT_URL}/${id}`, etablissement);   
+export const modifEtablissement = async(etablissement:Etablissement) => {
+  return put<Etablissement, number>(`${ETABLISSEMENT_ROOT_URL}`, etablissement);   
 }

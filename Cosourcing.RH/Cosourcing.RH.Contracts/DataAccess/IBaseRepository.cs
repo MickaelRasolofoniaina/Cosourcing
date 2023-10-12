@@ -17,7 +17,7 @@ namespace Cosourcing.RH.Contracts.DataAccess
         public void CommitTransaction();
 
         public void RollbackTransaction();
-        public Task<bool> UpdateEntity<T>(int id, T model) where T: BaseModel;
+        public Task<bool> UpdateEntity<T>(T model) where T: BaseModel;
     }
 }
 

@@ -13,7 +13,7 @@ namespace Cosourcing.RH.Contracts.Services.Employe
         public Task<int> DeleteEmploye(int id);
 
         public Task<EmployeModel[]> GetEtablissementEmployes(int idEtablissement);
-        public Task<bool> UpdateEmploye(int id, EmployeModel employe);
+        public Task<bool> UpdateEmploye(EmployeModel employe);
     }
 }
 

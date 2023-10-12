@@ -104,9 +104,9 @@ namespace Cosourcing.RH.Services.Societe
             return _baseRepository.SaveChangesAsync();
         }
 
-        public Task<bool> UpdateSociete(int id, SocieteModel societe)
+        public Task<bool> UpdateSociete(SocieteModel societe)
         {
-            return _baseRepository.UpdateEntity(id, societe);
+            return _baseRepository.UpdateEntity(societe);
         }
     }
 }

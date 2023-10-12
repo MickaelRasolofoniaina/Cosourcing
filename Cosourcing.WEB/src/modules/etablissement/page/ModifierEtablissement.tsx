@@ -15,7 +15,7 @@ export const ModifierEtablissement : React.FC = () =>{
 
 	const executer = (etablissement : Etablissement) => {
 		etablissement.id = idEtablissement;
-		modifEtablissement(etablissement.id, etablissement)
+		modifEtablissement(etablissement)
 			.then(response => {
 				if(!response.ok){
 					throw new Error('Echec de la mise à jour de cet Etablissement ');

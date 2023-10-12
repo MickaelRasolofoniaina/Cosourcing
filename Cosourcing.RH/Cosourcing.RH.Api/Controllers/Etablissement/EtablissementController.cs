@@ -91,11 +91,11 @@ namespace Cosourcing.RH.Api.Controllers.Etablissement
                 return BadRequest(ex.Message);
             }
         }
-        [Route("{id}")]
+        [Route("")]
         [HttpPut]
-        public async Task<IActionResult> UpdateEtablissement(int id, EtablissementModel etablissement){
+        public async Task<IActionResult> UpdateEtablissement(EtablissementModel etablissement){
             try{
-                var result = await _etablissementService.UpdateEtablissement(id, etablissement);
+                var result = await _etablissementService.UpdateEtablissement(etablissement);
                 return Ok(result);
             }
             catch(Exception ex){

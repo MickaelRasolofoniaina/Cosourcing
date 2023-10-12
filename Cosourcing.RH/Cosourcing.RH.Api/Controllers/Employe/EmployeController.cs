@@ -39,20 +39,11 @@ namespace Cosourcing.RH.Api.Controllers.Employe
         public async Task<IActionResult> GetAll([FromQuery] int idEtablissement = -1)
         {
             try
-            {
-                if(idEtablissement != -1)
-                {
-                    var result = await _employeService.GetEtablissementEmployes(idEtablissement);
+            {            
+                var result = await _employeService.GetEtablissementEmployes(idEtablissement);
 
-                    return Ok(result);
-                }
-                else
-                {
-
-                    var result = await _employeService.GetAll();
-
-                    return Ok(result);
-                }
+                return Ok(result);
+                
             }
             catch (Exception ex)
             {
@@ -91,12 +82,12 @@ namespace Cosourcing.RH.Api.Controllers.Employe
                 return BadRequest(ex.Message);
             }
         }
-        [Route("{id}")]
+        [Route("")]
         [HttpPut]
 
-        public async Task<IActionResult> UpdateEmploye(int id, EmployeModel employe){
+        public async Task<IActionResult> UpdateEmploye(EmployeModel employe){
             try{
-                var result = await _employeService.UpdateEmploye(id, employe);
+                var result = await _employeService.UpdateEmploye(employe);
                 return Ok(result);
             }
             catch(Exception ex){

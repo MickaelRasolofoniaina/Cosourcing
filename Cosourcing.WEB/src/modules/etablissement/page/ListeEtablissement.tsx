@@ -68,7 +68,7 @@ export const ListeEtablissement: React.FC = () => {
   const supression = (etablissement: Etablissement) => {
       if(etablissement && etablissement.id !== undefined){
       etablissement.deleted = true;
-      modifEtablissement(etablissement.id, etablissement)
+      modifEtablissement(etablissement)
       .then(response => {
         if(!response.ok){
           throw new Error('Echec de la suppression de cet Etablissement ');

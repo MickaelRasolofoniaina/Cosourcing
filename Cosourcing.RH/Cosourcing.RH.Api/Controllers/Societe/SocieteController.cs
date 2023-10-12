@@ -65,12 +65,12 @@ namespace Cosourcing.RH.Api.Controllers.Societe
                 return BadRequest(ex.Message);
             }
         }
-        [Route("{id}")]
+        [Route("")]
         [HttpPut]
 
-        public async Task<IActionResult> UpdateSociete(int id, SocieteModel societe){
+        public async Task<IActionResult> UpdateSociete(SocieteModel societe){
             try{
-                var result = await _societeService.UpdateSociete(id, societe);
+                var result = await _societeService.UpdateSociete(societe);
                 return Ok(result);
             }
             catch(Exception ex){

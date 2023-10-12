@@ -141,7 +141,7 @@ export const DetailEmploye: React.FC = () => {
                     </ListItem>
                     <ListItem>
                         <Typography>
-                            <b>Date d'embauche:</b>{formatDate(data.dEmbauche)}
+                            <b>Date d'embauche:</b>{formatDate(data.dateEmbauche)}
                         </Typography>
                     </ListItem>
                     <ListItem>

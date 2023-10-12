@@ -2,6 +2,38 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Cosourcing.RH.Domain.Entite
 {
+
+public static class Situation
+{
+    public static readonly string CELIBATAIRE = "CÉLIBATAIRE";
+    public static readonly string MARIE = "MARIÉ";
+    public static readonly string DIVORCE = "DIVORCÉ";
+    public static readonly string NONCONNUE = "NON CONNUE";
+}
+
+public static class MotifSortie
+{
+    public static readonly string DEMISSION = "DÉMISSION";
+    public static readonly string LICENCIEMENT = "LICENCIEMENT";
+    public static readonly string FIN_ESSAI_EMPLOYEUR = "FIN DE PÉRIODE D’ESSAI À L’INITIATIVE DE L’EMPLOYEUR";
+    public static readonly string FIN_ESSAI_SALARIE = "FIN DE PÉRIODE D’ESSAI À L’INITIATIVE DU SALARIÉ";
+    public static readonly string FIN_CDD_EMPLOYEUR = "FIN DE CDD PAR L’EMPLOYEUR";
+    public static readonly string FIN_CDD_SALARIE = "FIN DE CDD PAR LE SALARIÉ";
+}
+
+public static class TypeContrat
+{
+    public static readonly string CDD = "CDD";
+    public static readonly string CDI = "CDI";
+}
+
+public static class ModeReglement
+{
+    public static readonly string VIREMENT = "VIREMENT";
+    public static readonly string CHEQUE = "CHÈQUE";
+}
+
+
 	public class EmployeModel : BaseModel
 	{
         public string Nom { get; set; }
@@ -17,8 +49,8 @@ namespace Cosourcing.RH.Domain.Entite
         public string Poste { get; set; }
         public string Categorie { get; set; }
         public string Groupe { get; set; }
-        public DateTime DEmbauche { get; set; }
-        public DateTime DSortie { get; set; }
+        public DateTime DateEmbauche { get; set; }
+        public DateTime DateSortie { get; set; }
         public string MotifSortie { get; set; }
         public float Salaire { get; set; }
         public string Cin { get; set; }
@@ -49,8 +81,8 @@ namespace Cosourcing.RH.Domain.Entite
             string poste, 
             string categorie, 
             string groupe, 
-            DateTime dEmbauche, 
-            DateTime dSortie, 
+            DateTime dateEmbauche, 
+            DateTime dateSortie, 
             string motifSortie, 
             float salaire, 
             string cin, 
@@ -79,8 +111,8 @@ namespace Cosourcing.RH.Domain.Entite
             this.Poste = poste;
             this.Categorie = categorie;
             this.Groupe = groupe;
-            this.DEmbauche = dEmbauche;
-            this.DSortie = dSortie;
+            this.DateEmbauche = dateEmbauche;
+            this.DateSortie = dateSortie;
             this.MotifSortie = motifSortie;
             this.Salaire = salaire;
             this.Cin = cin;

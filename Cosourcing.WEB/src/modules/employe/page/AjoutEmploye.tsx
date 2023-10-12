@@ -25,7 +25,7 @@ import Alert from "@mui/material/Alert";
 import Snackbar from "@mui/material/Snackbar";
 import { useState } from "react";
 import { ajouterEmploye } from "../service/employeService";
-import { Employe , Genre , Situation , TypeContrat , ModeReglement} from "../../../models/entite/Employe";
+import { Employe , Genre , Situation , TypeContrat ,Categorie, Groupe, ModeReglement} from "../../../models/entite/Employe";
 
 const EmployeSchema:ObjectSchema<Employe>=object({
     nom:string().required("Veuillez indiquer le nom de l'employé"),
@@ -44,9 +44,9 @@ const EmployeSchema:ObjectSchema<Employe>=object({
     situation:mixed<Situation>().required("Veuillez indiquez la situation de l'employé"),
     adresse:string().required("Vueillez indiquer l'adresse de l'employé"),
     poste:string().required("Vueillez indiquer le poste qu'occupe l'employé"),
-    categorie:string().required("Veuillez indiquer la catégorie de l'employé"),
-    groupe:string().required("Veuillez indiquer le groupe de l'employé"),
-    dEmbauche:date().required("Veuillez indiquer la date d'embauche de l'employé"),
+    categorie: mixed<Categorie>().required("Veuillez indiquer la catégorie de l'employé"),
+    groupe:mixed<Groupe>().required("Veuillez indiquer le groupe de l'employé"),
+    dateEmbauche:date().required("Veuillez indiquer la date d'embauche de l'employé"),
     salaire:number()
         .required("Vueillez indiquer le salaire de base mensuel de l'employé")
         .min(0),
@@ -264,7 +264,15 @@ export const AjoutEmploye: React.FC = () => {
                                 error={errors.categorie !== undefined}
                                 helperText={errors.categorie?.message}
                                 label="Catégorie"
-                                />
+                                select
+                                >
+                                {Object.values(Categorie).map((option) => (
+                                <MenuItem key={option} value={option}>
+                                {option}
+                                </MenuItem>
+                                ))}
+                        </TextField>
+
                         </Grid>
                         <Grid item xs={4}>
                             <TextField
@@ -273,14 +281,21 @@ export const AjoutEmploye: React.FC = () => {
                                 error={errors.groupe !== undefined}
                                 helperText={errors.groupe?.message}
                                 label="Groupe"
-                                />
+                                select
+                                >
+                                {Object.values(Groupe).map((option) => (
+                                <MenuItem key={option} value={option}>
+                                {option}
+                                </MenuItem>
+                                ))}
+                        </TextField>
                         </Grid>
                         <Grid item xs={4}>
                             <TextField
-                                {...register("dEmbauche")}
+                                {...register("dateEmbauche")}
                                 fullWidth
-                                error={errors.dEmbauche !== undefined}
-                                helperText={errors.dEmbauche?.message}
+                                error={errors.dateEmbauche !== undefined}
+                                helperText={errors.dateEmbauche?.message}
                                 label="Date d'embauche"
                                 type="date"
                                 />

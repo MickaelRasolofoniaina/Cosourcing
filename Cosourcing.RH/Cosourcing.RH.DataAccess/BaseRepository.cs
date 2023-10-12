@@ -58,10 +58,10 @@ namespace Cosourcing.RH.DataAccess
 				entity.Deleted = true;
 			}
 		}
-		public async Task<bool> UpdateEntity<T>(int id, T model) where T : BaseModel
+		public async Task<bool> UpdateEntity<T>(T model) where T : BaseModel
 		{
 
-			var objet = await _rhDbContext.FindAsync<T>(id);
+			var objet = await _rhDbContext.FindAsync<T>(model.Id);
 			if (objet != null)
 			{
 				try

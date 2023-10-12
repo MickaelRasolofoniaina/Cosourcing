@@ -1,3 +1,4 @@
+using System.Linq.Expressions;
 using Cosourcing.RH.Contracts.DataAccess;
 using Cosourcing.RH.Contracts.DataAccess.Employe;
 using Cosourcing.RH.Contracts.Services.Employe;
@@ -24,15 +25,11 @@ namespace Cosourcing.RH.Services.Employe
 
 		private static void ValiderEmploye(EmployeModel employe)
 		{
-            if (!ValidateurGenerique.EstRenseigne(employe.Nom))
+            if (!ValidateurEmploye.ValiderEmploye(employe))
             {
-                throw new InvalidModelDataException("Veuillez indiquer le nom de l'employé");
-            }
+                throw new InvalidModelDataException("Veuillez indiquer tous les champs obligatoire");
+            }           
 
-            if (!ValidateurGenerique.EstRenseigne(employe.Adresse))
-            {
-                throw new InvalidModelDataException("Veuillez indiquer l'Adresse de l'employé");
-            }
         }
 
         public Task<int> Save(EmployeModel employe)
@@ -62,13 +59,20 @@ namespace Cosourcing.RH.Services.Employe
         }
 
         public Task<EmployeModel[]> GetEtablissementEmployes(int idEtablissement)
-        {
-            return _employeRepository.GetEtablissementEmployes(idEtablissement);
+        {   
+          
+                if(idEtablissement != -1){
+                    return _employeRepository.GetEtablissementEmployes(idEtablissement);
+                }
+                else{
+                    return _employeRepository.GetAllEmployes();
+                }           
+            
         }
 
-        public Task<bool> UpdateEmploye(int id, EmployeModel employe){
+        public Task<bool> UpdateEmploye(EmployeModel employe){
             ValiderEmploye(employe);
-            return _baseRepository.UpdateEntity(id, employe);
+            return _baseRepository.UpdateEntity(employe);
         }
     }
 }

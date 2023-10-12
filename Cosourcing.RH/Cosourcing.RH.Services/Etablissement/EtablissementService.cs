@@ -68,11 +68,11 @@ namespace Cosourcing.RH.Services.Etablissement
         {
             return _etablissementRepository.GetSocieteEtablissements(idSociete);
         }
-        public Task<bool> UpdateEtablissement(int id, EtablissementModel etablissement)
+        public Task<bool> UpdateEtablissement(EtablissementModel etablissement)
         {
             ValiderEtablissement(etablissement);
             ValidateurEntite.ValiderEntite(etablissement);
-            return _baseRepository.UpdateEntity(id, etablissement);
+            return _baseRepository.UpdateEntity(etablissement);
         }
     }
 }

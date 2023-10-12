@@ -22,7 +22,7 @@ public class Startup
         services.AddCors(options =>
                options
                     .AddDefaultPolicy(p => p.WithOrigins(allowedOrigins.ToArray())
-                    .WithMethods("GET", "POST", "PUT")
+                    .AllowAnyMethod()
                     .AllowAnyHeader()));
 
         services.AddControllers();

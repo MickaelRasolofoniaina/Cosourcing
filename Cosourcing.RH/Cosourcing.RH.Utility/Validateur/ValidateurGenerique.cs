@@ -1,4 +1,6 @@
 ﻿using System.Text.RegularExpressions;
+using System.Collections.Generic;
+
 
 namespace Cosourcing.RH.Utility;
 
@@ -38,6 +40,11 @@ public static class ValidateurGenerique
     public static bool EstDatePassee(DateTime date)
     {
         return date < DateTime.Now;
+    }
+
+    public static bool EstRenseignes(List<String> champs)
+    {
+        return champs.All(champ => !string.IsNullOrEmpty(champ));
     }
 }
 
