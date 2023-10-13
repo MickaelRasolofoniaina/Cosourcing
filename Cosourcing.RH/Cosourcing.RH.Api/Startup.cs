@@ -21,7 +21,7 @@ public class Startup
 
     public void ConfigureServices(IServiceCollection services)
     {
-        var allowedOrigins = new HashSet<string>(Configuration.GetValue<string[]>("AllowedHosts") ?? new string[] {"*"});
+        var allowedOrigins = new HashSet<string>(Configuration.GetValue<string[]>("AllowedHosts") ?? new string[] { "*" });
         var dbConnectionString = Configuration.GetConnectionString("Db") ?? "";
 
         services.AddCors(options =>
@@ -101,7 +101,7 @@ public class Startup
         {
             endpoints.MapControllers();
         });
-       
+
     }
 }
 

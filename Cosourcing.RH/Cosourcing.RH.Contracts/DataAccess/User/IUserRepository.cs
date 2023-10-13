@@ -6,6 +6,8 @@ namespace Cosourcing.RH.Contracts.DataAccess.User
 	public interface IUserRepository
 	{
 		public Task<UserModel[]> GetAllUsers();
+		Task<UserModel> GetUserByEmail(string email);
+
     }
 }
 

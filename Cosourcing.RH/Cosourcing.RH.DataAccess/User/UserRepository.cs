@@ -1,6 +1,9 @@
 ﻿using Cosourcing.RH.Contracts.DataAccess.User;
+using Cosourcing.RH.DataAccess.Context;
 using Cosourcing.RH.Domain.User;
 using Microsoft.EntityFrameworkCore;
+using System.Threading.Tasks;
+
 
 namespace Cosourcing.RH.DataAccess.User
 {
@@ -16,6 +19,12 @@ namespace Cosourcing.RH.DataAccess.User
         public Task<UserModel[]> GetAllUsers()
         {
             return _userDbContext.ToArrayAsync();
+        }
+
+        public async Task<UserModel> GetUserByEmail(string email)
+        {
+           
+            return await _userDbContext.FirstOrDefaultAsync(u => u.Email == email);
         }
     }
 }

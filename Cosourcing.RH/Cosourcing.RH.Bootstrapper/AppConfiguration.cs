@@ -5,8 +5,8 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Cosourcing.RH.Bootstrapper
 {
-	public static class AppConfiguration
-	{
+    public static class AppConfiguration
+    {
         public static void ConfigureServices(this IServiceCollection service, string dbConnectionString)
         {
             service.AddDbContext<RHDbContext>(options =>

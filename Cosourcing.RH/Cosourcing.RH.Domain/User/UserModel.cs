@@ -9,19 +9,13 @@ namespace Cosourcing.RH.Domain.User
         public string Email { get; set; }
 	    public string MotDePasseHash { get; set; }
 
-		public string Password { get; set; }
-
-        public bool IsActive { get; set; }
-
         public UserModel(
 			int id,
 			string lastName,
 			string firstName,
 			DateTime birthday,
 			string email,
-			string motDePasseHash,
-			string password,
-			bool isActive
+			string motDePasseHash
 		) : base(id)
 		{
 			LastName = lastName;
@@ -29,8 +23,6 @@ namespace Cosourcing.RH.Domain.User
 			Birthday = birthday;
 			Email = email;
 			MotDePasseHash = motDePasseHash;
-			Password = password;
-			IsActive = isActive;
 		}
 	}
 }
