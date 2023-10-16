@@ -43,7 +43,7 @@ public class Startup
 
         services.ConfigureServices(dbConnectionString);
 
-        var jwtSettings = Configuration.GetSection("JwtSettings");
+      /*var jwtSettings = Configuration.GetSection("JwtSettings");
         var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings["Key"]));
 
         services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -59,7 +59,7 @@ public class Startup
                     IssuerSigningKey = key,
                 };
             });
-        services.AddScoped<AuthService>();
+        services.AddScoped<AuthService>(); */
     }
 
     public void ConfigureContainer(ContainerBuilder containerBuilder)
