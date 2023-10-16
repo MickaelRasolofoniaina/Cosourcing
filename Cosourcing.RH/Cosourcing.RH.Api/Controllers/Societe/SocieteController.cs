@@ -1,11 +1,13 @@
 ﻿using Cosourcing.RH.Contracts.Services.Societe;
 using Cosourcing.RH.Domain.Entite;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Cosourcing.RH.Api.Controllers.Societe
 {
     [Route("api/rh/societe")]
     [ApiController]
+    [Authorize]
     public class SocieteController : ControllerBase
     {
         private ISocieteService _societeService;

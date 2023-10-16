@@ -1,11 +1,13 @@
 using Cosourcing.RH.Contracts.Services.Etablissement;
 using Cosourcing.RH.Domain.Entite;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Cosourcing.RH.Api.Controllers.Etablissement
 {
     [Route("api/rh/etablissement")]
     [ApiController]
+    [Authorize]
     public class EtablissementController : ControllerBase
 	{
 		private readonly IEtablissementService _etablissementService;
