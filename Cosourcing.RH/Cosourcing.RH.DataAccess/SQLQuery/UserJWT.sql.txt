@@ -9,10 +9,8 @@ CREATE TABLE IF NOT EXISTS public."User"
     "FirstName" character varying COLLATE pg_catalog."default",
     "Birthday" date NOT NULL,
     "Email" character varying(50) COLLATE pg_catalog."default",
-    "Deleted" "char",
-    "MotDePasseHash" character varying(25) COLLATE pg_catalog."default",
-    "Password" character varying(50) COLLATE pg_catalog."default",
-    "IsActive" boolean,
+    "Deleted" boolean,
+    "MotDePasseHash" character varying(100) COLLATE pg_catalog."default",
     CONSTRAINT "User_pkey" PRIMARY KEY ("Id")
 )
 
