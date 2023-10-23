@@ -3,11 +3,13 @@ using Cosourcing.RH.Contracts.Services.User;
 using Cosourcing.RH.Domain.Request.User;
 using Cosourcing.RH.Domain.User;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Cosourcing.RH.Api.Controllers.User
 {
     [Route("api/rh/user")]
     [ApiController]
+    [Authorize]
     public class UserController : ControllerBase
 	{
 		private IUserService _userService;

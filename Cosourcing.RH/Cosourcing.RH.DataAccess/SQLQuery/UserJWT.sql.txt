@@ -1,4 +1,4 @@
-﻿-- Table: public.User
+-- Table: public.User
 
 -- DROP TABLE IF EXISTS public."User";
 
@@ -8,6 +8,9 @@ CREATE TABLE IF NOT EXISTS public."User"
     "LastName" character varying COLLATE pg_catalog."default" NOT NULL,
     "FirstName" character varying COLLATE pg_catalog."default",
     "Birthday" date NOT NULL,
+    "Email" character varying(50) COLLATE pg_catalog."default",
+    "Deleted" boolean,
+    "MotDePasseHash" character varying(100) COLLATE pg_catalog."default",
     CONSTRAINT "User_pkey" PRIMARY KEY ("Id")
 )
 

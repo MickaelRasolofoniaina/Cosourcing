@@ -2,6 +2,11 @@
 using Autofac;
 using Microsoft.OpenApi.Models;
 using Cosourcing.RH.Bootstrapper;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using Autofac.Core;
+using Cosourcing.RH.Services.Auth;
 
 namespace Cosourcing.RH.Api;
 
@@ -16,7 +21,7 @@ public class Startup
 
     public void ConfigureServices(IServiceCollection services)
     {
-        var allowedOrigins = new HashSet<string>(Configuration.GetValue<string[]>("AllowedHosts") ?? new string[] {"*"});
+        var allowedOrigins = new HashSet<string>(Configuration.GetValue<string[]>("AllowedHosts") ?? new string[] { "*" });
         var dbConnectionString = Configuration.GetConnectionString("Db") ?? "";
 
         services.AddCors(options =>
@@ -37,6 +42,24 @@ public class Startup
         });
 
         services.ConfigureServices(dbConnectionString);
+
+      /*var jwtSettings = Configuration.GetSection("JwtSettings");
+        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings["Key"]));
+
+        services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+            .AddJwtBearer(options =>
+            {
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateIssuerSigningKey = true,
+                    ValidIssuer = jwtSettings["Issuer"],
+                    ValidAudience = jwtSettings["Audience"],
+                    IssuerSigningKey = key,
+                };
+            });
+        services.AddScoped<AuthService>(); */
     }
 
     public void ConfigureContainer(ContainerBuilder containerBuilder)
@@ -78,6 +101,7 @@ public class Startup
         {
             endpoints.MapControllers();
         });
+
     }
 }
 
