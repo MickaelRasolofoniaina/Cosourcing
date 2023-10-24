@@ -3,35 +3,62 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Cosourcing.RH.Domain.Entite
 {
 
-public static class Situation
+public enum Situation
 {
-    public static readonly string CELIBATAIRE = "CÉLIBATAIRE";
-    public static readonly string MARIE = "MARIÉ";
-    public static readonly string DIVORCE = "DIVORCÉ";
-    public static readonly string NONCONNUE = "NON CONNUE";
+    CELIBATAIRE,
+    MARIE,
+    DIVORCE,
+    NONCONNUE
 }
 
-public static class MotifSortie
+public enum MotifSortie
 {
-    public static readonly string DEMISSION = "DÉMISSION";
-    public static readonly string LICENCIEMENT = "LICENCIEMENT";
-    public static readonly string FIN_ESSAI_EMPLOYEUR = "FIN DE PÉRIODE D’ESSAI À L’INITIATIVE DE L’EMPLOYEUR";
-    public static readonly string FIN_ESSAI_SALARIE = "FIN DE PÉRIODE D’ESSAI À L’INITIATIVE DU SALARIÉ";
-    public static readonly string FIN_CDD_EMPLOYEUR = "FIN DE CDD PAR L’EMPLOYEUR";
-    public static readonly string FIN_CDD_SALARIE = "FIN DE CDD PAR LE SALARIÉ";
+    DEMISSION,
+    LICENCIEMENT,
+    FIN_ESSAI_EMPLOYEUR,
+    FIN_ESSAI_SALARIE,
+    FIN_CDD_EMPLOYEUR,
+    FIN_CDD_SALARIE
 }
 
-public static class TypeContrat
+public enum TypeContrat
 {
-    public static readonly string CDD = "CDD";
-    public static readonly string CDI = "CDI";
+    CDD,
+    CDI
 }
 
-public static class ModeReglement
+public enum ModeReglement
 {
-    public static readonly string VIREMENT = "VIREMENT";
-    public static readonly string CHEQUE = "CHÈQUE";
+    VIREMENT,
+    CHEQUE
 }
+
+public enum Genre
+{
+    HOMME,
+    FEMME,
+    AUTRE
+}
+
+public enum Poste
+{
+    DEVELOPPEUR,
+    DIRECTEUR,
+    AGENT
+}
+
+public enum Categorie
+{
+    CATEGORIE1,
+    CATEGORIE2
+}
+
+public enum Groupe
+{
+    GROUPE1,
+    GROUPE2
+}
+
 
 
 	public class EmployeModel : BaseModel

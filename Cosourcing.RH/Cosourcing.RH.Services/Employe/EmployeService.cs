@@ -28,7 +28,47 @@ namespace Cosourcing.RH.Services.Employe
             if (!ValidateurEmploye.ValiderEmploye(employe))
             {
                 throw new InvalidModelDataException("Veuillez indiquer tous les champs obligatoire");
-            }           
+            }  
+          
+            if (!ValidateurEmploye.EstValideSituation(employe.Situation))
+            {
+                throw new InvalidModelDataException("situation invalide");
+            }
+            if (!ValidateurEmploye.EstValideMotifSortie(employe.MotifSortie))
+            {
+                throw new InvalidModelDataException("Motif de sortie invalide");
+            }
+            if (!ValidateurEmploye.EstValideTypeContrat(employe.TypeContrat))
+            {
+                throw new InvalidModelDataException("Type de contrat invalide");
+            }
+            if (!ValidateurEmploye.EstValideModeReglement(employe.ModeReglement))
+            {
+                throw new InvalidModelDataException("Mode de règlement invalide");
+            }
+            if (!ValidateurEmploye.EstValideGenre(employe.Genre))
+            {
+                throw new InvalidModelDataException("Genre invalide");
+            }
+            if (!ValidateurEmploye.EstValidePoste(employe.Poste))
+            {
+                throw new InvalidModelDataException("Poste invalide");
+            }
+            if (!ValidateurEmploye.EstValideCategorie(employe.Categorie))
+            {
+                throw new InvalidModelDataException("Catégorie invalide");
+            }
+            if (!ValidateurEmploye.EstValideGroupe(employe.Groupe))
+            {
+                throw new InvalidModelDataException("Groupe invalide");
+            }
+            if(!ValidateurEmploye.EstValidePays(employe.PaysNaissance)){
+                throw new InvalidModelDataException("pays de naissance non valide");
+            }
+            if(!ValidateurEmploye.EstValidePays(employe.PaysNationalite)){
+                throw new InvalidModelDataException("pays de nationalité non valide");
+            }
+                     
 
         }
 

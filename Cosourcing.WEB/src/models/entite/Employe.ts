@@ -1,47 +1,56 @@
 import internal from "stream";
 import { string } from "yup";
 import { BaseModele } from "../BaseModel";
+import { Pays } from "./Pays";
 
-export enum Genre{
-    Monsieur='Monsieur',
-    Madame='Madame'
+export enum Situation {
+    CELIBATAIRE = "CELIBATAIRE",
+    MARIE = "MARIE",
+    DIVORCE = "DIVORCE",
+    NONCONNUE = "NONCONNUE"
 }
 
-export enum Situation{
-    Celibataire="Célibataire",  
-    Marie="Marié",  
-    Divorce="Divorcé",  
-    NonConnue="Non connue"
-
+export enum MotifSortie {
+    DEMISSION = "DEMISSION",
+    LICENCIEMENT = "LICENCIEMENT",
+    FIN_ESSAI_EMPLOYEUR = "FIN_ESSAI_EMPLOYEUR",
+    FIN_ESSAI_SALARIE = "FIN_ESSAI_SALARIE",
+    FIN_CDD_EMPLOYEUR = "FIN_CDD_EMPLOYEUR",
+    FIN_CDD_SALARIE = "FIN_CDD_SALARIE"
 }
 
-export enum MotifSotie{
-    Demision="Démission",
-    Licenciement="Licenciement",
-    FinEssaiEmployeur="Fin de période d’essai à l’initiative de l’Employeur",
-    FinEssaiSalarie="Fin de période d’essai à l’initiative du salarié",
-    FinCDDEmployeur="Fin de CDD par l’Employeur",
-    FinCDDSalarie=" Fin de CDD par le salarié"
-}
- export enum TypeContrat{
-    CDD="CDD",
-    CDI="CDI"
- }
-
-export enum ModeReglement{
-    virement="Virement",
-    cheque="Chèque"
+export enum TypeContrat {
+    CDD = "CDD",
+    CDI = "CDI"
 }
 
-export enum Categorie{
-    categorie1="Categorie1",
-    categorie2 = "Categorie2"
+export enum ModeReglement {
+    VIREMENT = "VIREMENT",
+    CHEQUE = "CHEQUE"
 }
 
-export enum Groupe{
-    groupe1 = "Groupe1",
-    groupe2 = "Groupe2"
+export enum Genre {
+    HOMME = "HOMME",
+    FEMME = "FEMME",
+    AUTRE = "AUTRE"
 }
+
+export enum Poste {
+    DEVELOPPEUR = "DEVELOPPEUR",
+    DIRECTEUR = "DIRECTEUR",
+    AGENT = "AGENT"
+}
+
+export enum Categorie {
+    CATEGORIE1 = "CATEGORIE1",
+    CATEGORIE2 = "CATEGORIE2"
+}
+
+export enum Groupe {
+    GROUPE1 = "GROUPE1",
+    GROUPE2 = "GROUPE2"
+}
+
 
 export interface Employe extends BaseModele {
     nom:string;
@@ -50,11 +59,11 @@ export interface Employe extends BaseModele {
     genre:Genre;
     dateNaissance:Date;
     lieuNaissance:string;
-    paysNaissance:string;
-    paysNationalite:string;
+    paysNaissance:Pays;
+    paysNationalite:Pays;
     situation:Situation;
     adresse:string;
-    poste:string;
+    poste:Poste;
     categorie:Categorie;
     groupe:Groupe;
     dateEmbauche:Date;
@@ -69,34 +78,5 @@ export interface Employe extends BaseModele {
     affectation:string;
     commentaire:string;
     idEtablissement:number;
-    motifSortie:string;
-}
-
-export interface EmployeModif extends BaseModele {
-    nom:string;
-    prenom:string;
-    matricule:number;
-    genre:Genre;
-    dateNaissance:Date;
-    lieuNaissance:string;
-    paysNaissance:string;
-    paysNationalite:string;
-    situation:Situation;
-    adresse:string;
-    poste:string;
-    categorie:string;
-    groupe:string;
-    dateEmbauche:Date;
-    dateSortie:Date;
-    motifSortie:MotifSotie;
-    salaire:number;
-    iban:string;
-    cin:string;
-    numCnaps:string;
-    heureContractuelle:number;
-    typeContrat:TypeContrat;
-    modeReglement:ModeReglement;
-    lieuTravail:string;
-    affectation:string;
-    commentaire:string;
+    motifSortie:MotifSortie;
 }
