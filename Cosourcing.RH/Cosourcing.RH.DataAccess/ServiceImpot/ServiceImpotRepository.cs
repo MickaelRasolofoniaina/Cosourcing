@@ -20,12 +20,6 @@ namespace Cosourcing.RH.DataAccess.ServiceImpot
                 .ToArrayAsync();
         }
 
-        public Task<ServiceImpotModel[]> GetEtablissementServiceImpots(int idEtablissement)
-        {
-            return _serviceImpotDbContext
-                .Where(e => !e.Deleted && e.IdEtablissement == idEtablissement)
-                .ToArrayAsync();
-        }
     }
 }
 

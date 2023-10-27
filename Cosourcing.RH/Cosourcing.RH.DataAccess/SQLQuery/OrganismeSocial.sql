@@ -1,6 +1,6 @@
 ﻿-- Table: public.OrganismeSocial
 
--- DROP TABLE IF EXISTS public."OrganismeSocial";
+DROP TABLE IF EXISTS public."OrganismeSocial";
 
 CREATE TABLE IF NOT EXISTS public."OrganismeSocial"
 (
@@ -11,24 +11,14 @@ CREATE TABLE IF NOT EXISTS public."OrganismeSocial"
     "BaseCotisationSocialeSalarie" decimal,
     "BaseTauxCotisationSocialeEmployeur" decimal,
     "BaseTauxCotisationSocialeSalarie" decimal,
-    "Deleted" boolean NOT NULL DEFAULT false,
-    "IdEtablissement" integer NOT NULL,
-    CONSTRAINT "OrganismeSocial_pkey" PRIMARY KEY ("Id"),
-    CONSTRAINT "OrganismeSocial_IdEtablissement_fkey" FOREIGN KEY ("IdEtablissement")
-        REFERENCES public."Etablissement" ("Id") MATCH SIMPLE
-        ON UPDATE NO ACTION
-        ON DELETE NO ACTION
+    "Deleted" boolean NOT NULL DEFAULT false,   
+    CONSTRAINT "OrganismeSocial_pkey" PRIMARY KEY ("Id")
+
 )
 
 TABLESPACE pg_default;
 
 ALTER TABLE IF EXISTS public."OrganismeSocial"
     OWNER to postgres;
--- Index: fki_FK_OrganismeSocial_Etablissement
+-- Index: fki_FK_OrganismeSocial_Affiliation
 
--- DROP INDEX IF EXISTS public."fki_FK_OrganismeSocial_Etablissement";
-
-CREATE INDEX IF NOT EXISTS "fki_FK_OrganismeSocial_Etablissement"
-    ON public."OrganismeSocial" USING btree
-    ("IdEtablissement" ASC NULLS LAST)
-    TABLESPACE pg_default;

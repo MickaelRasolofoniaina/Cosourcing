@@ -6,7 +6,6 @@ namespace Cosourcing.RH.Contracts.DataAccess.ServiceImpot
 	{
 		public Task<ServiceImpotModel[]> GetAllServiceImpots();
 
-		public Task<ServiceImpotModel[]> GetEtablissementServiceImpots(int idEtablissement);
     }
 }
 

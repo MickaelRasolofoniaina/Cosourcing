@@ -11,8 +11,7 @@ namespace Cosourcing.RH.Domain.Entite
         public decimal BaseTauxCotisationSocialeEmployeur { get; set; } 
         public decimal BaseTauxCotisationSocialeSalarie { get; set; }
         
-        [ForeignKey("OrganismeSocial_IdEtablissement_fkey")]
-        public int IdEtablissement { get; set; }
+        
     
         public OrganismeSocialModel(
             int id, 
@@ -21,8 +20,8 @@ namespace Cosourcing.RH.Domain.Entite
             decimal baseCotisationSocialeEmployeur ,
             decimal baseCotisationSocialeSalarie,
             decimal baseTauxCotisationSocialeEmployeur,
-            decimal baseTauxCotisationSocialeSalarie,
-            int idEtablissement
+            decimal baseTauxCotisationSocialeSalarie
+          
             ):base(id)
         {
             
@@ -32,7 +31,7 @@ namespace Cosourcing.RH.Domain.Entite
             this.BaseCotisationSocialeSalarie = baseCotisationSocialeSalarie;
             this.BaseTauxCotisationSocialeEmployeur = baseTauxCotisationSocialeEmployeur;
             this.BaseTauxCotisationSocialeSalarie = baseTauxCotisationSocialeSalarie;           
-            this.IdEtablissement = idEtablissement;
+
         }
 
 	}

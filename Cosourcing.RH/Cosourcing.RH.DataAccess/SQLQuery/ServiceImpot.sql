@@ -14,12 +14,7 @@ CREATE TABLE IF NOT EXISTS public."ServiceImpot"
     "BaseTauxImpotSalarie" decimal,
     "ReductionImpot" decimal,
     "Deleted" boolean NOT NULL DEFAULT false,
-    "IdEtablissement" integer NOT NULL,
-    CONSTRAINT "ServiceImpot_pkey" PRIMARY KEY ("Id"),
-    CONSTRAINT "ServiceImpot_IdEtablissement_fkey" FOREIGN KEY ("IdEtablissement")
-        REFERENCES public."Etablissement" ("Id") MATCH SIMPLE
-        ON UPDATE NO ACTION
-        ON DELETE NO ACTION
+    CONSTRAINT "ServiceImpot_pkey" PRIMARY KEY ("Id")
 )
 
 TABLESPACE pg_default;
@@ -28,9 +23,3 @@ ALTER TABLE IF EXISTS public."ServiceImpot"
     OWNER to postgres;
 -- Index: fki_FK_ServiceImpot_Etablissement
 
--- DROP INDEX IF EXISTS public."fki_FK_ServiceImpot_Etablissement";
-
-CREATE INDEX IF NOT EXISTS "fki_FK_ServiceImpot_Etablissement"
-    ON public."ServiceImpot" USING btree
-    ("IdEtablissement" ASC NULLS LAST)
-    TABLESPACE pg_default;

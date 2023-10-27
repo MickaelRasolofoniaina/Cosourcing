@@ -1,29 +1,29 @@
-using Cosourcing.RH.Contracts.Services.OrganismeSocial;
+using Cosourcing.RH.Contracts.Services.Inscription;
 using Cosourcing.RH.Domain.Entite;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Cosourcing.RH.Api.Controllers.OrganismeSocial
+namespace Cosourcing.RH.Api.Controllers.Inscription
 {
-    [Route("api/rh/organismeSocial")]
+    [Route("api/rh/inscription")]
     [ApiController]
-    public class OrganismeSocialController : ControllerBase
+    public class InscriptionController : ControllerBase
 	{
-		private readonly IOrganismeSocialService _organismeSocialService;
+		private readonly IInscriptionService _inscriptionService;
 
-		public OrganismeSocialController(
-			IOrganismeSocialService organismeSocialService
+		public InscriptionController(
+			IInscriptionService inscriptionService
 		)
 		{
-			_organismeSocialService = organismeSocialService;
+			_inscriptionService = inscriptionService;
 		}
 
         [Route("")]
         [HttpPost]
-        public async Task<IActionResult> Save(OrganismeSocialModel organismeSocial)
+        public async Task<IActionResult> Save(InscriptionModel inscription)
         {
             try
             {
-                var result = await _organismeSocialService.Save(organismeSocial);
+                var result = await _inscriptionService.Save(inscription);
 
                 return Ok(result);
             }
@@ -36,11 +36,12 @@ namespace Cosourcing.RH.Api.Controllers.OrganismeSocial
 
         [Route("")]
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll([FromQuery] int idEtablissement = -1, [FromQuery] int idServiceImpot = -1)
         {
             try
             {            
-                var result = await _organismeSocialService.GetAll();
+                var result = await _inscriptionService.GetEtablissementInscriptions(idEtablissement, idServiceImpot);
+
                 return Ok(result);
                 
             }
@@ -56,7 +57,7 @@ namespace Cosourcing.RH.Api.Controllers.OrganismeSocial
         {
             try
             {
-                var result = await _organismeSocialService.GetById(id);
+                var result = await _inscriptionService.GetById(id);
 
                 return Ok(result);
             }
@@ -68,11 +69,11 @@ namespace Cosourcing.RH.Api.Controllers.OrganismeSocial
 
         [Route("{id}")]
         [HttpDelete]
-        public async Task<IActionResult> DeleteOrganismeSocial(int id)
+        public async Task<IActionResult> DeleteInscription(int id)
         {
             try
             {
-                var result = await _organismeSocialService.DeleteOrganismeSocial(id);
+                var result = await _inscriptionService.DeleteInscription(id);
 
                 return Ok(result);
             }
@@ -84,9 +85,9 @@ namespace Cosourcing.RH.Api.Controllers.OrganismeSocial
         [Route("")]
         [HttpPut]
 
-        public async Task<IActionResult> UpdateOrganismeSocial(OrganismeSocialModel organismeSocial){
+        public async Task<IActionResult> UpdateInscription(InscriptionModel inscription){
             try{
-                var result = await _organismeSocialService.UpdateOrganismeSocial(organismeSocial);
+                var result = await _inscriptionService.UpdateInscription(inscription);
                 return Ok(result);
             }
             catch(Exception ex){

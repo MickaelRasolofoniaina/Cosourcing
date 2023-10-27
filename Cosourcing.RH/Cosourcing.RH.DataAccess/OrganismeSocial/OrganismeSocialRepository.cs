@@ -20,12 +20,6 @@ namespace Cosourcing.RH.DataAccess.OrganismeSocial
                 .ToArrayAsync();
         }
 
-        public Task<OrganismeSocialModel[]> GetEtablissementOrganismeSocials(int idEtablissement)
-        {
-            return _organismeSocialDbContext
-                .Where(e => !e.Deleted && e.IdEtablissement == idEtablissement)
-                .ToArrayAsync();
-        }
     }
 }
 

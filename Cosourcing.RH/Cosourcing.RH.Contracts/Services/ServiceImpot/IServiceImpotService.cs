@@ -11,8 +11,7 @@ namespace Cosourcing.RH.Contracts.Services.ServiceImpot
         public Task<ServiceImpotModel[]> GetAll();
 
         public Task<int> DeleteServiceImpot(int id);
-
-        public Task<ServiceImpotModel[]> GetEtablissementServiceImpots(int idEtablissement);
+        
         public Task<bool> UpdateServiceImpot(ServiceImpotModel serviceImpot);
     }
 }

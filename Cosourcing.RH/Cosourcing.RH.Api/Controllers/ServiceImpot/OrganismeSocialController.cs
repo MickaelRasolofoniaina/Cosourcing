@@ -36,11 +36,11 @@ namespace Cosourcing.RH.Api.Controllers.ServiceImpot
 
         [Route("")]
         [HttpGet]
-        public async Task<IActionResult> GetAll([FromQuery] int idEtablissement = -1)
+        public async Task<IActionResult> GetAll()
         {
             try
             {            
-                var result = await _serviceImpotService.GetEtablissementServiceImpots(idEtablissement);
+                var result = await _serviceImpotService.GetAll();
 
                 return Ok(result);
                 

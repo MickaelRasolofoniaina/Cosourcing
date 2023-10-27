@@ -13,8 +13,7 @@ namespace Cosourcing.RH.Domain.Entite
         public decimal BaseTauxImpotSalarie { get; set; }
         public decimal ReductionImpot {get; set; }
         
-        [ForeignKey("ServiceImpot_IdEtablissement_fkey")]
-        public int IdEtablissement { get; set; }
+       
     
         public ServiceImpotModel(
             int id, 
@@ -25,8 +24,7 @@ namespace Cosourcing.RH.Domain.Entite
             decimal baseCotisationImposableSalarie,
             decimal baseTauxImpotEmployeur,
             decimal baseTauxImpotSalarie,
-            decimal reductionImpot,
-            int idEtablissement
+            decimal reductionImpot
             ):base(id)
         {
             
@@ -37,7 +35,6 @@ namespace Cosourcing.RH.Domain.Entite
             this.BaseCotisationImposableSalarie = baseCotisationImposableSalarie;
             this.BaseTauxImpotEmployeur = baseTauxImpotEmployeur;
             this.BaseTauxImpotSalarie = baseTauxImpotSalarie;           
-            this.IdEtablissement = idEtablissement;
             this.ReductionImpot = reductionImpot;
         }
 

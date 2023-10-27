@@ -77,6 +77,28 @@ namespace Cosourcing.RH.Bootstrapper.DataAccess
                 })
                 .AsSelf()
                 .SingleInstance();
+            
+            containerBuilder
+                .Register(c =>
+                {
+                    var rhDbContext = c.Resolve<RHDbContext>();
+
+                    return rhDbContext.Affiliation;
+                })
+                .AsSelf()
+                .SingleInstance();
+
+            containerBuilder
+                .Register(c =>
+                {
+                    var rhDbContext = c.Resolve<RHDbContext>();
+
+                    return rhDbContext.Inscription;
+                })
+                .AsSelf()
+                .SingleInstance();
+
+
         }
     }
 }

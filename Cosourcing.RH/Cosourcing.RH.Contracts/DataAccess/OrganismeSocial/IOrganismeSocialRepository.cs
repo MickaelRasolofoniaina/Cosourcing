@@ -6,7 +6,7 @@ namespace Cosourcing.RH.Contracts.DataAccess.OrganismeSocial
 	{
 		public Task<OrganismeSocialModel[]> GetAllOrganismeSocials();
 
-		public Task<OrganismeSocialModel[]> GetEtablissementOrganismeSocials(int idEtablissement);
+		//public Task<OrganismeSocialModel[]> GetEtablissementOrganismeSocials(int idEtablissement);
     }
 }
 

@@ -66,15 +66,10 @@ namespace Cosourcing.RH.Services.OrganismeSocial
             return _baseRepository.SaveChangesAsync();
         }
 
-        public Task<OrganismeSocialModel[]> GetEtablissementOrganismeSocials(int idEtablissement)
-        {   
-          
-                if(idEtablissement != -1){
-                    return _organismeSocialRepository.GetEtablissementOrganismeSocials(idEtablissement);
-                }
-                else{
-                    return _organismeSocialRepository.GetAllOrganismeSocials();
-                }           
+        public Task<OrganismeSocialModel[]> GetOrganismeSocials()
+        {           
+               
+            return _organismeSocialRepository.GetAllOrganismeSocials();                          
             
         }
 

@@ -12,7 +12,6 @@ namespace Cosourcing.RH.Contracts.Services.OrganismeSocial
 
         public Task<int> DeleteOrganismeSocial(int id);
 
-        public Task<OrganismeSocialModel[]> GetEtablissementOrganismeSocials(int idEtablissement);
         public Task<bool> UpdateOrganismeSocial(OrganismeSocialModel organismeSocial);
     }
 }

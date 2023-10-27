@@ -69,17 +69,6 @@ namespace Cosourcing.RH.Services.ServiceImpot
             return _baseRepository.SaveChangesAsync();
         }
 
-        public Task<ServiceImpotModel[]> GetEtablissementServiceImpots(int idEtablissement)
-        {   
-          
-                if(idEtablissement != -1){
-                    return _serviceImpotRepository.GetEtablissementServiceImpots(idEtablissement);
-                }
-                else{
-                    return _serviceImpotRepository.GetAllServiceImpots();
-                }           
-            
-        }
 
         public Task<bool> UpdateServiceImpot(ServiceImpotModel serviceImpot){
             ValiderServiceImpot(serviceImpot);

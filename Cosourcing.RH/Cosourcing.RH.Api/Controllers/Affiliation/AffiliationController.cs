@@ -1,29 +1,29 @@
-using Cosourcing.RH.Contracts.Services.OrganismeSocial;
+using Cosourcing.RH.Contracts.Services.Affiliation;
 using Cosourcing.RH.Domain.Entite;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Cosourcing.RH.Api.Controllers.OrganismeSocial
+namespace Cosourcing.RH.Api.Controllers.Affiliation
 {
-    [Route("api/rh/organismeSocial")]
+    [Route("api/rh/affiliation")]
     [ApiController]
-    public class OrganismeSocialController : ControllerBase
+    public class AffiliationController : ControllerBase
 	{
-		private readonly IOrganismeSocialService _organismeSocialService;
+		private readonly IAffiliationService _affiliationService;
 
-		public OrganismeSocialController(
-			IOrganismeSocialService organismeSocialService
+		public AffiliationController(
+			IAffiliationService affiliationService
 		)
 		{
-			_organismeSocialService = organismeSocialService;
+			_affiliationService = affiliationService;
 		}
 
         [Route("")]
         [HttpPost]
-        public async Task<IActionResult> Save(OrganismeSocialModel organismeSocial)
+        public async Task<IActionResult> Save(AffiliationModel affiliation)
         {
             try
             {
-                var result = await _organismeSocialService.Save(organismeSocial);
+                var result = await _affiliationService.Save(affiliation);
 
                 return Ok(result);
             }
@@ -36,11 +36,12 @@ namespace Cosourcing.RH.Api.Controllers.OrganismeSocial
 
         [Route("")]
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll([FromQuery] int idEtablissement = -1, [FromQuery] int idOrganismeSocial = -1)
         {
             try
             {            
-                var result = await _organismeSocialService.GetAll();
+                var result = await _affiliationService.GetEtablissementAffiliations(idEtablissement, idOrganismeSocial);
+
                 return Ok(result);
                 
             }
@@ -56,7 +57,7 @@ namespace Cosourcing.RH.Api.Controllers.OrganismeSocial
         {
             try
             {
-                var result = await _organismeSocialService.GetById(id);
+                var result = await _affiliationService.GetById(id);
 
                 return Ok(result);
             }
@@ -68,11 +69,11 @@ namespace Cosourcing.RH.Api.Controllers.OrganismeSocial
 
         [Route("{id}")]
         [HttpDelete]
-        public async Task<IActionResult> DeleteOrganismeSocial(int id)
+        public async Task<IActionResult> DeleteAffiliation(int id)
         {
             try
             {
-                var result = await _organismeSocialService.DeleteOrganismeSocial(id);
+                var result = await _affiliationService.DeleteAffiliation(id);
 
                 return Ok(result);
             }
@@ -84,9 +85,9 @@ namespace Cosourcing.RH.Api.Controllers.OrganismeSocial
         [Route("")]
         [HttpPut]
 
-        public async Task<IActionResult> UpdateOrganismeSocial(OrganismeSocialModel organismeSocial){
+        public async Task<IActionResult> UpdateAffiliation(AffiliationModel affiliation){
             try{
-                var result = await _organismeSocialService.UpdateOrganismeSocial(organismeSocial);
+                var result = await _affiliationService.UpdateAffiliation(affiliation);
                 return Ok(result);
             }
             catch(Exception ex){
